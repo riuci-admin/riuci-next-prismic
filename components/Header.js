@@ -17,7 +17,12 @@ export const Header = ({ alternateLanguages = [], navigation, settings }) => {
       <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3 leading-none">
         <PrismicLink href="/">
           {prismicH.isFilled.image(settings.data.logo) && (
-            <PrismicNextImage field={settings.data.logo} />
+            <div className="flex items-center">
+              <PrismicNextImage field={settings.data.logo} />
+              <div className="text-5xl font-bold tracking-tight text-green">
+                RIUCI
+              </div>
+            </div>
           )}
         </PrismicLink>
         <nav>
@@ -25,7 +30,7 @@ export const Header = ({ alternateLanguages = [], navigation, settings }) => {
             {navigation.data?.links.map((item) => (
               <li
                 key={prismicH.asText(item.label)}
-                className="font-semibold tracking-tight text-slate-800"
+                className="text-slate-800 font-semibold tracking-tight"
               >
                 <PrismicLink field={item.link}>
                   <PrismicText field={item.label} />
