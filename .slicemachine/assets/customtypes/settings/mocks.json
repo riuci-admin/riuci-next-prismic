@@ -5,7 +5,7 @@
       {
         "type": "heading1",
         "content": {
-          "text": "Before"
+          "text": "Train"
         }
       }
     ]
@@ -14,13 +14,13 @@
     "__TYPE__": "ImageContent",
     "origin": {
       "id": "main",
-      "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2",
-      "width": 3648,
-      "height": 4560
+      "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
+      "width": 8640,
+      "height": 8640
     },
-    "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2",
-    "width": 3648,
-    "height": 4560,
+    "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
+    "width": 8640,
+    "height": 8640,
     "edit": {
       "zoom": 1,
       "crop": {
@@ -30,27 +30,5 @@
       "background": "transparent"
     },
     "thumbnails": {}
-  },
-  "newsletterDescription": {
-    "__TYPE__": "StructuredTextContent",
-    "value": [
-      {
-        "type": "paragraph",
-        "content": {
-          "text": "Esse dolore ea mollit exercitation sit est proident mollit magna irure veniam ut do commodo ipsum. Esse amet minim consequat nulla dolor officia veniam in dolore qui."
-        }
-      }
-    ]
-  },
-  "newsletterDisclaimer": {
-    "__TYPE__": "StructuredTextContent",
-    "value": [
-      {
-        "type": "paragraph",
-        "content": {
-          "text": "Velit eiusmod ex ex. Nulla ea elit sit qui culpa eu cillum."
-        }
-      }
-    ]
   }
 }

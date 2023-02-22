@@ -27,25 +27,14 @@
       }
     },
     "settings": {
-      "newsletterDescription": {
-        "config": {
-          "patternType": "PARAGRAPH",
-          "blocks": 1
-        }
-      },
-      "newsletterDisclaimer": {
-        "config": {
-          "patternType": "PARAGRAPH",
-          "blocks": 1
-        }
-      },
       "siteTitle": {
         "config": {
           "patternType": "HEADING",
           "blocks": 1
         }
       }
-    }
+    },
+    "footer": {}
   },
   "slices": {
     "Text": {
@@ -58,14 +47,6 @@
             }
           }
         }
-      }
-    },
-    "Image": {
-      "default": {
-        "primary": {}
-      },
-      "white": {
-        "primary": {}
       }
     },
     "Quote": {
@@ -85,50 +66,13 @@
         "primary": {}
       }
     },
-    "TextWithImage": {
-      "default": {
-        "primary": {
-          "text": {
-            "config": {
-              "patternType": "PARAGRAPH",
-              "blocks": 1
-            }
-          }
-        }
-      }
-    },
-    "TextWithFeatures": {
-      "default": {
-        "primary": {
-          "text": {
-            "config": {
-              "patternType": "PARAGRAPH",
-              "blocks": 1
-            }
-          }
-        },
-        "items": {
-          "featureDescription": {
-            "config": {
-              "patternType": "PARAGRAPH",
-              "blocks": 1
-            }
-          }
-        }
-      }
-    },
     "Hero": {
       "default": {
-        "primary": {
-          "text": {
-            "config": {
-              "patternType": "PARAGRAPH",
-              "blocks": 1
-            }
-          }
-        }
-      },
-      "withButton": {
+        "primary": {}
+      }
+    },
+    "Social": {
+      "default": {
         "primary": {}
       }
     }

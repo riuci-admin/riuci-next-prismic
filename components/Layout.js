@@ -5,17 +5,16 @@ export const Layout = ({
   alternateLanguages,
   navigation,
   settings,
+  footer,
   children,
-}) => {
-  return (
-    <div className="text-slate-800">
-      <Header
-        alternateLanguages={alternateLanguages}
-        navigation={navigation}
-        settings={settings}
-      />
-      <main>{children}</main>
-      <Footer settings={settings} />
-    </div>
-  );
-};
+}) => (
+  <div className="relative min-h-screen">
+    <Header
+      alternateLanguages={alternateLanguages}
+      navigation={navigation}
+      settings={settings}
+    />
+    <main className="pb-28">{children}</main>
+    <Footer footer={footer} />
+  </div>
+);

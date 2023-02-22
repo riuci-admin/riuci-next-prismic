@@ -1,0 +1,35 @@
+{
+  "id": "footer",
+  "label": "Footer",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "text": {
+        "type": "Text",
+        "config": {
+          "label": "Text",
+          "placeholder": ""
+        }
+      },
+      "email": {
+        "type": "Text",
+        "config": {
+          "label": "Email",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "social": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

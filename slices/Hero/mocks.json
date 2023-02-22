@@ -3,28 +3,27 @@
     "__TYPE__": "SharedSliceContent",
     "variation": "default",
     "primary": {
-      "text": {
+      "title": {
         "__TYPE__": "StructuredTextContent",
         "value": [
           {
-            "type": "paragraph",
+            "type": "heading1",
             "content": {
-              "text": "Exercitation sint amet quis do aute in esse anim nostrud."
+              "text": "However"
             }
           }
         ]
       },
-      "image": {
-        "__TYPE__": "ImageContent",
+      "background": {
         "origin": {
           "id": "main",
-          "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
-          "width": 5243,
-          "height": 3495
+          "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea",
+          "width": 5000,
+          "height": 4613
         },
-        "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
-        "width": 5243,
-        "height": 3495,
+        "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea",
+        "width": 5000,
+        "height": 4613,
         "edit": {
           "zoom": 1,
           "crop": {
@@ -33,63 +32,21 @@
           },
           "background": "transparent"
         },
+        "credits": null,
+        "alt": null,
+        "__TYPE__": "ImageContent",
         "thumbnails": {}
-      }
-    },
-    "items": [
-      {
-        "__TYPE__": "GroupItemContent",
-        "value": []
-      }
-    ]
-  },
-  {
-    "__TYPE__": "SharedSliceContent",
-    "variation": "withButton",
-    "primary": {
+      },
       "text": {
         "__TYPE__": "StructuredTextContent",
         "value": [
           {
             "type": "paragraph",
             "content": {
-              "text": "Pariatur nulla enim dolor consequat voluptate. Cillum cupidatat anim excepteur eu aute ad ullamco cupidatat culpa pariatur duis quis. Elit commodo nostrud qui consectetur amet ullamco deserunt eiusmod incididunt officia commodo pariatur."
+              "text": "Officia elit dolore anim officia amet. Nisi minim veniam fugiat irure ullamco pariatur consequat pariatur eiusmod pariatur velit esse. Est aliqua proident irure elit reprehenderit labore officia cupidatat ut minim proident."
             }
           }
         ]
-      },
-      "buttonText": {
-        "__TYPE__": "FieldContent",
-        "value": "slipped",
-        "type": "Text"
-      },
-      "buttonLink": {
-        "__TYPE__": "LinkContent",
-        "value": {
-          "__TYPE__": "ExternalLink",
-          "url": "http://google.com"
-        }
-      },
-      "image": {
-        "__TYPE__": "ImageContent",
-        "origin": {
-          "id": "main",
-          "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468",
-          "width": 4000,
-          "height": 6000
-        },
-        "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468",
-        "width": 4000,
-        "height": 6000,
-        "edit": {
-          "zoom": 1,
-          "crop": {
-            "x": 0,
-            "y": 0
-          },
-          "background": "transparent"
-        },
-        "thumbnails": {}
       }
     },
     "items": [

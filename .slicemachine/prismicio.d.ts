@@ -6,6 +6,57 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
     [KeyType in keyof T]: T[KeyType];
 };
+/** Content for Footer documents */
+interface FooterDocumentData {
+    /**
+     * Text field in *Footer*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.text
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    text: prismicT.KeyTextField;
+    /**
+     * Email field in *Footer*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.email
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    email: prismicT.KeyTextField;
+    /**
+     * Slice Zone field in *Footer*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<FooterDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Footer → Slice Zone*
+ *
+ */
+type FooterDocumentDataSlicesSlice = SocialSlice;
+/**
+ * Footer document from Prismic
+ *
+ * - **API ID**: `footer`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FooterDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<FooterDocumentData>, "footer", Lang>;
 /** Content for Navigation documents */
 interface NavigationDocumentData {
     /**
@@ -85,7 +136,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = HeroSlice | ImageSlice | TextWithFeaturesSlice | TextWithImageSlice;
+type PageDocumentDataSlicesSlice = HeroSlice;
 /**
  * Page document from Prismic
  *
@@ -120,28 +171,6 @@ interface SettingsDocumentData {
      *
      */
     logo: prismicT.ImageField<never>;
-    /**
-     * Newsletter Description field in *Settings*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: Text above the sign up form
-     * - **API ID Path**: settings.newsletterDescription
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    newsletterDescription: prismicT.RichTextField;
-    /**
-     * Newsletter Disclaimer field in *Settings*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: Small text below sign up form
-     * - **API ID Path**: settings.newsletterDisclaimer
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    newsletterDisclaimer: prismicT.RichTextField;
 }
 /**
  * Settings document from Prismic
@@ -153,32 +182,42 @@ interface SettingsDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type SettingsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<SettingsDocumentData>, "settings", Lang>;
-export type AllDocumentTypes = NavigationDocument | PageDocument | SettingsDocument;
+export type AllDocumentTypes = FooterDocument | NavigationDocument | PageDocument | SettingsDocument;
 /**
  * Primary content in Hero → Primary
  *
  */
 interface HeroSliceDefaultPrimary {
     /**
+     * Title field in *Hero → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: hero.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
      * Text field in *Hero → Primary*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: Introductory text for the page
+     * - **Placeholder**: *None*
      * - **API ID Path**: hero.primary.text
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
     text: prismicT.RichTextField;
     /**
-     * Image field in *Hero → Primary*
+     * Background field in *Hero → Primary*
      *
      * - **Field Type**: Image
      * - **Placeholder**: *None*
-     * - **API ID Path**: hero.primary.image
+     * - **API ID Path**: hero.primary.background
      * - **Documentation**: https://prismic.io/docs/core-concepts/image
      *
      */
-    image: prismicT.ImageField<never>;
+    background: prismicT.ImageField<never>;
 }
 /**
  * Default variation for Hero Slice
@@ -190,65 +229,10 @@ interface HeroSliceDefaultPrimary {
  */
 export type HeroSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<HeroSliceDefaultPrimary>, never>;
 /**
- * Primary content in Hero → Primary
- *
- */
-interface HeroSliceWithButtonPrimary {
-    /**
-     * Text field in *Hero → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: Introductory text for the page
-     * - **API ID Path**: hero.primary.text
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    text: prismicT.RichTextField;
-    /**
-     * Button Text field in *Hero → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: hero.primary.buttonText
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    buttonText: prismicT.KeyTextField;
-    /**
-     * Button Link field in *Hero → Primary*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: hero.primary.buttonLink
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    buttonLink: prismicT.LinkField;
-    /**
-     * Image field in *Hero → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: hero.primary.image
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    image: prismicT.ImageField<never>;
-}
-/**
- * With Button variation for Hero Slice
- *
- * - **API ID**: `withButton`
- * - **Description**: `Hero`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type HeroSliceWithButton = prismicT.SharedSliceVariation<"withButton", Simplify<HeroSliceWithButtonPrimary>, never>;
-/**
  * Slice variation for *Hero*
  *
  */
-type HeroSliceVariation = HeroSliceDefault | HeroSliceWithButton;
+type HeroSliceVariation = HeroSliceDefault;
 /**
  * Hero Shared Slice
  *
@@ -259,210 +243,49 @@ type HeroSliceVariation = HeroSliceDefault | HeroSliceWithButton;
  */
 export type HeroSlice = prismicT.SharedSlice<"hero", HeroSliceVariation>;
 /**
- * Primary content in Image → Primary
+ * Item in Social → Items
  *
  */
-interface ImageSliceWhitePrimary {
+export interface SocialSliceDefaultItem {
     /**
-     * Image field in *Image → Primary*
+     * Platform field in *Social → Items*
      *
-     * - **Field Type**: Image
+     * - **Field Type**: Link
      * - **Placeholder**: *None*
-     * - **API ID Path**: image.primary.image
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     * - **API ID Path**: social.items[].platform
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
      *
      */
-    image: prismicT.ImageField<never>;
-    /**
-     * With Accent field in *Image → Primary*
-     *
-     * - **Field Type**: Boolean
-     * - **Placeholder**: *None*
-     * - **Default Value**: true
-     * - **API ID Path**: image.primary.withAccent
-     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
-     *
-     */
-    withAccent: prismicT.BooleanField;
+    platform: prismicT.LinkField;
 }
 /**
- * White variation for Image Slice
- *
- * - **API ID**: `white`
- * - **Description**: `Image`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type ImageSliceWhite = prismicT.SharedSliceVariation<"white", Simplify<ImageSliceWhitePrimary>, never>;
-/**
- * Primary content in Image → Primary
- *
- */
-interface ImageSliceLightSlatePrimary {
-    /**
-     * Image field in *Image → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: image.primary.image
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    image: prismicT.ImageField<never>;
-    /**
-     * With Accent field in *Image → Primary*
-     *
-     * - **Field Type**: Boolean
-     * - **Placeholder**: *None*
-     * - **Default Value**: true
-     * - **API ID Path**: image.primary.withAccent
-     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
-     *
-     */
-    withAccent: prismicT.BooleanField;
-}
-/**
- * Light Slate variation for Image Slice
- *
- * - **API ID**: `lightSlate`
- * - **Description**: `Image`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type ImageSliceLightSlate = prismicT.SharedSliceVariation<"lightSlate", Simplify<ImageSliceLightSlatePrimary>, never>;
-/**
- * Slice variation for *Image*
- *
- */
-type ImageSliceVariation = ImageSliceWhite | ImageSliceLightSlate;
-/**
- * Image Shared Slice
- *
- * - **API ID**: `image`
- * - **Description**: `Image`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type ImageSlice = prismicT.SharedSlice<"image", ImageSliceVariation>;
-/**
- * Primary content in TextWithFeatures → Primary
- *
- */
-interface TextWithFeaturesSliceDefaultPrimary {
-    /**
-     * Icon field in *TextWithFeatures → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: text_with_features.primary.icon
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    icon: prismicT.ImageField<never>;
-    /**
-     * Text field in *TextWithFeatures → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: Primary text with rich formatting
-     * - **API ID Path**: text_with_features.primary.text
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    text: prismicT.RichTextField;
-}
-/**
- * Item in TextWithFeatures → Items
- *
- */
-export interface TextWithFeaturesSliceDefaultItem {
-    /**
-     * Feature Description field in *TextWithFeatures → Items*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: Description of a feature
-     * - **API ID Path**: text_with_features.items[].featureDescription
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    featureDescription: prismicT.RichTextField;
-}
-/**
- * Default variation for TextWithFeatures Slice
+ * Default variation for Social Slice
  *
  * - **API ID**: `default`
- * - **Description**: `TextWithFeatures`
+ * - **Description**: `Social`
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type TextWithFeaturesSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<TextWithFeaturesSliceDefaultPrimary>, Simplify<TextWithFeaturesSliceDefaultItem>>;
+export type SocialSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<SocialSliceDefaultItem>>;
 /**
- * Slice variation for *TextWithFeatures*
+ * Slice variation for *Social*
  *
  */
-type TextWithFeaturesSliceVariation = TextWithFeaturesSliceDefault;
+type SocialSliceVariation = SocialSliceDefault;
 /**
- * TextWithFeatures Shared Slice
+ * Social Shared Slice
  *
- * - **API ID**: `text_with_features`
- * - **Description**: `TextWithFeatures`
+ * - **API ID**: `social`
+ * - **Description**: `Social`
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type TextWithFeaturesSlice = prismicT.SharedSlice<"text_with_features", TextWithFeaturesSliceVariation>;
-/**
- * Primary content in TextWithImage → Primary
- *
- */
-interface TextWithImageSliceDefaultPrimary {
-    /**
-     * Text field in *TextWithImage → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: Text displayed next to image
-     * - **API ID Path**: text_with_image.primary.text
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    text: prismicT.RichTextField;
-    /**
-     * Image field in *TextWithImage → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: text_with_image.primary.image
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    image: prismicT.ImageField<never>;
-}
-/**
- * Default variation for TextWithImage Slice
- *
- * - **API ID**: `default`
- * - **Description**: `TextWithImage`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type TextWithImageSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<TextWithImageSliceDefaultPrimary>, never>;
-/**
- * Slice variation for *TextWithImage*
- *
- */
-type TextWithImageSliceVariation = TextWithImageSliceDefault;
-/**
- * TextWithImage Shared Slice
- *
- * - **API ID**: `text_with_image`
- * - **Description**: `TextWithImage`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type TextWithImageSlice = prismicT.SharedSlice<"text_with_image", TextWithImageSliceVariation>;
+export type SocialSlice = prismicT.SharedSlice<"social", SocialSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceWithButtonPrimary, HeroSliceWithButton, HeroSliceVariation, HeroSlice, ImageSliceWhitePrimary, ImageSliceWhite, ImageSliceLightSlatePrimary, ImageSliceLightSlate, ImageSliceVariation, ImageSlice, TextWithFeaturesSliceDefaultPrimary, TextWithFeaturesSliceDefaultItem, TextWithFeaturesSliceDefault, TextWithFeaturesSliceVariation, TextWithFeaturesSlice, TextWithImageSliceDefaultPrimary, TextWithImageSliceDefault, TextWithImageSliceVariation, TextWithImageSlice };
+        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, SocialSliceDefaultItem, SocialSliceDefault, SocialSliceVariation, SocialSlice };
     }
 }

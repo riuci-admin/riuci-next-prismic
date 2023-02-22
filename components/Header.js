@@ -3,7 +3,6 @@ import { PrismicLink, PrismicText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 
 import { linkResolver } from "../prismicio";
-import { Bounded } from "./Bounded";
 
 const FlagIcon = ({ lang }) => {
   const code = lang.substring(3).toLowerCase();
@@ -13,24 +12,24 @@ const FlagIcon = ({ lang }) => {
 
 export const Header = ({ alternateLanguages = [], navigation, settings }) => {
   return (
-    <Bounded as="header" yPadding="sm">
-      <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3 leading-none">
+    <header className="h-24 bg-green-50 py-5">
+      <div className="frame flex">
         <PrismicLink href="/">
           {prismicH.isFilled.image(settings.data.logo) && (
             <div className="flex items-center">
               <PrismicNextImage field={settings.data.logo} />
-              <div className="text-5xl font-bold tracking-tight text-green">
+              <div className="text-5xl font-bold tracking-tight text-green-dark">
                 RIUCI
               </div>
             </div>
           )}
         </PrismicLink>
-        <nav>
-          <ul className="flex flex-wrap gap-6 md:gap-10">
+        <nav className="flex flex-grow items-center justify-end">
+          <ul className="flex gap-6">
             {navigation.data?.links.map((item) => (
               <li
                 key={prismicH.asText(item.label)}
-                className="text-slate-800 font-semibold tracking-tight"
+                className="font-semibold tracking-tight text-green-dark hover:text-green-medium"
               >
                 <PrismicLink field={item.link}>
                   <PrismicText field={item.label} />
@@ -48,6 +47,6 @@ export const Header = ({ alternateLanguages = [], navigation, settings }) => {
           </ul>
         </nav>
       </div>
-    </Bounded>
+    </header>
   );
 };

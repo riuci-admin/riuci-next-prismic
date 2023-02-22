@@ -1,0 +1,43 @@
+{
+  "text": {
+    "__TYPE__": "FieldContent",
+    "value": "hit",
+    "type": "Text"
+  },
+  "email": {
+    "__TYPE__": "FieldContent",
+    "value": "touch",
+    "type": "Text"
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "social$def8a1aa-0ba3-4177-a643-8a23a807ca4b",
+        "name": "social",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {},
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "platform",
+                  {
+                    "__TYPE__": "LinkContent",
+                    "value": {
+                      "__TYPE__": "ExternalLink",
+                      "url": "https://slicemachine.dev"
+                    }
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
