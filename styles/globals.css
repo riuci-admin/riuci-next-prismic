@@ -9,7 +9,7 @@
     @apply text-base;
   }
   p {
-    @apply text-slate-800;
+    @apply pb-4 text-gray-900 last:pb-0;
   }
   .frame {
     @apply container mx-auto max-w-6xl px-5;

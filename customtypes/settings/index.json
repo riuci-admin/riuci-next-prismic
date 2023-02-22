@@ -5,21 +5,26 @@
   "status": true,
   "json": {
     "Main": {
-      "siteTitle": {
-        "type": "StructuredText",
-        "config": {
-          "label": "Site Title",
-          "placeholder": "Title of the site",
-          "allowTargetBlank": false,
-          "single": "heading1"
-        }
-      },
       "logo": {
         "type": "Image",
         "config": {
           "constraint": {},
           "thumbnails": [],
           "label": "Logo"
+        }
+      },
+      "logo_title": {
+        "type": "Text",
+        "config": {
+          "label": "Logo Title",
+          "placeholder": ""
+        }
+      },
+      "logo_subtitle": {
+        "type": "Text",
+        "config": {
+          "label": "Logo Subtitle",
+          "placeholder": ""
         }
       }
     }

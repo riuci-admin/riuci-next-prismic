@@ -1,26 +1,15 @@
 {
-  "siteTitle": {
-    "__TYPE__": "StructuredTextContent",
-    "value": [
-      {
-        "type": "heading1",
-        "content": {
-          "text": "Train"
-        }
-      }
-    ]
-  },
   "logo": {
     "__TYPE__": "ImageContent",
     "origin": {
       "id": "main",
-      "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
-      "width": 8640,
-      "height": 8640
+      "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea",
+      "width": 5000,
+      "height": 4613
     },
-    "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
-    "width": 8640,
-    "height": 8640,
+    "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea",
+    "width": 5000,
+    "height": 4613,
     "edit": {
       "zoom": 1,
       "crop": {
@@ -30,5 +19,15 @@
       "background": "transparent"
     },
     "thumbnails": {}
+  },
+  "logo_title": {
+    "__TYPE__": "FieldContent",
+    "value": "partly",
+    "type": "Text"
+  },
+  "logo_subtitle": {
+    "__TYPE__": "FieldContent",
+    "value": "hang",
+    "type": "Text"
   }
 }

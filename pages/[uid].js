@@ -15,10 +15,7 @@ const Page = ({ page, navigation, settings, footer }) => {
       footer={footer}
     >
       <Head>
-        <title>
-          {prismicH.asText(page.data.title)} |{" "}
-          {prismicH.asText(settings.data.siteTitle)}
-        </title>
+        <title>{prismicH.asText(page.data.title)}</title>
       </Head>
       <SliceZone slices={page.data.slices} components={components} />
     </Layout>

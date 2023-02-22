@@ -1,5 +1,11 @@
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { Inter } from "@next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
 
 export const Layout = ({
   alternateLanguages,
@@ -8,7 +14,7 @@ export const Layout = ({
   footer,
   children,
 }) => (
-  <div className="relative min-h-screen">
+  <div className={`${inter.variable} relative min-h-screen font-inter`}>
     <Header
       alternateLanguages={alternateLanguages}
       navigation={navigation}
