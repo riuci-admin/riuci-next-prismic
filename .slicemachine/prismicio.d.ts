@@ -302,15 +302,25 @@ export type ResearchLinesSlice = prismicT.SharedSlice<"research_lines", Research
  */
 export interface SocialSliceDefaultItem {
     /**
-     * Platform field in *Social → Items*
+     * Platform Link field in *Social → Items*
      *
      * - **Field Type**: Link
      * - **Placeholder**: *None*
-     * - **API ID Path**: social.items[].platform
+     * - **API ID Path**: social.items[].platform_link
      * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
      *
      */
-    platform: prismicT.LinkField;
+    platform_link: prismicT.LinkField;
+    /**
+     * Icon field in *Social → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: social.items[].icon
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    icon: prismicT.KeyTextField;
 }
 /**
  * Default variation for Social Slice

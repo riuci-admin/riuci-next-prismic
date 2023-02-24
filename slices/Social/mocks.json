@@ -8,7 +8,15 @@
         "__TYPE__": "GroupItemContent",
         "value": [
           [
-            "platform",
+            "icon",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "nothing",
+              "type": "Text"
+            }
+          ],
+          [
+            "platform_link",
             {
               "__TYPE__": "LinkContent",
               "value": {

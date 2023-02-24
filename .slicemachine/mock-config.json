@@ -66,10 +66,17 @@
     },
     "Social": {
       "default": {
-        "primary": {}
+        "primary": {},
+        "items": {}
       }
     },
     "ResearchLines": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "SocialShare": {
       "default": {
         "primary": {},
         "items": {}

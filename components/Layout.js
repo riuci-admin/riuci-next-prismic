@@ -20,7 +20,7 @@ export const Layout = ({
       navigation={navigation}
       settings={settings}
     />
-    <main className="pb-28">{children}</main>
+    <main className="pb-48">{children}</main>
     <Footer footer={footer} />
   </div>
 );

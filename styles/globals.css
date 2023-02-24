@@ -6,16 +6,19 @@
 
 @layer base {
   body {
-    @apply text-base;
+    @apply text-base text-gray-900;
+  }
+  section {
+    @apply py-16 first:pt-7;
   }
   h1 {
-    @apply mb-5 text-4xl font-semibold text-green-dark;
+    @apply mb-5 text-4xl font-semibold;
   }
   h2 {
-    @apply mb-5 text-3xl font-semibold text-green-dark;
+    @apply mb-5 text-3xl font-semibold;
   }
   p {
-    @apply pb-4 leading-normal text-gray-900 last:pb-0;
+    @apply pb-4 leading-normal last:pb-0;
   }
   .frame {
     @apply container mx-auto max-w-6xl px-5;

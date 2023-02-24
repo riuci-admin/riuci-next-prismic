@@ -8,7 +8,7 @@ import RichText from "components/RichText";
  * @param { HeroProps }
  */
 const Hero = ({ slice }) => (
-  <section className="bg-green-50 py-8">
+  <section className="bg-green-light">
     <div className="frame grid grid-cols-2 gap-10">
       <div>
         <RichText field={slice.primary.title} />

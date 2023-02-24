@@ -12,7 +12,7 @@ const FlagIcon = ({ lang }) => {
 
 export const Header = ({ alternateLanguages = [], navigation, settings }) => {
   return (
-    <header className="bg-green-50 py-5">
+    <header className="bg-green-light py-5">
       <div className="frame flex">
         <PrismicLink href="/">
           {prismicH.isFilled.image(settings.data.logo) && (
@@ -26,7 +26,7 @@ export const Header = ({ alternateLanguages = [], navigation, settings }) => {
             {navigation.data?.links.map((item) => (
               <li
                 key={prismicH.asText(item.label)}
-                className="font-semibold tracking-tight text-green-dark hover:text-green-medium"
+                className="text-lg font-semibold tracking-tight text-green-dark hover:text-green-soft"
               >
                 <PrismicLink field={item.link}>
                   <PrismicText field={item.label} />
@@ -34,7 +34,7 @@ export const Header = ({ alternateLanguages = [], navigation, settings }) => {
               </li>
             ))}
             {alternateLanguages.map((lang) => (
-              <li key={lang.lang}>
+              <li className="flex items-center" key={lang.lang}>
                 <PrismicLink href={linkResolver(lang)} locale={lang.lang}>
                   <span className="sr-only">{lang.lang}</span>
                   <FlagIcon lang={lang.lang} />

@@ -5,5 +5,5 @@ export default {
 }
 
 
-export const _Default = () => <MyComponent slice={{"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"platform":{"link_type":"Web","url":"https://slicemachine.dev"}}],"primary":{},"id":"_Default","slice_type":"social"}} />
+export const _Default = () => <MyComponent slice={{"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"platform_link":{"link_type":"Web","url":"https://slicemachine.dev"},"icon":"nothing"}],"primary":{},"id":"_Default","slice_type":"social"}} />
 _Default.storyName = ''
