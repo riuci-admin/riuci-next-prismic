@@ -12,7 +12,7 @@ const Social = ({ slice }) => (
           href={item.platform_link.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-2xl"
+          className="text-2xl hover:text-green-soft"
         >
           <i className={`fa-brands fa-${item.icon}`}></i>
         </a>

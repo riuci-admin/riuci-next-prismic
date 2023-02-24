@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply text-base text-gray-900;
+    @apply text-base text-neutral-900;
   }
   section {
     @apply py-16 first:pt-7;

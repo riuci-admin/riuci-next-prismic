@@ -12,11 +12,11 @@ const FlagIcon = ({ lang }) => {
 
 export const Header = ({ alternateLanguages = [], navigation, settings }) => {
   return (
-    <header className="bg-green-light py-5">
+    <header className="sticky top-0 z-30 bg-green-light py-4 shadow-lg">
       <div className="frame flex">
         <PrismicLink href="/">
           {prismicH.isFilled.image(settings.data.logo) && (
-            <div className="flex items-center">
+            <div className="flex w-32 items-center">
               <PrismicNextImage field={settings.data.logo} />
             </div>
           )}

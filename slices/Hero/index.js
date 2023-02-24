@@ -9,12 +9,12 @@ import RichText from "components/RichText";
  */
 const Hero = ({ slice }) => (
   <section className="bg-green-light">
-    <div className="frame grid grid-cols-2 gap-10">
+    <div className="frame grid grid-cols-2 gap-10 pt-10">
       <div>
         <RichText field={slice.primary.title} />
         <RichText field={slice.primary.text} />
       </div>
-      <div className="">
+      <div>
         <PrismicNextImage field={slice.primary.background} />
       </div>
     </div>
