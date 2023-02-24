@@ -12,20 +12,6 @@
           "thumbnails": [],
           "label": "Logo"
         }
-      },
-      "logo_title": {
-        "type": "Text",
-        "config": {
-          "label": "Logo Title",
-          "placeholder": ""
-        }
-      },
-      "logo_subtitle": {
-        "type": "Text",
-        "config": {
-          "label": "Logo Subtitle",
-          "placeholder": ""
-        }
       }
     }
   }

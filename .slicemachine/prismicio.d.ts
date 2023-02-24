@@ -136,7 +136,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = HeroSlice;
+type PageDocumentDataSlicesSlice = HeroSlice | ResearchLinesSlice;
 /**
  * Page document from Prismic
  *
@@ -160,28 +160,6 @@ interface SettingsDocumentData {
      *
      */
     logo: prismicT.ImageField<never>;
-    /**
-     * Logo Title field in *Settings*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: settings.logo_title
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    logo_title: prismicT.KeyTextField;
-    /**
-     * Logo Subtitle field in *Settings*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: settings.logo_subtitle
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    logo_subtitle: prismicT.KeyTextField;
 }
 /**
  * Settings document from Prismic
@@ -254,6 +232,71 @@ type HeroSliceVariation = HeroSliceDefault;
  */
 export type HeroSlice = prismicT.SharedSlice<"hero", HeroSliceVariation>;
 /**
+ * Primary content in ResearchLines → Primary
+ *
+ */
+interface ResearchLinesSliceDefaultPrimary {
+    /**
+     * Title field in *ResearchLines → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: research_lines.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+}
+/**
+ * Item in ResearchLines → Items
+ *
+ */
+export interface ResearchLinesSliceDefaultItem {
+    /**
+     * Topic field in *ResearchLines → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: research_lines.items[].topic
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    topic: prismicT.KeyTextField;
+    /**
+     * Icon field in *ResearchLines → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: research_lines.items[].icon
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    icon: prismicT.KeyTextField;
+}
+/**
+ * Default variation for ResearchLines Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `ResearchLines`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ResearchLinesSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<ResearchLinesSliceDefaultPrimary>, Simplify<ResearchLinesSliceDefaultItem>>;
+/**
+ * Slice variation for *ResearchLines*
+ *
+ */
+type ResearchLinesSliceVariation = ResearchLinesSliceDefault;
+/**
+ * ResearchLines Shared Slice
+ *
+ * - **API ID**: `research_lines`
+ * - **Description**: `ResearchLines`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ResearchLinesSlice = prismicT.SharedSlice<"research_lines", ResearchLinesSliceVariation>;
+/**
  * Item in Social → Items
  *
  */
@@ -297,6 +340,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, SocialSliceDefaultItem, SocialSliceDefault, SocialSliceVariation, SocialSlice };
+        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, ResearchLinesSliceDefaultPrimary, ResearchLinesSliceDefaultItem, ResearchLinesSliceDefault, ResearchLinesSliceVariation, ResearchLinesSlice, SocialSliceDefaultItem, SocialSliceDefault, SocialSliceVariation, SocialSlice };
     }
 }

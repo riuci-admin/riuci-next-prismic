@@ -1,14 +1,8 @@
 import * as prismicH from "@prismicio/helpers";
 import { PrismicLink, PrismicText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
-import { Montserrat } from "@next/font/google";
 
-import { linkResolver } from "../prismicio";
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  variable: "--font-montserrat",
-});
+import { linkResolver } from "prismicio";
 
 const FlagIcon = ({ lang }) => {
   const code = lang.substring(3).toLowerCase();
@@ -18,22 +12,12 @@ const FlagIcon = ({ lang }) => {
 
 export const Header = ({ alternateLanguages = [], navigation, settings }) => {
   return (
-    <header
-      className={`${montserrat.variable} h-24 bg-green-50 py-5 font-montserrat`}
-    >
+    <header className="bg-green-50 py-5">
       <div className="frame flex">
         <PrismicLink href="/">
           {prismicH.isFilled.image(settings.data.logo) && (
             <div className="flex items-center">
               <PrismicNextImage field={settings.data.logo} />
-              <div className="ml-1 flex flex-col">
-                <div className="text-5xl font-bold tracking-tight text-green-dark">
-                  {settings.data.logo_title}
-                </div>
-                <div className="text-center text-2xl font-semibold italic tracking-tight text-green-soft">
-                  {settings.data.logo_subtitle}
-                </div>
-              </div>
             </div>
           )}
         </PrismicLink>

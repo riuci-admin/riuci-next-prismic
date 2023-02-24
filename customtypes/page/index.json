@@ -28,6 +28,9 @@
           "choices": {
             "hero": {
               "type": "SharedSlice"
+            },
+            "research_lines": {
+              "type": "SharedSlice"
             }
           }
         }

@@ -68,6 +68,12 @@
       "default": {
         "primary": {}
       }
+    },
+    "ResearchLines": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
     }
   }
 }

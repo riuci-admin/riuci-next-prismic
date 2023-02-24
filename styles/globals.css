@@ -8,8 +8,14 @@
   body {
     @apply text-base;
   }
+  h1 {
+    @apply mb-5 text-4xl font-semibold text-green-dark;
+  }
+  h2 {
+    @apply mb-5 text-3xl font-semibold text-green-dark;
+  }
   p {
-    @apply pb-4 text-gray-900 last:pb-0;
+    @apply pb-4 leading-normal text-gray-900 last:pb-0;
   }
   .frame {
     @apply container mx-auto max-w-6xl px-5;
