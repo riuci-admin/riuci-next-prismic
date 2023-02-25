@@ -19,6 +19,20 @@
           "placeholder": ""
         }
       },
+      "bamboo": {
+        "type": "Text",
+        "config": {
+          "label": "Bamboo",
+          "placeholder": ""
+        }
+      },
+      "riuci_description": {
+        "type": "Text",
+        "config": {
+          "label": "RIUCI Description",
+          "placeholder": ""
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

@@ -1,19 +1,29 @@
 {
   "text": {
     "__TYPE__": "FieldContent",
-    "value": "hit",
+    "value": "donkey",
     "type": "Text"
   },
   "email": {
     "__TYPE__": "FieldContent",
-    "value": "touch",
+    "value": "parent",
+    "type": "Text"
+  },
+  "bamboo": {
+    "__TYPE__": "FieldContent",
+    "value": "busy",
+    "type": "Text"
+  },
+  "riuci_description": {
+    "__TYPE__": "FieldContent",
+    "value": "chicken",
     "type": "Text"
   },
   "slices": {
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "social$def8a1aa-0ba3-4177-a643-8a23a807ca4b",
+        "key": "social$9449e0aa-8f4a-4630-af52-13c7a46c633e",
         "name": "social",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -24,13 +34,21 @@
               "__TYPE__": "GroupItemContent",
               "value": [
                 [
-                  "platform",
+                  "platform_link",
                   {
                     "__TYPE__": "LinkContent",
                     "value": {
                       "__TYPE__": "ExternalLink",
-                      "url": "https://slicemachine.dev"
+                      "url": "https://prismic.io"
                     }
+                  }
+                ],
+                [
+                  "icon",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "grabbed",
+                    "type": "Text"
                   }
                 ]
               ]
