@@ -16,7 +16,7 @@ const ResearchLines = ({ slice }) => (
               {item.icon === "bamboo" ? (
                 <BambooSVG />
               ) : (
-                <i className={`fa-solid fa-${item.icon}`}></i>
+                <i className={`fa-solid fa-${item.icon} mt-1`}></i>
               )}
             </span>
             <span className="col-span-5">{item.topic}</span>
