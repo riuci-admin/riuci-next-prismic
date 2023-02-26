@@ -2,7 +2,12 @@ import { SliceZone } from "@prismicio/react";
 import { components } from "slices";
 
 export const Footer = ({ footer }) => (
-  <footer className="absolute bottom-0 flex h-72 w-full flex-col items-center justify-center bg-neutral-600 bg-[url('https://images.prismic.io/riuci/91732760-c850-462f-aad4-62a89b3fccbd_world-map.png?auto=compress,format')] bg-center bg-top bg-no-repeat text-sm text-white">
+  <footer
+    style={{
+      backgroundImage: `url('${footer.data.background.url}&bri=60')`,
+    }}
+    className="absolute bottom-0 flex h-72 w-full flex-col items-center justify-center bg-neutral-700 bg-center text-sm text-white"
+  >
     <div className="text-center">
       <div className="pb-1">{footer.data.text}</div>
       <div>

@@ -53,6 +53,17 @@ interface FooterDocumentData {
      */
     riuci_description: prismicT.KeyTextField;
     /**
+     * Background field in *Footer*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.background
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    background: prismicT.ImageField<never>;
+    /**
      * Slice Zone field in *Footer*
      *
      * - **Field Type**: Slice Zone
@@ -318,55 +329,6 @@ type ResearchLinesSliceVariation = ResearchLinesSliceDefault;
  *
  */
 export type ResearchLinesSlice = prismicT.SharedSlice<"research_lines", ResearchLinesSliceVariation>;
-/**
- * Item in Social → Items
- *
- */
-export interface SocialSliceDefaultItem {
-    /**
-     * Platform Link field in *Social → Items*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: social.items[].platform_link
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    platform_link: prismicT.LinkField;
-    /**
-     * Icon field in *Social → Items*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: social.items[].icon
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    icon: prismicT.KeyTextField;
-}
-/**
- * Default variation for Social Slice
- *
- * - **API ID**: `default`
- * - **Description**: `Social`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type SocialSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<SocialSliceDefaultItem>>;
-/**
- * Slice variation for *Social*
- *
- */
-type SocialSliceVariation = SocialSliceDefault;
-/**
- * Social Shared Slice
- *
- * - **API ID**: `social`
- * - **Description**: `Social`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type SocialSlice = prismicT.SharedSlice<"social", SocialSliceVariation>;
 /**
  * Item in Social → Items
  *

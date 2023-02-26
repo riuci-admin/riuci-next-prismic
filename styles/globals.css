@@ -9,10 +9,10 @@
     @apply text-base text-neutral-900;
   }
   section {
-    @apply py-16 first:pt-7;
+    @apply py-16;
   }
   h1 {
-    @apply mb-5 text-4xl font-semibold;
+    @apply mb-7 text-4xl font-semibold;
   }
   h2 {
     @apply mb-5 text-3xl font-semibold;

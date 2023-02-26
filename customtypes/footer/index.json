@@ -33,6 +33,14 @@
           "placeholder": ""
         }
       },
+      "background": {
+        "type": "Image",
+        "config": {
+          "label": "Background",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

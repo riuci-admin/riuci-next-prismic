@@ -1,6 +1,5 @@
 import React from "react";
-import { PrismicNextImage } from "@prismicio/next";
-import RichText from "components/RichText";
+import { PrismicRichText } from "@prismicio/react";
 
 /**
  * @typedef {import("@prismicio/client").Content.HeroSlice} HeroSlice
@@ -8,15 +7,15 @@ import RichText from "components/RichText";
  * @param { HeroProps }
  */
 const Hero = ({ slice }) => (
-  <section>
-    <div className="frame grid grid-cols-2 gap-10 pt-10">
-      <div>
-        <RichText field={slice.primary.title} />
-        <RichText field={slice.primary.text} />
-      </div>
-      <div>
-        <PrismicNextImage field={slice.primary.background} />
-      </div>
+  <section
+    style={{
+      backgroundImage: `url('${slice.primary.background.url}&w=1280&bri=-25&blur=35')`,
+    }}
+    className="w-full bg-cover bg-fixed"
+  >
+    <div className="frame flex max-w-2xl flex-col py-7 text-center text-white">
+      <PrismicRichText field={slice.primary.title} />
+      <PrismicRichText field={slice.primary.text} />
     </div>
   </section>
 );
