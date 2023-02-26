@@ -5,7 +5,7 @@ import React from "react";
  * @param { SocialProps }
  */
 const Social = ({ slice }) => (
-  <div className="flex flex-row gap-4 py-3">
+  <div className="flex flex-row gap-4 pt-2 pb-3">
     {slice.items.map((item, i) => (
       <div key={i}>
         <a
