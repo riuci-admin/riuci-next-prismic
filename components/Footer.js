@@ -6,7 +6,7 @@ export const Footer = ({ footer }) => (
     style={{
       backgroundImage: `url('${footer.data.background.url}&bri=60')`,
     }}
-    className="absolute bottom-0 flex h-72 w-full flex-col items-center justify-center bg-neutral-700 bg-center text-sm text-white"
+    className="absolute bottom-0 flex h-64 w-full flex-col items-center justify-center bg-neutral-700 bg-center text-sm text-white md:h-72"
   >
     <div className="text-center">
       <div className="pb-1">{footer.data.text}</div>
