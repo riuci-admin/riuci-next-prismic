@@ -12,6 +12,8 @@ const Hero = ({ slice }) => (
       backgroundImage: `url('${slice.primary.background.url}&w=1280&bri=-25&blur=35')`,
     }}
     className="w-full bg-cover bg-fixed"
+    role="img"
+    aria-label={slice.primary.background.alt}
   >
     <div className="frame flex max-w-2xl flex-col text-center text-white md:py-5 lg:py-7">
       <PrismicRichText field={slice.primary.title} />
