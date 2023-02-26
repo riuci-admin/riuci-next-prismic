@@ -1,5 +1,5 @@
-import React from "react";
 import { PrismicRichText } from "@prismicio/react";
+import React from "react";
 
 /**
  * @typedef {import("@prismicio/client").Content.HeroSlice} HeroSlice
