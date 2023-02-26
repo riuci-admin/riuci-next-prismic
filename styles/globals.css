@@ -21,6 +21,6 @@
     @apply pb-4 leading-normal last:pb-0;
   }
   .frame {
-    @apply container mx-auto max-w-6xl px-11;
+    @apply container mx-auto max-w-6xl px-6;
   }
 }
