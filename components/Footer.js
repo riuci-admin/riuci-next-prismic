@@ -4,7 +4,7 @@ import { components } from "slices";
 export const Footer = ({ footer }) => (
   <footer
     style={{
-      backgroundImage: `url('${footer.data.background.url}&bri=60')`,
+      backgroundImage: `url('${footer.data.background.url}&bri=100')`,
     }}
     className="absolute bottom-0 flex h-64 w-full flex-col items-center justify-center bg-neutral-700 bg-center text-sm text-white md:h-72"
   >
@@ -22,9 +22,8 @@ export const Footer = ({ footer }) => (
     <SliceZone slices={footer.data.slices} components={components} />
     <div className="mt-4 text-center text-xs text-neutral-400">
       <div className="w-[17rem]">{footer.data.riuci_description}</div>
-      <div className="mt-2">
-        RIUCI {footer.data.bamboo} © {new Date().getFullYear()}
-      </div>
+      <div className="mt-2">RIUCI {footer.data.bamboo}</div>
+      <div>© {new Date().getFullYear()}</div>
     </div>
   </footer>
 );
