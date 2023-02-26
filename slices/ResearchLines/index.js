@@ -1,3 +1,4 @@
+import BambooSVG from "components/BambooSVG";
 import React from "react";
 /**
  * @typedef {import("@prismicio/client").Content.ResearchLinesSlice} ResearchLinesSlice
@@ -12,7 +13,11 @@ const ResearchLines = ({ slice }) => (
         {slice.items.map((item, i) => (
           <div className="grid grid-cols-6" key={i}>
             <span className="text-3xl text-green-dark">
-              <i className={`fa-solid fa-${item.icon}`}></i>
+              {item.icon === "bamboo" ? (
+                <BambooSVG />
+              ) : (
+                <i className={`fa-solid fa-${item.icon}`}></i>
+              )}
             </span>
             <span className="col-span-5">{item.topic}</span>
           </div>
