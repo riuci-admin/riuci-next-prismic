@@ -1,35 +1,62 @@
 {
-  "links": {
-    "__TYPE__": "GroupContentType",
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "meet"
+  },
+  "name": {
+    "__TYPE__": "FieldContent",
+    "value": "hidden",
+    "type": "Text"
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
     "value": [
       {
-        "__TYPE__": "GroupItemContent",
-        "value": [
-          [
-            "label",
-            {
-              "__TYPE__": "StructuredTextContent",
-              "value": [
-                {
-                  "type": "heading3",
-                  "content": {
-                    "text": "Bridge"
-                  }
-                }
-              ]
-            }
-          ],
-          [
-            "link",
-            {
+        "key": "navigation_item$e8f4ff6d-7185-4bc2-843c-fef8a5ae515c",
+        "name": "navigation_item",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "name": {
+              "__TYPE__": "FieldContent",
+              "value": "stairs",
+              "type": "Text"
+            },
+            "link": {
               "__TYPE__": "LinkContent",
               "value": {
                 "__TYPE__": "ExternalLink",
                 "url": "http://twitter.com"
               }
             }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "child_name",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "contain",
+                    "type": "Text"
+                  }
+                ],
+                [
+                  "child_link",
+                  {
+                    "__TYPE__": "LinkContent",
+                    "value": {
+                      "__TYPE__": "ExternalLink",
+                      "url": "https://slicemachine.dev"
+                    }
+                  }
+                ]
+              ]
+            }
           ]
-        ]
+        }
       }
     ]
   }

@@ -31,6 +31,9 @@
             },
             "research_lines": {
               "type": "SharedSlice"
+            },
+            "text_block": {
+              "type": "SharedSlice"
             }
           }
         }

@@ -93,43 +93,33 @@ export type FooterDocument<Lang extends string = string> = prismicT.PrismicDocum
 /** Content for Navigation documents */
 interface NavigationDocumentData {
     /**
-     * Links field in *Navigation*
+     * Name field in *Navigation*
      *
-     * - **Field Type**: Group
+     * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: navigation.links[]
+     * - **API ID Path**: navigation.name
      * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    links: prismicT.GroupField<Simplify<NavigationDocumentDataLinksItem>>;
+    name: prismicT.KeyTextField;
+    /**
+     * Slice Zone field in *Navigation*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<NavigationDocumentDataSlicesSlice>;
 }
 /**
- * Item in Navigation → Links
+ * Slice for *Navigation → Slice Zone*
  *
  */
-export interface NavigationDocumentDataLinksItem {
-    /**
-     * Label field in *Navigation → Links*
-     *
-     * - **Field Type**: Title
-     * - **Placeholder**: Optional - Label for the link
-     * - **API ID Path**: navigation.links[].label
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    label: prismicT.TitleField;
-    /**
-     * Link field in *Navigation → Links*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: Link for navigation item
-     * - **API ID Path**: navigation.links[].link
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    link: prismicT.LinkField;
-}
+type NavigationDocumentDataSlicesSlice = NavigationItemSlice;
 /**
  * Navigation document from Prismic
  *
@@ -139,7 +129,7 @@ export interface NavigationDocumentDataLinksItem {
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type NavigationDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<NavigationDocumentData>, "navigation", Lang>;
+export type NavigationDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<NavigationDocumentData>, "navigation", Lang>;
 /** Content for Page documents */
 interface PageDocumentData {
     /**
@@ -169,7 +159,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = HeroSlice | ResearchLinesSlice;
+type PageDocumentDataSlicesSlice = HeroSlice | ResearchLinesSlice | TextBlockSlice;
 /**
  * Page document from Prismic
  *
@@ -264,6 +254,81 @@ type HeroSliceVariation = HeroSliceDefault;
  *
  */
 export type HeroSlice = prismicT.SharedSlice<"hero", HeroSliceVariation>;
+/**
+ * Primary content in NavigationItem → Primary
+ *
+ */
+interface NavigationItemSliceDefaultPrimary {
+    /**
+     * Name field in *NavigationItem → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation_item.primary.name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    name: prismicT.KeyTextField;
+    /**
+     * Link field in *NavigationItem → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation_item.primary.link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link: prismicT.LinkField;
+}
+/**
+ * Item in NavigationItem → Items
+ *
+ */
+export interface NavigationItemSliceDefaultItem {
+    /**
+     * Child Name field in *NavigationItem → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation_item.items[].child_name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    child_name: prismicT.KeyTextField;
+    /**
+     * Child Link field in *NavigationItem → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation_item.items[].child_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    child_link: prismicT.LinkField;
+}
+/**
+ * Default variation for NavigationItem Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `NavigationItem`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NavigationItemSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<NavigationItemSliceDefaultPrimary>, Simplify<NavigationItemSliceDefaultItem>>;
+/**
+ * Slice variation for *NavigationItem*
+ *
+ */
+type NavigationItemSliceVariation = NavigationItemSliceDefault;
+/**
+ * NavigationItem Shared Slice
+ *
+ * - **API ID**: `navigation_item`
+ * - **Description**: `NavigationItem`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NavigationItemSlice = prismicT.SharedSlice<"navigation_item", NavigationItemSliceVariation>;
 /**
  * Primary content in ResearchLines → Primary
  *
@@ -378,11 +443,60 @@ type SocialSliceVariation = SocialSliceDefault;
  *
  */
 export type SocialSlice = prismicT.SharedSlice<"social", SocialSliceVariation>;
+/**
+ * Primary content in TextBlock → Primary
+ *
+ */
+interface TextBlockSliceDefaultPrimary {
+    /**
+     * Title field in *TextBlock → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: text_block.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Description field in *TextBlock → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: text_block.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+}
+/**
+ * Default variation for TextBlock Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `TextBlock`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TextBlockSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<TextBlockSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *TextBlock*
+ *
+ */
+type TextBlockSliceVariation = TextBlockSliceDefault;
+/**
+ * TextBlock Shared Slice
+ *
+ * - **API ID**: `text_block`
+ * - **Description**: `TextBlock`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TextBlockSlice = prismicT.SharedSlice<"text_block", TextBlockSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, ResearchLinesSliceDefaultPrimary, ResearchLinesSliceDefaultItem, ResearchLinesSliceDefault, ResearchLinesSliceVariation, ResearchLinesSlice, SocialSliceDefaultItem, SocialSliceDefault, SocialSliceVariation, SocialSlice };
+        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, ResearchLinesSliceDefaultPrimary, ResearchLinesSliceDefaultItem, ResearchLinesSliceDefault, ResearchLinesSliceVariation, ResearchLinesSlice, SocialSliceDefaultItem, SocialSliceDefault, SocialSliceVariation, SocialSlice, TextBlockSliceDefaultPrimary, TextBlockSliceDefault, TextBlockSliceVariation, TextBlockSlice };
     }
 }

@@ -13,5 +13,18 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/aspect-ratio")],
+  daisyui: {
+    themes: [
+      {
+        riuci: {
+          primary: "#1B4C25",
+          secondary: "#A8CA45",
+          accent: "#F7FFF0",
+          neutral: "#3D4451",
+          "base-100": "#ffffff",
+        },
+      },
+    ],
+  },
+  plugins: [require("daisyui")],
 };

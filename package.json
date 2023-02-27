@@ -20,6 +20,7 @@
     "@prismicio/react": "^2.5.2",
     "@prismicio/slice-simulator-react": "^0.2.3",
     "clsx": "^1.2.1",
+    "daisyui": "^2.51.1",
     "flag-icons": "^6.6.6",
     "next": "^13.2.1",
     "react": "^18.2.0",
@@ -27,7 +28,6 @@
   },
   "devDependencies": {
     "@prismicio/types": "^0.2.7",
-    "@tailwindcss/aspect-ratio": "^0.4.2",
     "autoprefixer": "^10.4.13",
     "concurrently": "^7.6.0",
     "eslint": "^8.35.0",
