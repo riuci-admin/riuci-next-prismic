@@ -24,9 +24,13 @@ export const Header = ({ alternateLanguages = [], navigation, settings }) => {
             <ul className="menu menu-horizontal px-1">
               {navigation.data.slices.map((slice) => {
                 return (
-                  <li key={slice.id} tabIndex={0}>
+                  <li
+                    className="font-medium text-green-dark"
+                    key={slice.id}
+                    tabIndex={0}
+                  >
                     {slice.items.length > 0 ? (
-                      <a className="font-medium text-green-dark">
+                      <a>
                         {slice.primary.name}
                         <svg
                           className="fill-current"
