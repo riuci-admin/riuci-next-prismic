@@ -1,5 +1,5 @@
-import React from "react";
 import { PrismicRichText } from "@prismicio/react";
+import React from "react";
 
 /**
  * @typedef {import("@prismicio/client").Content.TextBlockSlice} TextBlockSlice
@@ -7,7 +7,7 @@ import { PrismicRichText } from "@prismicio/react";
  * @param { TextBlockProps }
  */
 const TextBlock = ({ slice }) => (
-  <section className="frame flex max-w-xl flex-col items-center">
+  <section className="frame flex max-w-xl flex-col items-center text-center">
     <div className="text-green-dark">
       <PrismicRichText field={slice.primary.title} />
     </div>
