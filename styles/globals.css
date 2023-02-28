@@ -23,4 +23,7 @@
   .frame {
     @apply container mx-auto max-w-6xl px-6;
   }
+  .menu :where(li) > :where(*:not(ul)) {
+    gap: 0.1rem !important;
+  }
 }

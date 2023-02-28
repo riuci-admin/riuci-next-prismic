@@ -29,7 +29,7 @@ export const Header = ({ alternateLanguages = [], navigation, settings }) => {
                 console.log(slice.primary.name);
                 return (
                   <li key={slice.id} tabIndex={0}>
-                    <a>
+                    <a className="font-medium text-green-dark">
                       {slice.primary.name}
                       <svg
                         className="fill-current"
@@ -42,10 +42,10 @@ export const Header = ({ alternateLanguages = [], navigation, settings }) => {
                       </svg>
                     </a>
                     {slice.items.length > 0 && (
-                      <ul className="bg-base-100 p-2">
+                      <ul className="border-[1px] border-neutral-200 bg-white p-2">
                         {slice.items.map((item) => {
                           return (
-                            <li key={JSON.stringify(item)}>
+                            <li className="text-sm" key={JSON.stringify(item)}>
                               <PrismicLink field={item.child_link}>
                                 {item.child_name}
                               </PrismicLink>
