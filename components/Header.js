@@ -26,7 +26,7 @@ export const Header = ({ alternateLanguages = [], navigation, settings }) => {
               {navigation.data.slices.map((slice) => {
                 return (
                   <li
-                    className="font-medium text-green-dark"
+                    className="hidden font-medium text-green-dark lg:flex"
                     key={slice.id}
                     tabIndex={0}
                   >
@@ -94,6 +94,23 @@ export const Header = ({ alternateLanguages = [], navigation, settings }) => {
                 </li>
               ))}
             </ul>
+            <div className="flex-none lg:hidden">
+              <label htmlFor="menu-drawer" className="btn-ghost btn-square btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  className="inline-block h-6 w-6 stroke-current"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              </label>
+            </div>
           </div>
         </div>
       </div>
