@@ -7,7 +7,7 @@ import React from "react";
  */
 const ResearchLines = ({ slice }) => (
   <section>
-    <div className="frame">
+    <div className="frame pb-7">
       <h2 className="text-center text-green-dark md:pb-3">
         {slice.primary.title}
       </h2>
@@ -17,7 +17,7 @@ const ResearchLines = ({ slice }) => (
             className="flex h-[11.5rem] flex-col items-center justify-center rounded-md border-[1px] border-neutral-300 p-5 text-center shadow-md md:justify-start"
             key={i}
           >
-            <div className="pb-3 text-5xl text-green-dark">
+            <div className="pb-3 text-5xl text-green-dark opacity-80">
               {item.icon === "bamboo" ? (
                 <BambooSVG />
               ) : (
