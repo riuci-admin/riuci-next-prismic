@@ -6,7 +6,7 @@ export const Footer = ({ footer }) => (
     style={{
       backgroundImage: `url('${footer.data.background.url}&bri=100')`,
     }}
-    className="absolute bottom-0 flex h-64 w-full flex-col items-center justify-center bg-neutral-800 bg-center text-sm text-white md:h-72"
+    className="absolute bottom-0 flex h-64 w-full flex-col items-center justify-center bg-neutral-800 bg-center bg-no-repeat text-sm text-white md:h-72"
     role="img"
     aria-label={footer.data.background.alt}
   >

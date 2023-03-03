@@ -6,16 +6,18 @@ import React from "react";
  * @param { ResearchLinesProps }
  */
 const ResearchLines = ({ slice }) => (
-  <section className="bg-neutral-100">
+  <section>
     <div className="frame">
-      <h2 className="text-center md:pb-3">{slice.primary.title}</h2>
+      <h2 className="text-center text-green-dark md:pb-3">
+        {slice.primary.title}
+      </h2>
       <div className="grid grid-cols-1 gap-5 pt-5 md:grid-cols-2 md:gap-11 lg:grid-cols-3">
         {slice.items.map((item, i) => (
           <div
-            className="flex h-40 flex-col items-center justify-center rounded-md border-[1px] border-neutral-300 p-5 text-center shadow-md md:justify-start"
+            className="flex h-[11.5rem] flex-col items-center justify-center rounded-md border-[1px] border-neutral-300 p-5 text-center shadow-md md:justify-start"
             key={i}
           >
-            <div className="pb-3 text-3xl text-green-dark">
+            <div className="pb-3 text-5xl text-green-dark">
               {item.icon === "bamboo" ? (
                 <BambooSVG />
               ) : (

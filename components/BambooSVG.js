@@ -3,7 +3,7 @@ export default function BambooSVG() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
-      style={{ height: "36px", width: "36px" }}
+      style={{ height: "3rem" }}
       className="mt-1"
     >
       <g transform="translate(0,0)">
