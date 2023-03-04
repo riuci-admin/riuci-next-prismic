@@ -11,7 +11,7 @@ const FlagIcon = ({ lang }) => {
 export const Header = ({ alternateLanguages = [], navigation, settings }) => {
   return (
     <header className="sticky top-0 z-30 bg-green-light py-3 shadow-lg md:py-4">
-      <div className="frame pr-0 pl-3">
+      <div className="frame pr-1 pl-3">
         <div className="navbar">
           <div className="flex-1">
             <PrismicLink href="/">
