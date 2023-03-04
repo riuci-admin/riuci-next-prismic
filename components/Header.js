@@ -5,14 +5,13 @@ import { linkResolver } from "prismicio";
 
 const FlagIcon = ({ lang }) => {
   const code = lang.substring(3).toLowerCase();
-
   return <span className={`fi fi-${code}`} />;
 };
 
 export const Header = ({ alternateLanguages = [], navigation, settings }) => {
   return (
     <header className="sticky top-0 z-30 bg-green-light py-3 shadow-lg md:py-4">
-      <div className="frame px-4">
+      <div className="frame pr-0 pl-3">
         <div className="navbar">
           <div className="flex-1">
             <PrismicLink href="/">
@@ -54,7 +53,7 @@ export const Header = ({ alternateLanguages = [], navigation, settings }) => {
                           return (
                             <li
                               className="text-sm font-medium text-green-dark"
-                              key={JSON.stringify(item)}
+                              key={item.child_link.id}
                             >
                               <PrismicLink field={item.child_link}>
                                 {item.child_name}
