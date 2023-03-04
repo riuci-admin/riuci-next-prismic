@@ -7,7 +7,7 @@ import React from "react";
  * @param { NavigationItemProps }
  */
 const NavigationItem = ({ slice }) => (
-  <section>
+  <section className="py">
     <PrismicRichText field={slice.primary.title} />
     <PrismicRichText field={slice.primary.description} />
   </section>

@@ -8,9 +8,6 @@
   body {
     @apply text-base text-neutral-900;
   }
-  section {
-    @apply py-12 md:py-14 lg:py-16;
-  }
   h1 {
     @apply mb-7 text-4xl font-semibold;
   }
@@ -19,6 +16,9 @@
   }
   p {
     @apply pb-4 leading-normal last:pb-0;
+  }
+  .py {
+    @apply py-12 md:py-14 lg:py-16;
   }
   .frame {
     @apply container mx-auto max-w-6xl px-6;

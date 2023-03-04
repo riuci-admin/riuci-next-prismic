@@ -6,7 +6,7 @@ import React from "react";
  * @param { ResearchLinesProps }
  */
 const ResearchLines = ({ slice }) => (
-  <section>
+  <section className="py">
     <div className="frame pb-7">
       <h2 className="text-center text-green-dark md:pb-3">
         {slice.primary.title}
