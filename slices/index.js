@@ -2,6 +2,7 @@
 
 import Hero from './Hero';
 import NavigationItem from './NavigationItem';
+import Operation from './Operation';
 import ResearchLines from './ResearchLines';
 import Social from './Social';
 import TextBlock from './TextBlock';
@@ -9,6 +10,7 @@ import TextBlock from './TextBlock';
 export {
 	Hero,
 	NavigationItem,
+	Operation,
 	ResearchLines,
 	Social,
 	TextBlock,
@@ -17,6 +19,7 @@ export {
 export const components = {
 	hero: Hero,
 	navigation_item: NavigationItem,
+	operation: Operation,
 	research_lines: ResearchLines,
 	social: Social,
 	text_block: TextBlock,

@@ -1,0 +1,97 @@
+{
+  "id": "operation",
+  "type": "SharedSlice",
+  "name": "Operation",
+  "description": "Operation",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Operation",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          }
+        },
+        "manifest_image": {
+          "type": "Image",
+          "config": {
+            "label": "Manifest Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "manifest_title": {
+          "type": "Text",
+          "config": {
+            "label": "Manifest Title",
+            "placeholder": ""
+          }
+        },
+        "manifest_text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Manifest Text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          }
+        },
+        "manifest_document": {
+          "type": "Text",
+          "config": {
+            "label": "Manifest Document",
+            "placeholder": ""
+          }
+        },
+        "manifest_link": {
+          "type": "Link",
+          "config": {
+            "label": "Manifest Link",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
+      "items": {
+        "member_name": {
+          "type": "Text",
+          "config": {
+            "label": "Member Name",
+            "placeholder": ""
+          }
+        },
+        "member_place": {
+          "type": "Text",
+          "config": {
+            "label": "Member Place",
+            "placeholder": ""
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

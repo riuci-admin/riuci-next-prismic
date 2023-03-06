@@ -78,6 +78,11 @@
         "primary": {}
       }
     },
-    "TextBlock": {}
+    "TextBlock": {},
+    "Operation": {
+      "default": {
+        "primary": {}
+      }
+    }
   }
 }

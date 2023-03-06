@@ -159,7 +159,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = HeroSlice | ResearchLinesSlice | TextBlockSlice;
+type PageDocumentDataSlicesSlice = HeroSlice | ResearchLinesSlice | TextBlockSlice | OperationSlice;
 /**
  * Page document from Prismic
  *
@@ -330,6 +330,141 @@ type NavigationItemSliceVariation = NavigationItemSliceDefault;
  */
 export type NavigationItemSlice = prismicT.SharedSlice<"navigation_item", NavigationItemSliceVariation>;
 /**
+ * Primary content in Operation → Primary
+ *
+ */
+interface OperationSliceDefaultPrimary {
+    /**
+     * Title field in *Operation → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: operation.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * Image field in *Operation → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: operation.primary.image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * Text field in *Operation → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: operation.primary.text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    text: prismicT.RichTextField;
+    /**
+     * Manifest Image field in *Operation → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: operation.primary.manifest_image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    manifest_image: prismicT.ImageField<never>;
+    /**
+     * Manifest Title field in *Operation → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: operation.primary.manifest_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    manifest_title: prismicT.KeyTextField;
+    /**
+     * Manifest Text field in *Operation → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: operation.primary.manifest_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    manifest_text: prismicT.RichTextField;
+    /**
+     * Manifest Document field in *Operation → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: operation.primary.manifest_document
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    manifest_document: prismicT.KeyTextField;
+    /**
+     * Manifest Link field in *Operation → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: operation.primary.manifest_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    manifest_link: prismicT.LinkField;
+}
+/**
+ * Item in Operation → Items
+ *
+ */
+export interface OperationSliceDefaultItem {
+    /**
+     * Member Name field in *Operation → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: operation.items[].member_name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    member_name: prismicT.KeyTextField;
+    /**
+     * Member Place field in *Operation → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: operation.items[].member_place
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    member_place: prismicT.KeyTextField;
+}
+/**
+ * Default variation for Operation Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Operation`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type OperationSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<OperationSliceDefaultPrimary>, Simplify<OperationSliceDefaultItem>>;
+/**
+ * Slice variation for *Operation*
+ *
+ */
+type OperationSliceVariation = OperationSliceDefault;
+/**
+ * Operation Shared Slice
+ *
+ * - **API ID**: `operation`
+ * - **Description**: `Operation`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type OperationSlice = prismicT.SharedSlice<"operation", OperationSliceVariation>;
+/**
  * Primary content in ResearchLines → Primary
  *
  */
@@ -497,6 +632,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, ResearchLinesSliceDefaultPrimary, ResearchLinesSliceDefaultItem, ResearchLinesSliceDefault, ResearchLinesSliceVariation, ResearchLinesSlice, SocialSliceDefaultItem, SocialSliceDefault, SocialSliceVariation, SocialSlice, TextBlockSliceDefaultPrimary, TextBlockSliceDefault, TextBlockSliceVariation, TextBlockSlice };
+        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, OperationSliceDefaultPrimary, OperationSliceDefaultItem, OperationSliceDefault, OperationSliceVariation, OperationSlice, ResearchLinesSliceDefaultPrimary, ResearchLinesSliceDefaultItem, ResearchLinesSliceDefault, ResearchLinesSliceVariation, ResearchLinesSlice, SocialSliceDefaultItem, SocialSliceDefault, SocialSliceVariation, SocialSlice, TextBlockSliceDefaultPrimary, TextBlockSliceDefault, TextBlockSliceVariation, TextBlockSlice };
     }
 }
