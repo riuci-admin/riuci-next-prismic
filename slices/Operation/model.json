@@ -35,42 +35,43 @@
             "multi": "paragraph"
           }
         },
-        "manifest_image": {
+        "manifesto_image": {
           "type": "Image",
           "config": {
-            "label": "Manifest Image",
+            "label": "Manifesto Image",
             "constraint": {},
             "thumbnails": []
           }
         },
-        "manifest_title": {
+        "manifesto_title": {
           "type": "Text",
           "config": {
-            "label": "Manifest Title",
+            "label": "Manifesto Title",
             "placeholder": ""
           }
         },
-        "manifest_text": {
+        "manifesto_text": {
           "type": "StructuredText",
           "config": {
-            "label": "Manifest Text",
+            "label": "Manifesto Text",
             "placeholder": "",
-            "allowTargetBlank": true,
+            "allowTargetBlank": false,
             "multi": "paragraph"
           }
         },
-        "manifest_document": {
+        "manifesto_document": {
           "type": "Text",
           "config": {
-            "label": "Manifest Document",
+            "label": "Manifesto Document",
             "placeholder": ""
           }
         },
-        "manifest_link": {
+        "manifesto_link": {
           "type": "Link",
           "config": {
-            "label": "Manifest Link",
+            "label": "Manifesto Link",
             "placeholder": "",
+            "allowTargetBlank": false,
             "select": null
           }
         }

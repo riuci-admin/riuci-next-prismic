@@ -22,12 +22,12 @@ const Operation = ({ slice }) => (
     </div>
     <div className="mt-9 grid items-center gap-7 lg:grid-cols-2">
       <h2 className="mt-7 text-center text-green-dark lg:col-span-2">
-        {slice.primary.manifest_title}
+        {slice.primary.manifesto_title}
       </h2>
       <div className="order-1 lg:order-none">
-        <PrismicRichText field={slice.primary.manifest_text} />
+        <PrismicRichText field={slice.primary.manifesto_text} />
       </div>
-      <PrismicNextImage field={slice.primary.manifest_image} />
+      <PrismicNextImage field={slice.primary.manifesto_image} />
     </div>
     <div className="mt-4">
       <table className="table-zebra mx-auto table">
@@ -49,11 +49,11 @@ const Operation = ({ slice }) => (
       <a
         role="button"
         className="btn-primary btn text-white hover:text-green-soft"
-        href={slice.primary.manifest_link.url}
+        href={slice.primary.manifesto_link.url}
         target="_blank"
         rel="noopener noreferrer"
       >
-        {slice.primary.manifest_document}
+        {slice.primary.manifesto_document}
       </a>
     </div>
   </section>

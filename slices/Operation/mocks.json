@@ -3,64 +3,12 @@
     "__TYPE__": "SharedSliceContent",
     "variation": "default",
     "primary": {
-      "manifest_image": {
-        "origin": {
-          "id": "main",
-          "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da",
-          "width": 4000,
-          "height": 4000
-        },
-        "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da",
-        "width": 4000,
-        "height": 4000,
-        "edit": {
-          "zoom": 1,
-          "crop": {
-            "x": 0,
-            "y": 0
-          },
-          "background": "transparent"
-        },
-        "credits": null,
-        "alt": null,
-        "__TYPE__": "ImageContent",
-        "thumbnails": {}
-      },
-      "manifest_title": {
-        "__TYPE__": "FieldContent",
-        "value": "negative",
-        "type": "Text"
-      },
-      "manifest_text": {
-        "__TYPE__": "StructuredTextContent",
-        "value": [
-          {
-            "type": "paragraph",
-            "content": {
-              "text": "Nisi consectetur nulla cillum officia Lorem commodo non laboris id. Non elit ipsum nisi enim ad dolor est nulla ut nostrud pariatur dolor. Irure proident qui ut eiusmod exercitation qui sunt nostrud nulla dolore anim deserunt et nostrud fugiat."
-            }
-          }
-        ]
-      },
-      "manifest_document": {
-        "__TYPE__": "FieldContent",
-        "value": "yard",
-        "type": "Text"
-      },
-      "manifest_link": {
-        "__TYPE__": "LinkContent",
-        "value": {
-          "__TYPE__": "ExternalLink",
-          "url": "http://google.com"
-        }
-      },
       "title": {
         "__TYPE__": "FieldContent",
         "value": "everywhere",
         "type": "Text"
       },
       "image": {
-        "__TYPE__": "ImageContent",
         "origin": {
           "id": "main",
           "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118",
@@ -78,6 +26,9 @@
           },
           "background": "transparent"
         },
+        "credits": null,
+        "alt": null,
+        "__TYPE__": "ImageContent",
         "thumbnails": {}
       },
       "text": {
@@ -90,6 +41,55 @@
             }
           }
         ]
+      },
+      "manifesto_image": {
+        "__TYPE__": "ImageContent",
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89",
+          "width": 3456,
+          "height": 3456
+        },
+        "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89",
+        "width": 3456,
+        "height": 3456,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 0
+          },
+          "background": "transparent"
+        },
+        "thumbnails": {}
+      },
+      "manifesto_title": {
+        "__TYPE__": "FieldContent",
+        "value": "audience",
+        "type": "Text"
+      },
+      "manifesto_text": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Minim sit duis quis consequat ea duis ea excepteur sunt. Eiusmod adipisicing enim officia in magna."
+            }
+          }
+        ]
+      },
+      "manifesto_document": {
+        "__TYPE__": "FieldContent",
+        "value": "origin",
+        "type": "Text"
+      },
+      "manifesto_link": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "https://prismic.io"
+        }
       }
     },
     "items": [

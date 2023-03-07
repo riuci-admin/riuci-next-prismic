@@ -365,55 +365,55 @@ interface OperationSliceDefaultPrimary {
      */
     text: prismicT.RichTextField;
     /**
-     * Manifest Image field in *Operation → Primary*
+     * Manifesto Image field in *Operation → Primary*
      *
      * - **Field Type**: Image
      * - **Placeholder**: *None*
-     * - **API ID Path**: operation.primary.manifest_image
+     * - **API ID Path**: operation.primary.manifesto_image
      * - **Documentation**: https://prismic.io/docs/core-concepts/image
      *
      */
-    manifest_image: prismicT.ImageField<never>;
+    manifesto_image: prismicT.ImageField<never>;
     /**
-     * Manifest Title field in *Operation → Primary*
+     * Manifesto Title field in *Operation → Primary*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: operation.primary.manifest_title
+     * - **API ID Path**: operation.primary.manifesto_title
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    manifest_title: prismicT.KeyTextField;
+    manifesto_title: prismicT.KeyTextField;
     /**
-     * Manifest Text field in *Operation → Primary*
+     * Manifesto Text field in *Operation → Primary*
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: operation.primary.manifest_text
+     * - **API ID Path**: operation.primary.manifesto_text
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    manifest_text: prismicT.RichTextField;
+    manifesto_text: prismicT.RichTextField;
     /**
-     * Manifest Document field in *Operation → Primary*
+     * Manifesto Document field in *Operation → Primary*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: operation.primary.manifest_document
+     * - **API ID Path**: operation.primary.manifesto_document
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    manifest_document: prismicT.KeyTextField;
+    manifesto_document: prismicT.KeyTextField;
     /**
-     * Manifest Link field in *Operation → Primary*
+     * Manifesto Link field in *Operation → Primary*
      *
      * - **Field Type**: Link
      * - **Placeholder**: *None*
-     * - **API ID Path**: operation.primary.manifest_link
+     * - **API ID Path**: operation.primary.manifesto_link
      * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
      *
      */
-    manifest_link: prismicT.LinkField;
+    manifesto_link: prismicT.LinkField;
 }
 /**
  * Item in Operation → Items
