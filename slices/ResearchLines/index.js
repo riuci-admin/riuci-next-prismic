@@ -8,7 +8,7 @@ import React from "react";
 const ResearchLines = ({ slice }) => (
   <section className="py bg-neutral-100">
     <div className="frame pb-11 pt-3">
-      <h2 className="text-center text-green-dark">{slice.primary.title}</h2>
+      <h2>{slice.primary.title}</h2>
       <div className="grid grid-cols-1 gap-11 pt-3 md:grid-cols-2 md:gap-11 lg:grid-cols-3">
         {slice.items.map((item, i) => (
           <div className="card bg-white shadow-xl" key={i}>

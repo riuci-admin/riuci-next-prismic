@@ -10,9 +10,7 @@ import React from "react";
 const Operation = ({ slice }) => (
   <section className="frame py md:max-w-2xl lg:max-w-5xl">
     <div className="grid grid-cols-1 items-center gap-x-7 lg:grid-cols-2">
-      <h1 className="text-center text-green-dark lg:col-span-2">
-        {slice.primary.title}
-      </h1>
+      <h1 className="lg:col-span-2">{slice.primary.title}</h1>
       <div className="pb-6 lg:pb-0">
         <PrismicNextImage field={slice.primary.image} />
       </div>
@@ -21,9 +19,7 @@ const Operation = ({ slice }) => (
       </div>
     </div>
     <div className="mt-7 grid items-center gap-x-7 lg:grid-cols-2">
-      <h2 className="mt-7 text-center text-green-dark lg:col-span-2">
-        {slice.primary.manifesto_title}
-      </h2>
+      <h2 className="mt-7 lg:col-span-2">{slice.primary.manifesto_title}</h2>
       <div className="order-1 lg:order-none">
         <PrismicRichText field={slice.primary.manifesto_text} />
       </div>

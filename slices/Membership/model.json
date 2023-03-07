@@ -1,15 +1,15 @@
 {
-  "id": "hero",
+  "id": "membership",
   "type": "SharedSlice",
-  "name": "Hero",
-  "description": "Hero",
+  "name": "Membership",
+  "description": "Membership",
   "variations": [
     {
       "id": "default",
       "name": "Default",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "Hero",
+      "description": "Membership",
       "primary": {
         "title": {
           "type": "Text",
@@ -18,21 +18,13 @@
             "placeholder": ""
           }
         },
-        "text": {
+        "description": {
           "type": "StructuredText",
           "config": {
-            "label": "Text",
+            "label": "Description",
             "placeholder": "",
             "allowTargetBlank": false,
-            "multi": "paragraph,strong,em"
-          }
-        },
-        "background": {
-          "type": "Image",
-          "config": {
-            "label": "Background",
-            "constraint": {},
-            "thumbnails": []
+            "multi": "paragraph,strong,hyperlink,o-list-item"
           }
         }
       },

@@ -9,13 +9,10 @@
     @apply text-base text-neutral-900;
   }
   h1 {
-    @apply mb-7 text-4xl font-semibold;
+    @apply mb-7 text-center text-4xl font-semibold text-green-dark;
   }
   h2 {
-    @apply mb-5 text-2xl font-semibold;
-  }
-  p {
-    @apply pb-4 leading-normal last:pb-0;
+    @apply mb-5 text-center text-2xl font-semibold text-green-dark;
   }
   .py {
     @apply py-9 md:py-11;

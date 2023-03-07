@@ -37,6 +37,9 @@
             },
             "operation": {
               "type": "SharedSlice"
+            },
+            "membership": {
+              "type": "SharedSlice"
             }
           }
         }

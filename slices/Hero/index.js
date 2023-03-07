@@ -17,7 +17,7 @@ const Hero = ({ slice }) => (
   >
     <div className="hero-content py-14 text-center text-white md:py-16 lg:py-24">
       <div className="max-w-xl px-2 lg:max-w-2xl lg:px-8">
-        <PrismicRichText field={slice.primary.title} />
+        <h1 className="text-white">{slice.primary.title}</h1>
         <PrismicRichText field={slice.primary.text} />
       </div>
     </div>
