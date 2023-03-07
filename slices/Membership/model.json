@@ -23,7 +23,7 @@
           "config": {
             "label": "Description",
             "placeholder": "",
-            "allowTargetBlank": false,
+            "allowTargetBlank": true,
             "multi": "paragraph,strong,hyperlink,o-list-item"
           }
         }
