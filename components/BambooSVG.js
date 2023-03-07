@@ -4,7 +4,6 @@ export default function BambooSVG() {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
       style={{ height: "3rem" }}
-      className="mt-1"
     >
       <g transform="translate(0,0)">
         <path
