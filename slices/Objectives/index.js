@@ -10,7 +10,7 @@ const Objectives = ({ slice }) => (
   <section className="bg-white">
     <div className="frame py max-w-4xl">
       <div
-        className="card image-full h-96 items-center bg-bottom shadow-xl"
+        className="card image-full h-96 items-center shadow-xl md:bg-bottom"
         style={{
           backgroundImage: `url('${slice.primary.general_image.url}&w=896')`,
         }}
