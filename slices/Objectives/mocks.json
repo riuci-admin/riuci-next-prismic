@@ -1,0 +1,98 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "general_title": {
+        "__TYPE__": "FieldContent",
+        "value": "thirty",
+        "type": "Text"
+      },
+      "general_description": {
+        "__TYPE__": "FieldContent",
+        "value": "operation",
+        "type": "Text"
+      },
+      "specific_title": {
+        "__TYPE__": "FieldContent",
+        "value": "mark",
+        "type": "Text"
+      },
+      "specific_description": {
+        "__TYPE__": "FieldContent",
+        "value": "lead",
+        "type": "Text"
+      },
+      "general_image": {
+        "__TYPE__": "ImageContent",
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0",
+          "width": 3344,
+          "height": 2509
+        },
+        "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0",
+        "width": 3344,
+        "height": 2509,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 0
+          },
+          "background": "transparent"
+        },
+        "thumbnails": {}
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "objective_title",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "promised",
+              "type": "Text"
+            }
+          ],
+          [
+            "objective_description",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "hearing",
+              "type": "Text"
+            }
+          ],
+          [
+            "objective_image",
+            {
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
+                "width": 3424,
+                "height": 3424
+              },
+              "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
+              "width": 3424,
+              "height": 3424,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "credits": null,
+              "alt": null,
+              "__TYPE__": "ImageContent",
+              "thumbnails": {}
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

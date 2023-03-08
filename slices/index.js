@@ -3,6 +3,7 @@
 import Hero from './Hero';
 import Membership from './Membership';
 import NavigationItem from './NavigationItem';
+import Objectives from './Objectives';
 import Operation from './Operation';
 import ResearchLines from './ResearchLines';
 import Social from './Social';
@@ -12,6 +13,7 @@ export {
 	Hero,
 	Membership,
 	NavigationItem,
+	Objectives,
 	Operation,
 	ResearchLines,
 	Social,
@@ -22,6 +24,7 @@ export const components = {
 	hero: Hero,
 	membership: Membership,
 	navigation_item: NavigationItem,
+	objectives: Objectives,
 	operation: Operation,
 	research_lines: ResearchLines,
 	social: Social,

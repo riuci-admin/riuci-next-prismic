@@ -40,6 +40,9 @@
             },
             "membership": {
               "type": "SharedSlice"
+            },
+            "objectives": {
+              "type": "SharedSlice"
             }
           }
         }
