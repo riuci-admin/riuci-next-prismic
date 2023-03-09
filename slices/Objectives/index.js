@@ -26,11 +26,11 @@ const Objectives = ({ slice }) => (
       </div>
       <h2 className="mt-10 pt-3 text-left">{slice.primary.specific_title}</h2>
       <div>{slice.primary.specific_description}</div>
-      <div className="grid gap-11 py-7 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-11 py-7 md:grid-cols-2">
         {slice?.items?.map((item, i) => (
           <div
             key={i}
-            className="card bg-white shadow-xl md:last:col-span-2 md:last:mx-auto md:last:w-1/2 lg:last:col-span-1 lg:last:w-full"
+            className="card bg-white shadow-xl md:last:col-span-2 md:last:mx-auto md:last:w-1/2"
           >
             <figure>
               <PrismicNextImage field={item.objective_image} />
