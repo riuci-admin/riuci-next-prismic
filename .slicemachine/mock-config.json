@@ -93,6 +93,12 @@
       "default": {
         "primary": {}
       }
+    },
+    "ManagementTeam": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
     }
   }
 }

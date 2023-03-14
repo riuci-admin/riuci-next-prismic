@@ -36,7 +36,7 @@ const Objectives = ({ slice }) => (
               <PrismicNextImage field={item.objective_image} />
             </figure>
             <div className="card-body">
-              <h3 className="card-title">{item.objective_title}</h3>
+              <h3 className="text-left">{item.objective_title}</h3>
               <p>{item.objective_description}</p>
             </div>
           </div>

@@ -43,6 +43,9 @@
             },
             "objectives": {
               "type": "SharedSlice"
+            },
+            "management_team": {
+              "type": "SharedSlice"
             }
           }
         }

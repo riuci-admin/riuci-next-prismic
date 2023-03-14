@@ -30,7 +30,7 @@ const Operation = ({ slice }) => (
     <div className="mt-4">
       <table className="table-zebra mx-auto table">
         <tbody>
-          {slice?.items?.map((item, i) => (
+          {slice.items.map((item, i) => (
             <tr key={i}>
               <td className="max-w-[7rem] whitespace-normal md:max-w-full">
                 {item.member_name}
