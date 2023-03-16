@@ -56,6 +56,13 @@
             "placeholder": ""
           }
         },
+        "gkt_title": {
+          "type": "Text",
+          "config": {
+            "label": "GKT Title",
+            "placeholder": ""
+          }
+        },
         "gkt_leader_photo": {
           "type": "Image",
           "config": {
@@ -150,6 +157,13 @@
           "type": "Text",
           "config": {
             "label": "GKT Member 5",
+            "placeholder": ""
+          }
+        },
+        "ekt_title": {
+          "type": "Text",
+          "config": {
+            "label": "EKT Title",
             "placeholder": ""
           }
         },
@@ -262,6 +276,13 @@
           "type": "Text",
           "config": {
             "label": "EKT Member 6",
+            "placeholder": ""
+          }
+        },
+        "mkt_title": {
+          "type": "Text",
+          "config": {
+            "label": "MKT Title",
             "placeholder": ""
           }
         },

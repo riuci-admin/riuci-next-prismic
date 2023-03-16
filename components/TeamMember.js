@@ -1,12 +1,25 @@
 import { PrismicNextImage } from "@prismicio/next";
 
-export const TeamMember = ({ member_photo, member }) => (
-  <div className="card mx-auto mb-7 max-w-[18rem] bg-white shadow-xl lg:h-60">
-    <figure className="flex justify-center pt-7">
-      <PrismicNextImage field={member_photo} width={80} />
-    </figure>
-    <div className="card-body items-center px-7 pt-4 pb-7 text-center lg:py-4">
-      <div className="font-medium leading-snug">{member}</div>
+export const TeamMember = ({ photo, member, title }) => (
+  <div className="card max-w-[19rem] border-[1px] border-neutral-100 bg-white shadow-xl">
+    <div className="avatar mt-5 flex justify-center">
+      <div className="w-36 rounded-full">
+        <PrismicNextImage
+          field={photo}
+          imgixParams={{
+            fit: "facearea",
+            facepad: 4,
+          }}
+        />
+      </div>
+    </div>
+    <div className="card-body pt-5 text-center leading-tight md:h-36">
+      <div className="font-medium">{member}</div>
+      {title && (
+        <div className="mt-2 text-sm font-semibold text-green-dark">
+          {title}
+        </div>
+      )}
     </div>
   </div>
 );

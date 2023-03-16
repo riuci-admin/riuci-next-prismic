@@ -320,6 +320,16 @@ interface ManagementTeamSliceDefaultPrimary {
      */
     coordinator_title: prismicT.KeyTextField;
     /**
+     * GKT Title field in *ManagementTeam → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: management_team.primary.gkt_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    gkt_title: prismicT.KeyTextField;
+    /**
      * GKT Leader Photo field in *ManagementTeam → Primary*
      *
      * - **Field Type**: Image
@@ -449,6 +459,16 @@ interface ManagementTeamSliceDefaultPrimary {
      *
      */
     gkt_member_5: prismicT.KeyTextField;
+    /**
+     * EKT Title field in *ManagementTeam → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: management_team.primary.ekt_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    ekt_title: prismicT.KeyTextField;
     /**
      * EKT Leader Photo field in *ManagementTeam → Primary*
      *
@@ -599,6 +619,16 @@ interface ManagementTeamSliceDefaultPrimary {
      *
      */
     ekt_member_6: prismicT.KeyTextField;
+    /**
+     * MKT Title field in *ManagementTeam → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: management_team.primary.mkt_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    mkt_title: prismicT.KeyTextField;
     /**
      * MKT Leader Photo field in *ManagementTeam → Primary*
      *

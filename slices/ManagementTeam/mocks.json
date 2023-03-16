@@ -633,6 +633,21 @@
         "__TYPE__": "FieldContent",
         "value": "box",
         "type": "Text"
+      },
+      "gkt_title": {
+        "__TYPE__": "FieldContent",
+        "value": "addition",
+        "type": "Text"
+      },
+      "ekt_title": {
+        "__TYPE__": "FieldContent",
+        "value": "cry",
+        "type": "Text"
+      },
+      "mkt_title": {
+        "__TYPE__": "FieldContent",
+        "value": "team",
+        "type": "Text"
       }
     },
     "items": [

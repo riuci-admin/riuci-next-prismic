@@ -1,5 +1,4 @@
 export const MemberDirectory = ({
-  directory_title,
   country_header,
   institution_header,
   delegate_header,
@@ -8,7 +7,6 @@ export const MemberDirectory = ({
   items,
 }) => (
   <div className="mb-14 mt-7">
-    <h3 className="mb-7 text-center">{directory_title}</h3>
     <div className="mt-3 overflow-x-auto">
       <table className="table-zebra mx-auto table max-w-6xl">
         <thead>
