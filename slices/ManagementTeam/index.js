@@ -17,7 +17,7 @@ const ManagementTeam = ({ slice }) => (
       </div>
     </section>
 
-    <section className="py bg-white pb-16">
+    <section className="bg-white pt-3 pb-16">
       <div className="frame">
         <h2 className="mb-12 text-center">{slice.primary.team_title}</h2>
         <div className="flex flex-wrap justify-center gap-7 md:gap-14">
