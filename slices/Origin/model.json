@@ -1,15 +1,15 @@
 {
-  "id": "operation",
+  "id": "origin",
   "type": "SharedSlice",
   "name": "Origin",
-  "description": "Operation",
+  "description": "Origin",
   "variations": [
     {
       "id": "default",
       "name": "Default",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "Operation",
+      "description": "Origin",
       "primary": {
         "title": {
           "type": "Text",

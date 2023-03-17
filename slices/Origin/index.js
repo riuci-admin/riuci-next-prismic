@@ -3,11 +3,11 @@ import { PrismicRichText } from "@prismicio/react";
 import React from "react";
 
 /**
- * @typedef {import("@prismicio/client").Content.OperationSlice} OperationSlice
- * @typedef {import("@prismicio/react").SliceComponentProps<OperationSlice>} OperationProps
- * @param { OperationProps }
+ * @typedef {import("@prismicio/client").Content.OriginSlice} OriginSlice
+ * @typedef {import("@prismicio/react").SliceComponentProps<OriginSlice>} OriginProps
+ * @param { OriginProps }
  */
-const Operation = ({ slice }) => (
+const Origin = ({ slice }) => (
   <section className="frame py md:max-w-2xl lg:max-w-5xl">
     <div className="grid grid-cols-1 items-center gap-x-7 lg:grid-cols-2">
       <h1 className="lg:col-span-2">{slice.primary.title}</h1>
@@ -57,4 +57,4 @@ const Operation = ({ slice }) => (
   </section>
 );
 
-export default Operation;
+export default Origin;

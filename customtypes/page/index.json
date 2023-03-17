@@ -35,7 +35,7 @@
             "text_block": {
               "type": "SharedSlice"
             },
-            "operation": {
+            "origin": {
               "type": "SharedSlice"
             },
             "membership": {
