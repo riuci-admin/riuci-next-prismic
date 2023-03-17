@@ -99,6 +99,26 @@
         "primary": {},
         "items": {}
       }
+    },
+    "NetworkMembers": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "GenerateKnowledgeTeam": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "ExchangeKnowledgeTeam": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "ManageKnowledgeTeam": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }

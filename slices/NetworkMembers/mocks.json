@@ -1,0 +1,96 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "FieldContent",
+        "value": "spirit",
+        "type": "Text"
+      },
+      "description": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Sint qui adipisicing culpa proident cillum Lorem velit. Esse amet do nostrud sint magna commodo nisi excepteur sunt. Reprehenderit enim do qui eu anim ullamco do adipisicing."
+            }
+          }
+        ]
+      },
+      "country_header": {
+        "__TYPE__": "FieldContent",
+        "value": "classroom",
+        "type": "Text"
+      },
+      "institution_header": {
+        "__TYPE__": "FieldContent",
+        "value": "temperature",
+        "type": "Text"
+      },
+      "delegate_header": {
+        "__TYPE__": "FieldContent",
+        "value": "machinery",
+        "type": "Text"
+      },
+      "name_header": {
+        "__TYPE__": "FieldContent",
+        "value": "zebra",
+        "type": "Text"
+      },
+      "email_header": {
+        "__TYPE__": "FieldContent",
+        "value": "floating",
+        "type": "Text"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "country",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "nodded",
+              "type": "Text"
+            }
+          ],
+          [
+            "institution",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "different",
+              "type": "Text"
+            }
+          ],
+          [
+            "delegate",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "knew",
+              "type": "Text"
+            }
+          ],
+          [
+            "name",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "pile",
+              "type": "Text"
+            }
+          ],
+          [
+            "email",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "silver",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

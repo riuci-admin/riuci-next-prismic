@@ -159,7 +159,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = HeroSlice | ResearchLinesSlice | TextBlockSlice | OperationSlice | MembershipSlice | ObjectivesSlice | ManagementTeamSlice;
+type PageDocumentDataSlicesSlice = HeroSlice | ResearchLinesSlice | TextBlockSlice | OperationSlice | MembershipSlice | ObjectivesSlice | ManagementTeamSlice | NetworkMembersSlice | ExchangeKnowledgeTeamSlice | GenerateKnowledgeTeamSlice | ManageKnowledgeTeamSlice;
 /**
  * Page document from Prismic
  *
@@ -195,6 +195,196 @@ interface SettingsDocumentData {
  */
 export type SettingsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<SettingsDocumentData>, "settings", Lang>;
 export type AllDocumentTypes = FooterDocument | NavigationDocument | PageDocument | SettingsDocument;
+/**
+ * Primary content in ExchangeKnowledgeTeam → Primary
+ *
+ */
+interface ExchangeKnowledgeTeamSliceDefaultPrimary {
+    /**
+     * Title field in *ExchangeKnowledgeTeam → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: exchange_knowledge_team.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * Coordinator Photo field in *ExchangeKnowledgeTeam → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: exchange_knowledge_team.primary.coordinator_photo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    coordinator_photo: prismicT.ImageField<never>;
+    /**
+     * Coordinator field in *ExchangeKnowledgeTeam → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: exchange_knowledge_team.primary.coordinator
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    coordinator: prismicT.KeyTextField;
+    /**
+     * Coordinator Title field in *ExchangeKnowledgeTeam → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: exchange_knowledge_team.primary.coordinator_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    coordinator_title: prismicT.KeyTextField;
+}
+/**
+ * Item in ExchangeKnowledgeTeam → Items
+ *
+ */
+export interface ExchangeKnowledgeTeamSliceDefaultItem {
+    /**
+     * Member Photo field in *ExchangeKnowledgeTeam → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: exchange_knowledge_team.items[].member_photo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    member_photo: prismicT.ImageField<never>;
+    /**
+     * Member field in *ExchangeKnowledgeTeam → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: exchange_knowledge_team.items[].member
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    member: prismicT.KeyTextField;
+}
+/**
+ * Default variation for ExchangeKnowledgeTeam Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `ExchangeKnowledgeTeam`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ExchangeKnowledgeTeamSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<ExchangeKnowledgeTeamSliceDefaultPrimary>, Simplify<ExchangeKnowledgeTeamSliceDefaultItem>>;
+/**
+ * Slice variation for *ExchangeKnowledgeTeam*
+ *
+ */
+type ExchangeKnowledgeTeamSliceVariation = ExchangeKnowledgeTeamSliceDefault;
+/**
+ * ExchangeKnowledgeTeam Shared Slice
+ *
+ * - **API ID**: `exchange_knowledge_team`
+ * - **Description**: `ExchangeKnowledgeTeam`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ExchangeKnowledgeTeamSlice = prismicT.SharedSlice<"exchange_knowledge_team", ExchangeKnowledgeTeamSliceVariation>;
+/**
+ * Primary content in GenerateKnowledgeTeam → Primary
+ *
+ */
+interface GenerateKnowledgeTeamSliceDefaultPrimary {
+    /**
+     * Title field in *GenerateKnowledgeTeam → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: generate_knowledge_team.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * Coordinator Photo field in *GenerateKnowledgeTeam → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: generate_knowledge_team.primary.coordinator_photo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    coordinator_photo: prismicT.ImageField<never>;
+    /**
+     * Coordinator field in *GenerateKnowledgeTeam → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: generate_knowledge_team.primary.coordinator
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    coordinator: prismicT.KeyTextField;
+    /**
+     * Coordinator Title field in *GenerateKnowledgeTeam → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: generate_knowledge_team.primary.coordinator_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    coordinator_title: prismicT.KeyTextField;
+}
+/**
+ * Item in GenerateKnowledgeTeam → Items
+ *
+ */
+export interface GenerateKnowledgeTeamSliceDefaultItem {
+    /**
+     * Member Photo field in *GenerateKnowledgeTeam → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: generate_knowledge_team.items[].member_photo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    member_photo: prismicT.ImageField<never>;
+    /**
+     * Member field in *GenerateKnowledgeTeam → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: generate_knowledge_team.items[].member
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    member: prismicT.KeyTextField;
+}
+/**
+ * Default variation for GenerateKnowledgeTeam Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `GenerateKnowledgeTeam`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type GenerateKnowledgeTeamSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<GenerateKnowledgeTeamSliceDefaultPrimary>, Simplify<GenerateKnowledgeTeamSliceDefaultItem>>;
+/**
+ * Slice variation for *GenerateKnowledgeTeam*
+ *
+ */
+type GenerateKnowledgeTeamSliceVariation = GenerateKnowledgeTeamSliceDefault;
+/**
+ * GenerateKnowledgeTeam Shared Slice
+ *
+ * - **API ID**: `generate_knowledge_team`
+ * - **Description**: `GenerateKnowledgeTeam`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type GenerateKnowledgeTeamSlice = prismicT.SharedSlice<"generate_knowledge_team", GenerateKnowledgeTeamSliceVariation>;
 /**
  * Primary content in Hero → Primary
  *
@@ -254,6 +444,101 @@ type HeroSliceVariation = HeroSliceDefault;
  *
  */
 export type HeroSlice = prismicT.SharedSlice<"hero", HeroSliceVariation>;
+/**
+ * Primary content in ManageKnowledgeTeam → Primary
+ *
+ */
+interface ManageKnowledgeTeamSliceDefaultPrimary {
+    /**
+     * Title field in *ManageKnowledgeTeam → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: manage_knowledge_team.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * Coordinator Photo field in *ManageKnowledgeTeam → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: manage_knowledge_team.primary.coordinator_photo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    coordinator_photo: prismicT.ImageField<never>;
+    /**
+     * Coordinator field in *ManageKnowledgeTeam → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: manage_knowledge_team.primary.coordinator
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    coordinator: prismicT.KeyTextField;
+    /**
+     * Coordinator Title field in *ManageKnowledgeTeam → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: manage_knowledge_team.primary.coordinator_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    coordinator_title: prismicT.KeyTextField;
+}
+/**
+ * Item in ManageKnowledgeTeam → Items
+ *
+ */
+export interface ManageKnowledgeTeamSliceDefaultItem {
+    /**
+     * Member Photo field in *ManageKnowledgeTeam → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: manage_knowledge_team.items[].member_photo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    member_photo: prismicT.ImageField<never>;
+    /**
+     * Member field in *ManageKnowledgeTeam → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: manage_knowledge_team.items[].member
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    member: prismicT.KeyTextField;
+}
+/**
+ * Default variation for ManageKnowledgeTeam Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `ManageKnowledgeTeam`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ManageKnowledgeTeamSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<ManageKnowledgeTeamSliceDefaultPrimary>, Simplify<ManageKnowledgeTeamSliceDefaultItem>>;
+/**
+ * Slice variation for *ManageKnowledgeTeam*
+ *
+ */
+type ManageKnowledgeTeamSliceVariation = ManageKnowledgeTeamSliceDefault;
+/**
+ * ManageKnowledgeTeam Shared Slice
+ *
+ * - **API ID**: `manage_knowledge_team`
+ * - **Description**: `ManageKnowledgeTeam`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ManageKnowledgeTeamSlice = prismicT.SharedSlice<"manage_knowledge_team", ManageKnowledgeTeamSliceVariation>;
 /**
  * Primary content in ManagementTeam → Primary
  *
@@ -319,506 +604,6 @@ interface ManagementTeamSliceDefaultPrimary {
      *
      */
     coordinator_title: prismicT.KeyTextField;
-    /**
-     * GKT Title field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.gkt_title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    gkt_title: prismicT.KeyTextField;
-    /**
-     * GKT Leader Photo field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.gkt_leader_photo
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    gkt_leader_photo: prismicT.ImageField<never>;
-    /**
-     * GKT Leader field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.gkt_leader
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    gkt_leader: prismicT.KeyTextField;
-    /**
-     * GKT Leader Title field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.gkt_leader_title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    gkt_leader_title: prismicT.KeyTextField;
-    /**
-     * GKT Member 1 Photo field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.gkt_member_1_photo
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    gkt_member_1_photo: prismicT.ImageField<never>;
-    /**
-     * GKT Member 1 field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.gkt_member_1
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    gkt_member_1: prismicT.KeyTextField;
-    /**
-     * GKT Member 2 Photo field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.gkt_member_2_photo
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    gkt_member_2_photo: prismicT.ImageField<never>;
-    /**
-     * GKT Member 2 field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.gkt_member_2
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    gkt_member_2: prismicT.KeyTextField;
-    /**
-     * GKT Member 3 Photo field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.gkt_member_3_photo
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    gkt_member_3_photo: prismicT.ImageField<never>;
-    /**
-     * GKT Member 3 field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.gkt_member_3
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    gkt_member_3: prismicT.KeyTextField;
-    /**
-     * GKT Member 4 Photo field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.gkt_member_4_photo
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    gkt_member_4_photo: prismicT.ImageField<never>;
-    /**
-     * GKT Member 4 field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.gkt_member_4
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    gkt_member_4: prismicT.KeyTextField;
-    /**
-     * GKT Member 5 Photo field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.gkt_member_5_photo
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    gkt_member_5_photo: prismicT.ImageField<never>;
-    /**
-     * GKT Member 5 field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.gkt_member_5
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    gkt_member_5: prismicT.KeyTextField;
-    /**
-     * EKT Title field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.ekt_title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    ekt_title: prismicT.KeyTextField;
-    /**
-     * EKT Leader Photo field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.ekt_leader_photo
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    ekt_leader_photo: prismicT.ImageField<never>;
-    /**
-     * EKT Leader field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.ekt_leader
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    ekt_leader: prismicT.KeyTextField;
-    /**
-     * EKT Leader Title field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.ekt_leader_title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    ekt_leader_title: prismicT.KeyTextField;
-    /**
-     * EKT Member 1 Photo field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.ekt_member_1_photo
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    ekt_member_1_photo: prismicT.ImageField<never>;
-    /**
-     * EKT Member 1 field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.ekt_member_1
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    ekt_member_1: prismicT.KeyTextField;
-    /**
-     * EKT Member 2 Photo field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.ekt_member_2_photo
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    ekt_member_2_photo: prismicT.ImageField<never>;
-    /**
-     * EKT Member 2 field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.ekt_member_2
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    ekt_member_2: prismicT.KeyTextField;
-    /**
-     * EKT Member 3 Photo field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.ekt_member_3_photo
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    ekt_member_3_photo: prismicT.ImageField<never>;
-    /**
-     * EKT Member 3 field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.ekt_member_3
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    ekt_member_3: prismicT.KeyTextField;
-    /**
-     * EKT Member 4 Photo field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.ekt_member_4_photo
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    ekt_member_4_photo: prismicT.ImageField<never>;
-    /**
-     * EKT Member 4 field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.ekt_member_4
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    ekt_member_4: prismicT.KeyTextField;
-    /**
-     * EKT Member 5 Photo field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.ekt_member_5_photo
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    ekt_member_5_photo: prismicT.ImageField<never>;
-    /**
-     * EKT Member 5 field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.ekt_member_5
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    ekt_member_5: prismicT.KeyTextField;
-    /**
-     * EKT Member 6 Photo field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.ekt_member_6_photo
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    ekt_member_6_photo: prismicT.ImageField<never>;
-    /**
-     * EKT Member 6 field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.ekt_member_6
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    ekt_member_6: prismicT.KeyTextField;
-    /**
-     * MKT Title field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.mkt_title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    mkt_title: prismicT.KeyTextField;
-    /**
-     * MKT Leader Photo field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.mkt_leader_photo
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    mkt_leader_photo: prismicT.ImageField<never>;
-    /**
-     * MKT Leader field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.mkt_leader
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    mkt_leader: prismicT.KeyTextField;
-    /**
-     * MKT Leader Title field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.mkt_leader_title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    mkt_leader_title: prismicT.KeyTextField;
-    /**
-     * MKT Member 1 Photo field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.mkt_member_1_photo
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    mkt_member_1_photo: prismicT.ImageField<never>;
-    /**
-     * MKT Member 1 field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.mkt_member_1
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    mkt_member_1: prismicT.KeyTextField;
-    /**
-     * MKT Member 2 Photo field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.mkt_member_2_photo
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    mkt_member_2_photo: prismicT.ImageField<never>;
-    /**
-     * MKT Member 2 field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.mkt_member_2
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    mkt_member_2: prismicT.KeyTextField;
-    /**
-     * MKT Member 3 Photo field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.mkt_member_3_photo
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    mkt_member_3_photo: prismicT.ImageField<never>;
-    /**
-     * MKT Member 3 field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.mkt_member_3
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    mkt_member_3: prismicT.KeyTextField;
-    /**
-     * MKT Member 4 Photo field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.mkt_member_4_photo
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    mkt_member_4_photo: prismicT.ImageField<never>;
-    /**
-     * MKT Member 4 field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.mkt_member_4
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    mkt_member_4: prismicT.KeyTextField;
-    /**
-     * MKT Member 5 Photo field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.mkt_member_5_photo
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    mkt_member_5_photo: prismicT.ImageField<never>;
-    /**
-     * MKT Member 5 field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.mkt_member_5
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    mkt_member_5: prismicT.KeyTextField;
-    /**
-     * Directory Title field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.directory_title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    directory_title: prismicT.KeyTextField;
-    /**
-     * Country Header field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.country_header
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    country_header: prismicT.KeyTextField;
-    /**
-     * Institution Header field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.institution_header
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    institution_header: prismicT.KeyTextField;
-    /**
-     * Delegate Header field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.delegate_header
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    delegate_header: prismicT.KeyTextField;
-    /**
-     * Name Header field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.name_header
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    name_header: prismicT.KeyTextField;
-    /**
-     * Email Header field in *ManagementTeam → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.primary.email_header
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    email_header: prismicT.KeyTextField;
 }
 /**
  * Item in ManagementTeam → Items
@@ -826,55 +611,25 @@ interface ManagementTeamSliceDefaultPrimary {
  */
 export interface ManagementTeamSliceDefaultItem {
     /**
-     * Country field in *ManagementTeam → Items*
+     * Member Photo field in *ManagementTeam → Items*
      *
-     * - **Field Type**: Text
+     * - **Field Type**: Image
      * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.items[].country
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     * - **API ID Path**: management_team.items[].member_photo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
      *
      */
-    country: prismicT.KeyTextField;
+    member_photo: prismicT.ImageField<never>;
     /**
-     * Institution field in *ManagementTeam → Items*
+     * Member field in *ManagementTeam → Items*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.items[].institution
+     * - **API ID Path**: management_team.items[].member
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    institution: prismicT.KeyTextField;
-    /**
-     * Delegate field in *ManagementTeam → Items*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.items[].delegate
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    delegate: prismicT.KeyTextField;
-    /**
-     * Name field in *ManagementTeam → Items*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.items[].name
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    name: prismicT.KeyTextField;
-    /**
-     * Email field in *ManagementTeam → Items*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: management_team.items[].email
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    email: prismicT.KeyTextField;
+    member: prismicT.KeyTextField;
 }
 /**
  * Default variation for ManagementTeam Slice
@@ -1023,6 +778,161 @@ type NavigationItemSliceVariation = NavigationItemSliceDefault;
  *
  */
 export type NavigationItemSlice = prismicT.SharedSlice<"navigation_item", NavigationItemSliceVariation>;
+/**
+ * Primary content in NetworkMembers → Primary
+ *
+ */
+interface NetworkMembersSliceDefaultPrimary {
+    /**
+     * Title field in *NetworkMembers → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: network_members.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * Description field in *NetworkMembers → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: network_members.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * Country Header field in *NetworkMembers → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: network_members.primary.country_header
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    country_header: prismicT.KeyTextField;
+    /**
+     * Institution Header field in *NetworkMembers → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: network_members.primary.institution_header
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    institution_header: prismicT.KeyTextField;
+    /**
+     * Delegate Header field in *NetworkMembers → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: network_members.primary.delegate_header
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    delegate_header: prismicT.KeyTextField;
+    /**
+     * Name Header field in *NetworkMembers → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: network_members.primary.name_header
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    name_header: prismicT.KeyTextField;
+    /**
+     * Email Header field in *NetworkMembers → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: network_members.primary.email_header
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    email_header: prismicT.KeyTextField;
+}
+/**
+ * Item in NetworkMembers → Items
+ *
+ */
+export interface NetworkMembersSliceDefaultItem {
+    /**
+     * Country field in *NetworkMembers → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: network_members.items[].country
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    country: prismicT.KeyTextField;
+    /**
+     * Institution field in *NetworkMembers → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: network_members.items[].institution
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    institution: prismicT.KeyTextField;
+    /**
+     * Delegate field in *NetworkMembers → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: network_members.items[].delegate
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    delegate: prismicT.KeyTextField;
+    /**
+     * Name field in *NetworkMembers → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: network_members.items[].name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    name: prismicT.KeyTextField;
+    /**
+     * Email field in *NetworkMembers → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: network_members.items[].email
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    email: prismicT.KeyTextField;
+}
+/**
+ * Default variation for NetworkMembers Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `NetworkMembers`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NetworkMembersSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<NetworkMembersSliceDefaultPrimary>, Simplify<NetworkMembersSliceDefaultItem>>;
+/**
+ * Slice variation for *NetworkMembers*
+ *
+ */
+type NetworkMembersSliceVariation = NetworkMembersSliceDefault;
+/**
+ * NetworkMembers Shared Slice
+ *
+ * - **API ID**: `network_members`
+ * - **Description**: `NetworkMembers`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NetworkMembersSlice = prismicT.SharedSlice<"network_members", NetworkMembersSliceVariation>;
 /**
  * Primary content in Objectives → Primary
  *
@@ -1441,6 +1351,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, ManagementTeamSliceDefaultPrimary, ManagementTeamSliceDefaultItem, ManagementTeamSliceDefault, ManagementTeamSliceVariation, ManagementTeamSlice, MembershipSliceDefaultPrimary, MembershipSliceDefault, MembershipSliceVariation, MembershipSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, ObjectivesSliceDefaultPrimary, ObjectivesSliceDefaultItem, ObjectivesSliceDefault, ObjectivesSliceVariation, ObjectivesSlice, OperationSliceDefaultPrimary, OperationSliceDefaultItem, OperationSliceDefault, OperationSliceVariation, OperationSlice, ResearchLinesSliceDefaultPrimary, ResearchLinesSliceDefaultItem, ResearchLinesSliceDefault, ResearchLinesSliceVariation, ResearchLinesSlice, SocialSliceDefaultItem, SocialSliceDefault, SocialSliceVariation, SocialSlice, TextBlockSliceDefaultPrimary, TextBlockSliceDefault, TextBlockSliceVariation, TextBlockSlice };
+        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ExchangeKnowledgeTeamSliceDefaultPrimary, ExchangeKnowledgeTeamSliceDefaultItem, ExchangeKnowledgeTeamSliceDefault, ExchangeKnowledgeTeamSliceVariation, ExchangeKnowledgeTeamSlice, GenerateKnowledgeTeamSliceDefaultPrimary, GenerateKnowledgeTeamSliceDefaultItem, GenerateKnowledgeTeamSliceDefault, GenerateKnowledgeTeamSliceVariation, GenerateKnowledgeTeamSlice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, ManageKnowledgeTeamSliceDefaultPrimary, ManageKnowledgeTeamSliceDefaultItem, ManageKnowledgeTeamSliceDefault, ManageKnowledgeTeamSliceVariation, ManageKnowledgeTeamSlice, ManagementTeamSliceDefaultPrimary, ManagementTeamSliceDefaultItem, ManagementTeamSliceDefault, ManagementTeamSliceVariation, ManagementTeamSlice, MembershipSliceDefaultPrimary, MembershipSliceDefault, MembershipSliceVariation, MembershipSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, NetworkMembersSliceDefaultPrimary, NetworkMembersSliceDefaultItem, NetworkMembersSliceDefault, NetworkMembersSliceVariation, NetworkMembersSlice, ObjectivesSliceDefaultPrimary, ObjectivesSliceDefaultItem, ObjectivesSliceDefault, ObjectivesSliceVariation, ObjectivesSlice, OperationSliceDefaultPrimary, OperationSliceDefaultItem, OperationSliceDefault, OperationSliceVariation, OperationSlice, ResearchLinesSliceDefaultPrimary, ResearchLinesSliceDefaultItem, ResearchLinesSliceDefault, ResearchLinesSliceVariation, ResearchLinesSlice, SocialSliceDefaultItem, SocialSliceDefault, SocialSliceVariation, SocialSlice, TextBlockSliceDefaultPrimary, TextBlockSliceDefault, TextBlockSliceVariation, TextBlockSlice };
     }
 }

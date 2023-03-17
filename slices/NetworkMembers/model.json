@@ -1,0 +1,106 @@
+{
+  "id": "network_members",
+  "type": "SharedSlice",
+  "name": "NetworkMembers",
+  "description": "NetworkMembers",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "NetworkMembers",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em"
+          }
+        },
+        "country_header": {
+          "type": "Text",
+          "config": {
+            "label": "Country Header",
+            "placeholder": ""
+          }
+        },
+        "institution_header": {
+          "type": "Text",
+          "config": {
+            "label": "Institution Header",
+            "placeholder": ""
+          }
+        },
+        "delegate_header": {
+          "type": "Text",
+          "config": {
+            "label": "Delegate Header",
+            "placeholder": ""
+          }
+        },
+        "name_header": {
+          "type": "Text",
+          "config": {
+            "label": "Name Header",
+            "placeholder": ""
+          }
+        },
+        "email_header": {
+          "type": "Text",
+          "config": {
+            "label": "Email Header",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "country": {
+          "type": "Text",
+          "config": {
+            "label": "Country",
+            "placeholder": ""
+          }
+        },
+        "institution": {
+          "type": "Text",
+          "config": {
+            "label": "Institution",
+            "placeholder": ""
+          }
+        },
+        "delegate": {
+          "type": "Text",
+          "config": {
+            "label": "Delegate",
+            "placeholder": ""
+          }
+        },
+        "name": {
+          "type": "Text",
+          "config": {
+            "label": "Name",
+            "placeholder": ""
+          }
+        },
+        "email": {
+          "type": "Text",
+          "config": {
+            "label": "Email",
+            "placeholder": ""
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

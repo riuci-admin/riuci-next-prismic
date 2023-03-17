@@ -1,36 +1,20 @@
 {
-  "id": "management_team",
+  "id": "generate_knowledge_team",
   "type": "SharedSlice",
-  "name": "ManagementTeam",
-  "description": "ManagementTeam",
+  "name": "GenerateKnowledgeTeam",
+  "description": "GenerateKnowledgeTeam",
   "variations": [
     {
       "id": "default",
       "name": "Default",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "ManagementTeam",
+      "description": "GenerateKnowledgeTeam",
       "primary": {
         "title": {
           "type": "Text",
           "config": {
             "label": "Title",
-            "placeholder": ""
-          }
-        },
-        "description": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Description",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "paragraph,strong"
-          }
-        },
-        "team_title": {
-          "type": "Text",
-          "config": {
-            "label": "Team Title",
             "placeholder": ""
           }
         },

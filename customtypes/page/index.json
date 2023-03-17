@@ -46,6 +46,18 @@
             },
             "management_team": {
               "type": "SharedSlice"
+            },
+            "network_members": {
+              "type": "SharedSlice"
+            },
+            "exchange_knowledge_team": {
+              "type": "SharedSlice"
+            },
+            "generate_knowledge_team": {
+              "type": "SharedSlice"
+            },
+            "manage_knowledge_team": {
+              "type": "SharedSlice"
             }
           }
         }
