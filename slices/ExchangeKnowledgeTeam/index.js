@@ -9,8 +9,8 @@ import React from "react";
 const ExchangeKnowledgeTeam = ({ slice }) => (
   <section className="py bg-white pb-16">
     <div className="frame">
-      <h2 className="mb-12 text-center">{slice.primary.title}</h2>
-      <div className="flex flex-wrap justify-center gap-7 md:gap-14">
+      <h2 className="mb-7 text-center md:mb-10">{slice.primary.title}</h2>
+      <div className="flex flex-wrap justify-center gap-9 md:gap-14">
         <TeamMember
           photo={slice.primary.coordinator_photo}
           member={slice.primary.coordinator}
