@@ -1,7 +1,7 @@
-import MyComponent from '../../../../slices/Operation';
+import MyComponent from '../../../../slices/Origin';
 
 export default {
-  title: 'slices/Operation'
+  title: 'slices/Origin'
 }
 
 

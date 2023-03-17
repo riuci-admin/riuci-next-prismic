@@ -1,7 +1,7 @@
 {
   "id": "operation",
   "type": "SharedSlice",
-  "name": "Operation",
+  "name": "Origin",
   "description": "Operation",
   "variations": [
     {

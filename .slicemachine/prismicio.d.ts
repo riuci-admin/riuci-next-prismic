@@ -1049,12 +1049,12 @@ type ObjectivesSliceVariation = ObjectivesSliceDefault;
  */
 export type ObjectivesSlice = prismicT.SharedSlice<"objectives", ObjectivesSliceVariation>;
 /**
- * Primary content in Operation → Primary
+ * Primary content in Origin → Primary
  *
  */
 interface OperationSliceDefaultPrimary {
     /**
-     * Title field in *Operation → Primary*
+     * Title field in *Origin → Primary*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
@@ -1064,7 +1064,7 @@ interface OperationSliceDefaultPrimary {
      */
     title: prismicT.KeyTextField;
     /**
-     * Image field in *Operation → Primary*
+     * Image field in *Origin → Primary*
      *
      * - **Field Type**: Image
      * - **Placeholder**: *None*
@@ -1074,7 +1074,7 @@ interface OperationSliceDefaultPrimary {
      */
     image: prismicT.ImageField<never>;
     /**
-     * Text field in *Operation → Primary*
+     * Text field in *Origin → Primary*
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
@@ -1084,7 +1084,7 @@ interface OperationSliceDefaultPrimary {
      */
     text: prismicT.RichTextField;
     /**
-     * Manifesto Image field in *Operation → Primary*
+     * Manifesto Image field in *Origin → Primary*
      *
      * - **Field Type**: Image
      * - **Placeholder**: *None*
@@ -1094,7 +1094,7 @@ interface OperationSliceDefaultPrimary {
      */
     manifesto_image: prismicT.ImageField<never>;
     /**
-     * Manifesto Title field in *Operation → Primary*
+     * Manifesto Title field in *Origin → Primary*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
@@ -1104,7 +1104,7 @@ interface OperationSliceDefaultPrimary {
      */
     manifesto_title: prismicT.KeyTextField;
     /**
-     * Manifesto Text field in *Operation → Primary*
+     * Manifesto Text field in *Origin → Primary*
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
@@ -1114,7 +1114,7 @@ interface OperationSliceDefaultPrimary {
      */
     manifesto_text: prismicT.RichTextField;
     /**
-     * Manifesto Document field in *Operation → Primary*
+     * Manifesto Document field in *Origin → Primary*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
@@ -1124,7 +1124,7 @@ interface OperationSliceDefaultPrimary {
      */
     manifesto_document: prismicT.KeyTextField;
     /**
-     * Manifesto Link field in *Operation → Primary*
+     * Manifesto Link field in *Origin → Primary*
      *
      * - **Field Type**: Link
      * - **Placeholder**: *None*
@@ -1135,12 +1135,12 @@ interface OperationSliceDefaultPrimary {
     manifesto_link: prismicT.LinkField;
 }
 /**
- * Item in Operation → Items
+ * Item in Origin → Items
  *
  */
 export interface OperationSliceDefaultItem {
     /**
-     * Member Name field in *Operation → Items*
+     * Member Name field in *Origin → Items*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
@@ -1150,7 +1150,7 @@ export interface OperationSliceDefaultItem {
      */
     member_name: prismicT.KeyTextField;
     /**
-     * Member Place field in *Operation → Items*
+     * Member Place field in *Origin → Items*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
@@ -1161,7 +1161,7 @@ export interface OperationSliceDefaultItem {
     member_place: prismicT.KeyTextField;
 }
 /**
- * Default variation for Operation Slice
+ * Default variation for Origin Slice
  *
  * - **API ID**: `default`
  * - **Description**: `Operation`
@@ -1170,12 +1170,12 @@ export interface OperationSliceDefaultItem {
  */
 export type OperationSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<OperationSliceDefaultPrimary>, Simplify<OperationSliceDefaultItem>>;
 /**
- * Slice variation for *Operation*
+ * Slice variation for *Origin*
  *
  */
 type OperationSliceVariation = OperationSliceDefault;
 /**
- * Operation Shared Slice
+ * Origin Shared Slice
  *
  * - **API ID**: `operation`
  * - **Description**: `Operation`
