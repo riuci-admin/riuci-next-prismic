@@ -159,7 +159,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = HeroSlice | ResearchLinesSlice | TextBlockSlice | OperationSlice | MembershipSlice | ObjectivesSlice | ManagementTeamSlice | NetworkMembersSlice | ExchangeKnowledgeTeamSlice | GenerateKnowledgeTeamSlice | ManageKnowledgeTeamSlice;
+type PageDocumentDataSlicesSlice = HeroSlice | ResearchLinesSlice | TextBlockSlice | OriginSlice | MembershipSlice | ObjectivesSlice | ManagementTeamSlice | NetworkMembersSlice | ExchangeKnowledgeTeamSlice | GenerateKnowledgeTeamSlice | ManageKnowledgeTeamSlice;
 /**
  * Page document from Prismic
  *
@@ -853,6 +853,36 @@ interface NetworkMembersSliceDefaultPrimary {
      *
      */
     email_header: prismicT.KeyTextField;
+    /**
+     * All field in *NetworkMembers → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: network_members.primary.all
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    all: prismicT.KeyTextField;
+    /**
+     * Search field in *NetworkMembers → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: network_members.primary.search
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    search: prismicT.KeyTextField;
+    /**
+     * Records field in *NetworkMembers → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: network_members.primary.records
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    records: prismicT.KeyTextField;
 }
 /**
  * Item in NetworkMembers → Items
@@ -1052,13 +1082,13 @@ export type ObjectivesSlice = prismicT.SharedSlice<"objectives", ObjectivesSlice
  * Primary content in Origin → Primary
  *
  */
-interface OperationSliceDefaultPrimary {
+interface OriginSliceDefaultPrimary {
     /**
      * Title field in *Origin → Primary*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: operation.primary.title
+     * - **API ID Path**: origin.primary.title
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
@@ -1068,7 +1098,7 @@ interface OperationSliceDefaultPrimary {
      *
      * - **Field Type**: Image
      * - **Placeholder**: *None*
-     * - **API ID Path**: operation.primary.image
+     * - **API ID Path**: origin.primary.image
      * - **Documentation**: https://prismic.io/docs/core-concepts/image
      *
      */
@@ -1078,7 +1108,7 @@ interface OperationSliceDefaultPrimary {
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: operation.primary.text
+     * - **API ID Path**: origin.primary.text
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
@@ -1088,7 +1118,7 @@ interface OperationSliceDefaultPrimary {
      *
      * - **Field Type**: Image
      * - **Placeholder**: *None*
-     * - **API ID Path**: operation.primary.manifesto_image
+     * - **API ID Path**: origin.primary.manifesto_image
      * - **Documentation**: https://prismic.io/docs/core-concepts/image
      *
      */
@@ -1098,7 +1128,7 @@ interface OperationSliceDefaultPrimary {
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: operation.primary.manifesto_title
+     * - **API ID Path**: origin.primary.manifesto_title
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
@@ -1108,7 +1138,7 @@ interface OperationSliceDefaultPrimary {
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: operation.primary.manifesto_text
+     * - **API ID Path**: origin.primary.manifesto_text
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
@@ -1118,7 +1148,7 @@ interface OperationSliceDefaultPrimary {
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: operation.primary.manifesto_document
+     * - **API ID Path**: origin.primary.manifesto_document
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
@@ -1128,7 +1158,7 @@ interface OperationSliceDefaultPrimary {
      *
      * - **Field Type**: Link
      * - **Placeholder**: *None*
-     * - **API ID Path**: operation.primary.manifesto_link
+     * - **API ID Path**: origin.primary.manifesto_link
      * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
      *
      */
@@ -1138,13 +1168,13 @@ interface OperationSliceDefaultPrimary {
  * Item in Origin → Items
  *
  */
-export interface OperationSliceDefaultItem {
+export interface OriginSliceDefaultItem {
     /**
      * Member Name field in *Origin → Items*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: operation.items[].member_name
+     * - **API ID Path**: origin.items[].member_name
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
@@ -1154,7 +1184,7 @@ export interface OperationSliceDefaultItem {
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: operation.items[].member_place
+     * - **API ID Path**: origin.items[].member_place
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
@@ -1164,25 +1194,25 @@ export interface OperationSliceDefaultItem {
  * Default variation for Origin Slice
  *
  * - **API ID**: `default`
- * - **Description**: `Operation`
+ * - **Description**: `Origin`
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type OperationSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<OperationSliceDefaultPrimary>, Simplify<OperationSliceDefaultItem>>;
+export type OriginSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<OriginSliceDefaultPrimary>, Simplify<OriginSliceDefaultItem>>;
 /**
  * Slice variation for *Origin*
  *
  */
-type OperationSliceVariation = OperationSliceDefault;
+type OriginSliceVariation = OriginSliceDefault;
 /**
  * Origin Shared Slice
  *
- * - **API ID**: `operation`
- * - **Description**: `Operation`
+ * - **API ID**: `origin`
+ * - **Description**: `Origin`
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type OperationSlice = prismicT.SharedSlice<"operation", OperationSliceVariation>;
+export type OriginSlice = prismicT.SharedSlice<"origin", OriginSliceVariation>;
 /**
  * Primary content in ResearchLines → Primary
  *
@@ -1351,6 +1381,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ExchangeKnowledgeTeamSliceDefaultPrimary, ExchangeKnowledgeTeamSliceDefaultItem, ExchangeKnowledgeTeamSliceDefault, ExchangeKnowledgeTeamSliceVariation, ExchangeKnowledgeTeamSlice, GenerateKnowledgeTeamSliceDefaultPrimary, GenerateKnowledgeTeamSliceDefaultItem, GenerateKnowledgeTeamSliceDefault, GenerateKnowledgeTeamSliceVariation, GenerateKnowledgeTeamSlice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, ManageKnowledgeTeamSliceDefaultPrimary, ManageKnowledgeTeamSliceDefaultItem, ManageKnowledgeTeamSliceDefault, ManageKnowledgeTeamSliceVariation, ManageKnowledgeTeamSlice, ManagementTeamSliceDefaultPrimary, ManagementTeamSliceDefaultItem, ManagementTeamSliceDefault, ManagementTeamSliceVariation, ManagementTeamSlice, MembershipSliceDefaultPrimary, MembershipSliceDefault, MembershipSliceVariation, MembershipSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, NetworkMembersSliceDefaultPrimary, NetworkMembersSliceDefaultItem, NetworkMembersSliceDefault, NetworkMembersSliceVariation, NetworkMembersSlice, ObjectivesSliceDefaultPrimary, ObjectivesSliceDefaultItem, ObjectivesSliceDefault, ObjectivesSliceVariation, ObjectivesSlice, OperationSliceDefaultPrimary, OperationSliceDefaultItem, OperationSliceDefault, OperationSliceVariation, OperationSlice, ResearchLinesSliceDefaultPrimary, ResearchLinesSliceDefaultItem, ResearchLinesSliceDefault, ResearchLinesSliceVariation, ResearchLinesSlice, SocialSliceDefaultItem, SocialSliceDefault, SocialSliceVariation, SocialSlice, TextBlockSliceDefaultPrimary, TextBlockSliceDefault, TextBlockSliceVariation, TextBlockSlice };
+        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ExchangeKnowledgeTeamSliceDefaultPrimary, ExchangeKnowledgeTeamSliceDefaultItem, ExchangeKnowledgeTeamSliceDefault, ExchangeKnowledgeTeamSliceVariation, ExchangeKnowledgeTeamSlice, GenerateKnowledgeTeamSliceDefaultPrimary, GenerateKnowledgeTeamSliceDefaultItem, GenerateKnowledgeTeamSliceDefault, GenerateKnowledgeTeamSliceVariation, GenerateKnowledgeTeamSlice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, ManageKnowledgeTeamSliceDefaultPrimary, ManageKnowledgeTeamSliceDefaultItem, ManageKnowledgeTeamSliceDefault, ManageKnowledgeTeamSliceVariation, ManageKnowledgeTeamSlice, ManagementTeamSliceDefaultPrimary, ManagementTeamSliceDefaultItem, ManagementTeamSliceDefault, ManagementTeamSliceVariation, ManagementTeamSlice, MembershipSliceDefaultPrimary, MembershipSliceDefault, MembershipSliceVariation, MembershipSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, NetworkMembersSliceDefaultPrimary, NetworkMembersSliceDefaultItem, NetworkMembersSliceDefault, NetworkMembersSliceVariation, NetworkMembersSlice, ObjectivesSliceDefaultPrimary, ObjectivesSliceDefaultItem, ObjectivesSliceDefault, ObjectivesSliceVariation, ObjectivesSlice, OriginSliceDefaultPrimary, OriginSliceDefaultItem, OriginSliceDefault, OriginSliceVariation, OriginSlice, ResearchLinesSliceDefaultPrimary, ResearchLinesSliceDefaultItem, ResearchLinesSliceDefault, ResearchLinesSliceVariation, ResearchLinesSlice, SocialSliceDefaultItem, SocialSliceDefault, SocialSliceVariation, SocialSlice, TextBlockSliceDefaultPrimary, TextBlockSliceDefault, TextBlockSliceVariation, TextBlockSlice };
     }
 }

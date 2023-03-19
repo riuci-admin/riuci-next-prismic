@@ -43,6 +43,21 @@
         "__TYPE__": "FieldContent",
         "value": "floating",
         "type": "Text"
+      },
+      "all": {
+        "__TYPE__": "FieldContent",
+        "value": "mood",
+        "type": "Text"
+      },
+      "search": {
+        "__TYPE__": "FieldContent",
+        "value": "result",
+        "type": "Text"
+      },
+      "records": {
+        "__TYPE__": "FieldContent",
+        "value": "steam",
+        "type": "Text"
       }
     },
     "items": [

@@ -2,42 +2,38 @@ import matchSorter from "match-sorter";
 import { useMemo } from "react";
 import { useFilters, useTable } from "react-table";
 
-function DefaultColumnFilter({
-  column: { filterValue, preFilteredRows, setFilter },
-}) {
-  const count = preFilteredRows.length;
+function DefaultColumnFilter({ column, translations }) {
+  const count = column.preFilteredRows.length;
   return (
     <input
       type="text"
-      value={filterValue || ""}
+      value={column.filterValue || ""}
       onChange={(e) => {
-        setFilter(e.target.value || undefined);
+        column.setFilter(e.target.value || undefined);
       }}
-      placeholder={`Search ${count} records...`}
+      placeholder={`${translations.search} ${count} ${translations.records}...`}
       className="input input-sm mt-1 w-full"
     />
   );
 }
 
-function SelectColumnFilter({
-  column: { filterValue, setFilter, preFilteredRows, id },
-}) {
+function SelectColumnFilter({ column, translations }) {
   const options = useMemo(() => {
     const options = new Set();
-    preFilteredRows.forEach((row) => {
-      options.add(row.values[id]);
+    column.preFilteredRows.forEach((row) => {
+      options.add(row.values[column.id]);
     });
     return [...options.values()];
-  }, [id, preFilteredRows]);
+  }, [column.id, column.preFilteredRows]);
   return (
     <select
-      value={filterValue}
+      value={column.filterValue}
       onChange={(e) => {
-        setFilter(e.target.value || undefined);
+        column.setFilter(e.target.value || undefined);
       }}
       className="select select-sm mt-1 w-full"
     >
-      <option value="">All</option>
+      <option value="">{translations.all}</option>
       {options.map((option, i) => (
         <option key={i} value={option}>
           {option}
@@ -52,7 +48,7 @@ function fuzzyTextFilterFn(rows, id, filterValue) {
 }
 fuzzyTextFilterFn.autoRemove = (val) => !val;
 
-function Table({ columns, data }) {
+function Table({ columns, data, translations }) {
   const filterTypes = useMemo(
     () => ({
       fuzzyText: fuzzyTextFilterFn,
@@ -82,11 +78,12 @@ function Table({ columns, data }) {
         data,
         defaultColumn,
         filterTypes,
+        translations,
       },
       useFilters
     );
   return (
-    <table {...getTableProps()} className="table-zebra mx-auto table max-w-6xl">
+    <table {...getTableProps()} className="w-6xl table-zebra mx-auto table">
       <thead>
         {headerGroups.map((headerGroup, i) => (
           <tr key={i} {...headerGroup.getHeaderGroupProps()}>
@@ -127,6 +124,9 @@ export const MemberDirectory = ({
   delegate_header,
   name_header,
   email_header,
+  all,
+  search,
+  records,
   items,
 }) => {
   const columns = useMemo(
@@ -135,7 +135,6 @@ export const MemberDirectory = ({
         Header: country_header,
         accessor: "country",
         Filter: SelectColumnFilter,
-        filter: "includes",
       },
       {
         Header: institution_header,
@@ -145,7 +144,6 @@ export const MemberDirectory = ({
         Header: delegate_header,
         accessor: "delegate",
         Filter: SelectColumnFilter,
-        filter: "includes",
       },
       {
         Header: name_header,
@@ -165,11 +163,10 @@ export const MemberDirectory = ({
     ]
   );
   const data = useMemo(() => items, [items]);
+  const translations = { all, search, records };
   return (
-    <div className="mb-14 mt-7">
-      <div className="mt-3 overflow-x-auto">
-        <Table columns={columns} data={data} />
-      </div>
+    <div className="mt-3 overflow-x-auto">
+      <Table columns={columns} data={data} translations={translations} />
     </div>
   );
 };

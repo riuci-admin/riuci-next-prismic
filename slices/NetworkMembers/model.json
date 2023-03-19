@@ -61,6 +61,27 @@
             "label": "Email Header",
             "placeholder": ""
           }
+        },
+        "all": {
+          "type": "Text",
+          "config": {
+            "label": "All",
+            "placeholder": ""
+          }
+        },
+        "search": {
+          "type": "Text",
+          "config": {
+            "label": "Search",
+            "placeholder": ""
+          }
+        },
+        "records": {
+          "type": "Text",
+          "config": {
+            "label": "Records",
+            "placeholder": ""
+          }
         }
       },
       "items": {
