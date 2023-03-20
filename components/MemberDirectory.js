@@ -118,52 +118,43 @@ function Table({ columns, data, translations }) {
   );
 }
 
-export const MemberDirectory = ({
-  country_header,
-  institution_header,
-  delegate_header,
-  name_header,
-  email_header,
-  all,
-  search,
-  records,
-  items,
-}) => {
+export const MemberDirectory = ({ primary, items }) => {
   const columns = useMemo(
     () => [
       {
-        Header: country_header,
+        Header: primary.country_header,
         accessor: "country",
         Filter: SelectColumnFilter,
       },
       {
-        Header: institution_header,
+        Header: primary.institution_header,
         accessor: "institution",
       },
       {
-        Header: delegate_header,
+        Header: primary.delegate_header,
         accessor: "delegate",
         Filter: SelectColumnFilter,
       },
       {
-        Header: name_header,
+        Header: primary.name_header,
         accessor: "name",
       },
       {
-        Header: email_header,
+        Header: primary.email_header,
         accessor: "email",
       },
     ],
-    [
-      country_header,
-      institution_header,
-      delegate_header,
-      name_header,
-      email_header,
-    ]
+    [primary]
   );
   const data = useMemo(() => items, [items]);
-  const translations = { all, search, records };
+  const translations = useMemo(
+    () => ({
+      all: primary.all,
+      search: primary.search,
+      records: primary.records,
+    }),
+    [primary]
+  );
   return (
     <div className="mt-3 overflow-x-auto">
       <Table columns={columns} data={data} translations={translations} />
