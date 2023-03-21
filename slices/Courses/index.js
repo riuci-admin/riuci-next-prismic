@@ -9,13 +9,13 @@ import React from "react";
  * @param { CoursesProps }
  */
 const Courses = ({ slice }) => (
-  <section className="py">
+  <section className="py bg-neutral-100">
     <div className="frame flex flex-col">
       <h1 className="mb-10">{slice.primary.title}</h1>
       {slice.items.map((item, i) => (
         <div
           key={i}
-          className="card mb-12 overflow-auto border-[1px] border-neutral-100 bg-base-100 shadow-xl md:card-side"
+          className="card mb-12 overflow-auto bg-white shadow-xl md:card-side"
         >
           <figure
             className="h-72 bg-cover md:h-auto md:w-1/2"
