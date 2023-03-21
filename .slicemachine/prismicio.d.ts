@@ -217,15 +217,16 @@ interface CoursesSliceDefaultPrimary {
  */
 export interface CoursesSliceDefaultItem {
     /**
-     * Start Date field in *Courses → Items*
+     * Visible field in *Courses → Items*
      *
-     * - **Field Type**: Date
+     * - **Field Type**: Boolean
      * - **Placeholder**: *None*
-     * - **API ID Path**: courses.items[].start_date
-     * - **Documentation**: https://prismic.io/docs/core-concepts/date
+     * - **Default Value**: true
+     * - **API ID Path**: courses.items[].visible
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
      *
      */
-    start_date: prismicT.DateField;
+    visible: prismicT.BooleanField;
     /**
      * Image field in *Courses → Items*
      *

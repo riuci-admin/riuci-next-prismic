@@ -14,14 +14,6 @@
         "__TYPE__": "GroupItemContent",
         "value": [
           [
-            "start_date",
-            {
-              "__TYPE__": "FieldContent",
-              "type": "Date",
-              "value": "2018-07-01"
-            }
-          ],
-          [
             "image",
             {
               "origin": {
@@ -67,6 +59,13 @@
               "__TYPE__": "FieldContent",
               "value": "first",
               "type": "Text"
+            }
+          ],
+          [
+            "visible",
+            {
+              "__TYPE__": "BooleanContent",
+              "value": false
             }
           ]
         ]

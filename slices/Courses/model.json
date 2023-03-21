@@ -20,11 +20,13 @@
         }
       },
       "items": {
-        "start_date": {
-          "type": "Date",
+        "visible": {
+          "type": "Boolean",
           "config": {
-            "label": "Start Date",
-            "placeholder": ""
+            "label": "Visible",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": true
           }
         },
         "image": {
