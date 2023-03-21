@@ -23,6 +23,9 @@
   .frame {
     @apply container mx-auto max-w-6xl px-6;
   }
+  .course > p {
+    @apply mb-2 leading-normal;
+  }
   .menu :where(li) > :where(*:not(ul)) {
     gap: 0.1rem !important;
   }

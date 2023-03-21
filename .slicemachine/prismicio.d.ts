@@ -159,7 +159,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = HeroSlice | ResearchLinesSlice | TextBlockSlice | OriginSlice | MembershipSlice | ObjectivesSlice | ManagementTeamSlice | NetworkMembersSlice | ExchangeKnowledgeTeamSlice | GenerateKnowledgeTeamSlice | ManageKnowledgeTeamSlice;
+type PageDocumentDataSlicesSlice = HeroSlice | ResearchLinesSlice | TextBlockSlice | OriginSlice | MembershipSlice | ObjectivesSlice | ManagementTeamSlice | NetworkMembersSlice | ExchangeKnowledgeTeamSlice | GenerateKnowledgeTeamSlice | ManageKnowledgeTeamSlice | CoursesSlice;
 /**
  * Page document from Prismic
  *
@@ -195,6 +195,91 @@ interface SettingsDocumentData {
  */
 export type SettingsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<SettingsDocumentData>, "settings", Lang>;
 export type AllDocumentTypes = FooterDocument | NavigationDocument | PageDocument | SettingsDocument;
+/**
+ * Primary content in Courses → Primary
+ *
+ */
+interface CoursesSliceDefaultPrimary {
+    /**
+     * Title field in *Courses → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: courses.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+}
+/**
+ * Item in Courses → Items
+ *
+ */
+export interface CoursesSliceDefaultItem {
+    /**
+     * Start Date field in *Courses → Items*
+     *
+     * - **Field Type**: Date
+     * - **Placeholder**: *None*
+     * - **API ID Path**: courses.items[].start_date
+     * - **Documentation**: https://prismic.io/docs/core-concepts/date
+     *
+     */
+    start_date: prismicT.DateField;
+    /**
+     * Image field in *Courses → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: courses.items[].image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * Topic field in *Courses → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: courses.items[].topic
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    topic: prismicT.KeyTextField;
+    /**
+     * Text field in *Courses → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: courses.items[].text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    text: prismicT.RichTextField;
+}
+/**
+ * Default variation for Courses Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Courses`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CoursesSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<CoursesSliceDefaultPrimary>, Simplify<CoursesSliceDefaultItem>>;
+/**
+ * Slice variation for *Courses*
+ *
+ */
+type CoursesSliceVariation = CoursesSliceDefault;
+/**
+ * Courses Shared Slice
+ *
+ * - **API ID**: `courses`
+ * - **Description**: `Courses`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CoursesSlice = prismicT.SharedSlice<"courses", CoursesSliceVariation>;
 /**
  * Primary content in ExchangeKnowledgeTeam → Primary
  *
@@ -1381,6 +1466,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ExchangeKnowledgeTeamSliceDefaultPrimary, ExchangeKnowledgeTeamSliceDefaultItem, ExchangeKnowledgeTeamSliceDefault, ExchangeKnowledgeTeamSliceVariation, ExchangeKnowledgeTeamSlice, GenerateKnowledgeTeamSliceDefaultPrimary, GenerateKnowledgeTeamSliceDefaultItem, GenerateKnowledgeTeamSliceDefault, GenerateKnowledgeTeamSliceVariation, GenerateKnowledgeTeamSlice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, ManageKnowledgeTeamSliceDefaultPrimary, ManageKnowledgeTeamSliceDefaultItem, ManageKnowledgeTeamSliceDefault, ManageKnowledgeTeamSliceVariation, ManageKnowledgeTeamSlice, ManagementTeamSliceDefaultPrimary, ManagementTeamSliceDefaultItem, ManagementTeamSliceDefault, ManagementTeamSliceVariation, ManagementTeamSlice, MembershipSliceDefaultPrimary, MembershipSliceDefault, MembershipSliceVariation, MembershipSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, NetworkMembersSliceDefaultPrimary, NetworkMembersSliceDefaultItem, NetworkMembersSliceDefault, NetworkMembersSliceVariation, NetworkMembersSlice, ObjectivesSliceDefaultPrimary, ObjectivesSliceDefaultItem, ObjectivesSliceDefault, ObjectivesSliceVariation, ObjectivesSlice, OriginSliceDefaultPrimary, OriginSliceDefaultItem, OriginSliceDefault, OriginSliceVariation, OriginSlice, ResearchLinesSliceDefaultPrimary, ResearchLinesSliceDefaultItem, ResearchLinesSliceDefault, ResearchLinesSliceVariation, ResearchLinesSlice, SocialSliceDefaultItem, SocialSliceDefault, SocialSliceVariation, SocialSlice, TextBlockSliceDefaultPrimary, TextBlockSliceDefault, TextBlockSliceVariation, TextBlockSlice };
+        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, CoursesSliceDefaultPrimary, CoursesSliceDefaultItem, CoursesSliceDefault, CoursesSliceVariation, CoursesSlice, ExchangeKnowledgeTeamSliceDefaultPrimary, ExchangeKnowledgeTeamSliceDefaultItem, ExchangeKnowledgeTeamSliceDefault, ExchangeKnowledgeTeamSliceVariation, ExchangeKnowledgeTeamSlice, GenerateKnowledgeTeamSliceDefaultPrimary, GenerateKnowledgeTeamSliceDefaultItem, GenerateKnowledgeTeamSliceDefault, GenerateKnowledgeTeamSliceVariation, GenerateKnowledgeTeamSlice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, ManageKnowledgeTeamSliceDefaultPrimary, ManageKnowledgeTeamSliceDefaultItem, ManageKnowledgeTeamSliceDefault, ManageKnowledgeTeamSliceVariation, ManageKnowledgeTeamSlice, ManagementTeamSliceDefaultPrimary, ManagementTeamSliceDefaultItem, ManagementTeamSliceDefault, ManagementTeamSliceVariation, ManagementTeamSlice, MembershipSliceDefaultPrimary, MembershipSliceDefault, MembershipSliceVariation, MembershipSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, NetworkMembersSliceDefaultPrimary, NetworkMembersSliceDefaultItem, NetworkMembersSliceDefault, NetworkMembersSliceVariation, NetworkMembersSlice, ObjectivesSliceDefaultPrimary, ObjectivesSliceDefaultItem, ObjectivesSliceDefault, ObjectivesSliceVariation, ObjectivesSlice, OriginSliceDefaultPrimary, OriginSliceDefaultItem, OriginSliceDefault, OriginSliceVariation, OriginSlice, ResearchLinesSliceDefaultPrimary, ResearchLinesSliceDefaultItem, ResearchLinesSliceDefault, ResearchLinesSliceVariation, ResearchLinesSlice, SocialSliceDefaultItem, SocialSliceDefault, SocialSliceVariation, SocialSlice, TextBlockSliceDefaultPrimary, TextBlockSliceDefault, TextBlockSliceVariation, TextBlockSlice };
     }
 }

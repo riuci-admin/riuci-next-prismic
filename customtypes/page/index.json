@@ -58,6 +58,9 @@
             },
             "manage_knowledge_team": {
               "type": "SharedSlice"
+            },
+            "courses": {
+              "type": "SharedSlice"
             }
           }
         }
