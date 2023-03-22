@@ -20,7 +20,10 @@ const ExternalRepositories = ({ slice }) => (
         >
           <div>{item.name}</div>
           <figure className="rounded-sm pt-5">
-            <PrismicNextImage field={item.logo} />
+            <PrismicNextImage
+              field={item.logo}
+              imgixParams={{ mask: "corners", cornerRadius: 20 }}
+            />
           </figure>
         </a>
       ))}
