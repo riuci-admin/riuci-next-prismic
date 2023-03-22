@@ -8,7 +8,7 @@ import React from "react";
  */
 const ExternalRepositories = ({ slice }) => (
   <section className="py bg-neutral-100">
-    <h1>{slice.primary.title}</h1>
+    <h1 className="mb-10">{slice.primary.title}</h1>
     <div className="frame mb-8 flex flex-wrap items-center justify-center gap-10 text-center">
       {slice.items.map((item, i) => (
         <a
