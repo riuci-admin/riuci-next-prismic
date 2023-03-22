@@ -2,6 +2,7 @@
 
 import Courses from './Courses';
 import ExchangeKnowledgeTeam from './ExchangeKnowledgeTeam';
+import ExternalRepositories from './ExternalRepositories';
 import GenerateKnowledgeTeam from './GenerateKnowledgeTeam';
 import Hero from './Hero';
 import ManageKnowledgeTeam from './ManageKnowledgeTeam';
@@ -18,6 +19,7 @@ import TextBlock from './TextBlock';
 export {
 	Courses,
 	ExchangeKnowledgeTeam,
+	ExternalRepositories,
 	GenerateKnowledgeTeam,
 	Hero,
 	ManageKnowledgeTeam,
@@ -35,6 +37,7 @@ export {
 export const components = {
 	courses: Courses,
 	exchange_knowledge_team: ExchangeKnowledgeTeam,
+	external_repositories: ExternalRepositories,
 	generate_knowledge_team: GenerateKnowledgeTeam,
 	hero: Hero,
 	manage_knowledge_team: ManageKnowledgeTeam,

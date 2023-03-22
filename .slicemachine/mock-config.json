@@ -125,6 +125,12 @@
         "primary": {},
         "items": {}
       }
+    },
+    "ExternalRepositories": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
     }
   }
 }
