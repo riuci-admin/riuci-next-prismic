@@ -13,7 +13,7 @@ const ExternalRepositories = ({ slice }) => (
       {slice.items.map((item, i) => (
         <a
           key={i}
-          className="card h-72 w-80 border-[1px] bg-white p-8 font-medium shadow-xl hover:border-[1px] hover:border-green-100 hover:bg-green-light hover:text-green-dark hover:shadow-green-200"
+          className="card h-72 w-[19rem] border-[1px] bg-white p-8 font-medium shadow-xl hover:border-[1px] hover:border-green-100 hover:bg-green-light hover:text-green-dark hover:shadow-green-200"
           href={item.link}
           target="_blank"
           rel="noopener noreferrer"
