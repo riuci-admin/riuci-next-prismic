@@ -159,7 +159,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = HeroSlice | ResearchLinesSlice | TextBlockSlice | OriginSlice | MembershipSlice | ObjectivesSlice | ManagementTeamSlice | NetworkMembersSlice | ExchangeKnowledgeTeamSlice | GenerateKnowledgeTeamSlice | ManageKnowledgeTeamSlice | CoursesSlice | ExternalRepositoriesSlice;
+type PageDocumentDataSlicesSlice = HeroSlice | ResearchLinesSlice | TextBlockSlice | OriginSlice | MembershipSlice | ObjectivesSlice | ManagementTeamSlice | NetworkMembersSlice | ExchangeKnowledgeTeamSlice | GenerateKnowledgeTeamSlice | ManageKnowledgeTeamSlice | CoursesSlice | ExternalRepositoriesSlice | RepositorySlice;
 /**
  * Page document from Prismic
  *
@@ -1375,6 +1375,251 @@ type OriginSliceVariation = OriginSliceDefault;
  */
 export type OriginSlice = prismicT.SharedSlice<"origin", OriginSliceVariation>;
 /**
+ * Primary content in Repository → Primary
+ *
+ */
+interface RepositorySliceDefaultPrimary {
+    /**
+     * Title field in *Repository → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: repository.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * Language Header field in *Repository → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: repository.primary.language_header
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    language_header: prismicT.KeyTextField;
+    /**
+     * Title Header field in *Repository → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: repository.primary.title_header
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title_header: prismicT.KeyTextField;
+    /**
+     * Authors Header field in *Repository → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: repository.primary.authors_header
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    authors_header: prismicT.KeyTextField;
+    /**
+     * Description Header field in *Repository → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: repository.primary.description_header
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    description_header: prismicT.KeyTextField;
+    /**
+     * Year Header field in *Repository → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: repository.primary.year_header
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    year_header: prismicT.KeyTextField;
+    /**
+     * Publisher Header field in *Repository → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: repository.primary.publisher_header
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    publisher_header: prismicT.KeyTextField;
+    /**
+     * Country Header field in *Repository → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: repository.primary.country_header
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    country_header: prismicT.KeyTextField;
+    /**
+     * Type Header field in *Repository → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: repository.primary.type_header
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    type_header: prismicT.KeyTextField;
+    /**
+     * All field in *Repository → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: repository.primary.all
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    all: prismicT.KeyTextField;
+    /**
+     * Search field in *Repository → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: repository.primary.search
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    search: prismicT.KeyTextField;
+    /**
+     * Records field in *Repository → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: repository.primary.records
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    records: prismicT.KeyTextField;
+}
+/**
+ * Item in Repository → Items
+ *
+ */
+export interface RepositorySliceDefaultItem {
+    /**
+     * Language field in *Repository → Items*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **API ID Path**: repository.items[].language
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    language: prismicT.SelectField<"English" | "Spanish" | "Inglés" | "Español">;
+    /**
+     * Title field in *Repository → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: repository.items[].title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * Link field in *Repository → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: repository.items[].link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link: prismicT.LinkField;
+    /**
+     * Authors field in *Repository → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: repository.items[].authors
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    authors: prismicT.KeyTextField;
+    /**
+     * Description field in *Repository → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: repository.items[].description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    description: prismicT.KeyTextField;
+    /**
+     * Year field in *Repository → Items*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: repository.items[].year
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    year: prismicT.NumberField;
+    /**
+     * Publisher field in *Repository → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: repository.items[].publisher
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    publisher: prismicT.KeyTextField;
+    /**
+     * Country field in *Repository → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: repository.items[].country
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    country: prismicT.KeyTextField;
+    /**
+     * Type field in *Repository → Items*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **API ID Path**: repository.items[].type
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    type: prismicT.SelectField<"Article" | "Technical Paper" | "Undergraduate Thesis" | "Master's Thesis" | "Doctoral Thesis" | "Other" | "Artículo" | "Documento Técnico" | "Tesis Pregrado" | "Tesis Maestría" | "Tesis Doctorado" | "Otro">;
+}
+/**
+ * Default variation for Repository Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Repository`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type RepositorySliceDefault = prismicT.SharedSliceVariation<"default", Simplify<RepositorySliceDefaultPrimary>, Simplify<RepositorySliceDefaultItem>>;
+/**
+ * Slice variation for *Repository*
+ *
+ */
+type RepositorySliceVariation = RepositorySliceDefault;
+/**
+ * Repository Shared Slice
+ *
+ * - **API ID**: `repository`
+ * - **Description**: `Repository`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type RepositorySlice = prismicT.SharedSlice<"repository", RepositorySliceVariation>;
+/**
  * Primary content in ResearchLines → Primary
  *
  */
@@ -1542,6 +1787,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, CoursesSliceDefaultPrimary, CoursesSliceDefaultItem, CoursesSliceDefault, CoursesSliceVariation, CoursesSlice, ExchangeKnowledgeTeamSliceDefaultPrimary, ExchangeKnowledgeTeamSliceDefaultItem, ExchangeKnowledgeTeamSliceDefault, ExchangeKnowledgeTeamSliceVariation, ExchangeKnowledgeTeamSlice, ExternalRepositoriesSliceDefaultPrimary, ExternalRepositoriesSliceDefaultItem, ExternalRepositoriesSliceDefault, ExternalRepositoriesSliceVariation, ExternalRepositoriesSlice, GenerateKnowledgeTeamSliceDefaultPrimary, GenerateKnowledgeTeamSliceDefaultItem, GenerateKnowledgeTeamSliceDefault, GenerateKnowledgeTeamSliceVariation, GenerateKnowledgeTeamSlice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, ManageKnowledgeTeamSliceDefaultPrimary, ManageKnowledgeTeamSliceDefaultItem, ManageKnowledgeTeamSliceDefault, ManageKnowledgeTeamSliceVariation, ManageKnowledgeTeamSlice, ManagementTeamSliceDefaultPrimary, ManagementTeamSliceDefaultItem, ManagementTeamSliceDefault, ManagementTeamSliceVariation, ManagementTeamSlice, MembershipSliceDefaultPrimary, MembershipSliceDefault, MembershipSliceVariation, MembershipSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, NetworkMembersSliceDefaultPrimary, NetworkMembersSliceDefaultItem, NetworkMembersSliceDefault, NetworkMembersSliceVariation, NetworkMembersSlice, ObjectivesSliceDefaultPrimary, ObjectivesSliceDefaultItem, ObjectivesSliceDefault, ObjectivesSliceVariation, ObjectivesSlice, OriginSliceDefaultPrimary, OriginSliceDefaultItem, OriginSliceDefault, OriginSliceVariation, OriginSlice, ResearchLinesSliceDefaultPrimary, ResearchLinesSliceDefaultItem, ResearchLinesSliceDefault, ResearchLinesSliceVariation, ResearchLinesSlice, SocialSliceDefaultItem, SocialSliceDefault, SocialSliceVariation, SocialSlice, TextBlockSliceDefaultPrimary, TextBlockSliceDefault, TextBlockSliceVariation, TextBlockSlice };
+        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, CoursesSliceDefaultPrimary, CoursesSliceDefaultItem, CoursesSliceDefault, CoursesSliceVariation, CoursesSlice, ExchangeKnowledgeTeamSliceDefaultPrimary, ExchangeKnowledgeTeamSliceDefaultItem, ExchangeKnowledgeTeamSliceDefault, ExchangeKnowledgeTeamSliceVariation, ExchangeKnowledgeTeamSlice, ExternalRepositoriesSliceDefaultPrimary, ExternalRepositoriesSliceDefaultItem, ExternalRepositoriesSliceDefault, ExternalRepositoriesSliceVariation, ExternalRepositoriesSlice, GenerateKnowledgeTeamSliceDefaultPrimary, GenerateKnowledgeTeamSliceDefaultItem, GenerateKnowledgeTeamSliceDefault, GenerateKnowledgeTeamSliceVariation, GenerateKnowledgeTeamSlice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, ManageKnowledgeTeamSliceDefaultPrimary, ManageKnowledgeTeamSliceDefaultItem, ManageKnowledgeTeamSliceDefault, ManageKnowledgeTeamSliceVariation, ManageKnowledgeTeamSlice, ManagementTeamSliceDefaultPrimary, ManagementTeamSliceDefaultItem, ManagementTeamSliceDefault, ManagementTeamSliceVariation, ManagementTeamSlice, MembershipSliceDefaultPrimary, MembershipSliceDefault, MembershipSliceVariation, MembershipSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, NetworkMembersSliceDefaultPrimary, NetworkMembersSliceDefaultItem, NetworkMembersSliceDefault, NetworkMembersSliceVariation, NetworkMembersSlice, ObjectivesSliceDefaultPrimary, ObjectivesSliceDefaultItem, ObjectivesSliceDefault, ObjectivesSliceVariation, ObjectivesSlice, OriginSliceDefaultPrimary, OriginSliceDefaultItem, OriginSliceDefault, OriginSliceVariation, OriginSlice, RepositorySliceDefaultPrimary, RepositorySliceDefaultItem, RepositorySliceDefault, RepositorySliceVariation, RepositorySlice, ResearchLinesSliceDefaultPrimary, ResearchLinesSliceDefaultItem, ResearchLinesSliceDefault, ResearchLinesSliceVariation, ResearchLinesSlice, SocialSliceDefaultItem, SocialSliceDefault, SocialSliceVariation, SocialSlice, TextBlockSliceDefaultPrimary, TextBlockSliceDefault, TextBlockSliceVariation, TextBlockSlice };
     }
 }

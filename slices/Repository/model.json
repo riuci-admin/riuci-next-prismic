@@ -1,0 +1,188 @@
+{
+  "id": "repository",
+  "type": "SharedSlice",
+  "name": "Repository",
+  "description": "Repository",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Repository",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "language_header": {
+          "type": "Text",
+          "config": {
+            "label": "Language Header",
+            "placeholder": ""
+          }
+        },
+        "title_header": {
+          "type": "Text",
+          "config": {
+            "label": "Title Header",
+            "placeholder": ""
+          }
+        },
+        "authors_header": {
+          "type": "Text",
+          "config": {
+            "label": "Authors Header",
+            "placeholder": ""
+          }
+        },
+        "description_header": {
+          "type": "Text",
+          "config": {
+            "label": "Description Header",
+            "placeholder": ""
+          }
+        },
+        "year_header": {
+          "type": "Text",
+          "config": {
+            "label": "Year Header",
+            "placeholder": ""
+          }
+        },
+        "publisher_header": {
+          "type": "Text",
+          "config": {
+            "label": "Publisher Header",
+            "placeholder": ""
+          }
+        },
+        "country_header": {
+          "type": "Text",
+          "config": {
+            "label": "Country Header",
+            "placeholder": ""
+          }
+        },
+        "type_header": {
+          "type": "Text",
+          "config": {
+            "label": "Type Header",
+            "placeholder": ""
+          }
+        },
+        "all": {
+          "type": "Text",
+          "config": {
+            "label": "All",
+            "placeholder": ""
+          }
+        },
+        "search": {
+          "type": "Text",
+          "config": {
+            "label": "Search",
+            "placeholder": ""
+          }
+        },
+        "records": {
+          "type": "Text",
+          "config": {
+            "label": "Records",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "language": {
+          "type": "Select",
+          "config": {
+            "label": "Language",
+            "placeholder": "",
+            "options": [
+              "English",
+              "Spanish",
+              "Inglés",
+              "Español"
+            ]
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "authors": {
+          "type": "Text",
+          "config": {
+            "label": "Authors",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": ""
+          }
+        },
+        "year": {
+          "type": "Number",
+          "config": {
+            "label": "Year",
+            "placeholder": ""
+          }
+        },
+        "publisher": {
+          "type": "Text",
+          "config": {
+            "label": "Publisher",
+            "placeholder": ""
+          }
+        },
+        "country": {
+          "type": "Text",
+          "config": {
+            "label": "Country",
+            "placeholder": ""
+          }
+        },
+        "type": {
+          "type": "Select",
+          "config": {
+            "label": "Type",
+            "placeholder": "",
+            "options": [
+              "Article",
+              "Technical Paper",
+              "Undergraduate Thesis",
+              "Master's Thesis",
+              "Doctoral Thesis",
+              "Other",
+              "Artículo",
+              "Documento Técnico",
+              "Tesis Pregrado",
+              "Tesis Maestría",
+              "Tesis Doctorado",
+              "Otro"
+            ]
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

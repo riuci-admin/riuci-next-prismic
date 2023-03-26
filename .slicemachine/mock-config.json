@@ -131,6 +131,12 @@
         "primary": {},
         "items": {}
       }
+    },
+    "Repository": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
     }
   }
 }

@@ -20,10 +20,7 @@ export const richTextComponents = {
     <strong className="font-semibold">{children}</strong>
   ),
   hyperlink: ({ children, node }) => (
-    <PrismicLink
-      field={node.data}
-      className="font-semibold text-green-dark underline decoration-1 underline-offset-2 hover:text-green-soft"
-    >
+    <PrismicLink field={node.data} className="link">
       {children}
     </PrismicLink>
   ),

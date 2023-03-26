@@ -17,7 +17,7 @@ function DefaultColumnFilter({ column, translations }) {
   );
 }
 
-function SelectColumnFilter({ column, translations }) {
+export const SelectColumnFilter = ({ column, translations }) => {
   const options = useMemo(() => {
     const options = new Set();
     column.preFilteredRows.forEach((row) => {
@@ -41,14 +41,14 @@ function SelectColumnFilter({ column, translations }) {
       ))}
     </select>
   );
-}
+};
 
 function fuzzyTextFilterFn(rows, id, filterValue) {
   return matchSorter(rows, filterValue, { keys: [(row) => row.values[id]] });
 }
 fuzzyTextFilterFn.autoRemove = (val) => !val;
 
-function Table({ columns, data, translations }) {
+export const Table = ({ columns, data, translations }) => {
   const filterTypes = useMemo(
     () => ({
       fuzzyText: fuzzyTextFilterFn,
@@ -71,29 +71,32 @@ function Table({ columns, data, translations }) {
     }),
     []
   );
+  const tableInstance = useTable(
+    {
+      columns,
+      data,
+      defaultColumn,
+      filterTypes,
+      translations,
+    },
+    useFilters
+  );
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-    useTable(
-      {
-        columns,
-        data,
-        defaultColumn,
-        filterTypes,
-        translations,
-      },
-      useFilters
-    );
+    tableInstance;
   return (
     <table {...getTableProps()} className="w-6xl table-zebra mx-auto table">
       <thead>
         {headerGroups.map((headerGroup, i) => (
           <tr key={i} {...headerGroup.getHeaderGroupProps()}>
             <th></th>
-            {headerGroup.headers.map((column, i) => (
-              <th key={i} {...column.getHeaderProps()}>
-                {column.render("Header")}
-                <div>{column.canFilter ? column.render("Filter") : null}</div>
-              </th>
-            ))}
+            {headerGroup.headers.map((column, i) => {
+              return (
+                <th key={i} {...column.getHeaderProps()}>
+                  {column.render("Header")}
+                  <div>{column.canFilter ? column.render("Filter") : null}</div>
+                </th>
+              );
+            })}
           </tr>
         ))}
       </thead>
@@ -102,10 +105,14 @@ function Table({ columns, data, translations }) {
           prepareRow(row);
           return (
             <tr key={i} {...row.getRowProps()}>
-              <th>{i + 1}</th>
+              <th className="align-text-top">{i + 1}</th>
               {row.cells.map((cell, i) => {
                 return (
-                  <td key={i} {...cell.getCellProps()}>
+                  <td
+                    key={i}
+                    {...cell.getCellProps()}
+                    className="whitespace-normal align-text-top"
+                  >
                     {cell.render("Cell")}
                   </td>
                 );
@@ -115,49 +122,5 @@ function Table({ columns, data, translations }) {
         })}
       </tbody>
     </table>
-  );
-}
-
-export const MemberDirectory = ({ primary, items }) => {
-  const columns = useMemo(
-    () => [
-      {
-        Header: primary.country_header,
-        accessor: "country",
-        Filter: SelectColumnFilter,
-      },
-      {
-        Header: primary.institution_header,
-        accessor: "institution",
-      },
-      {
-        Header: primary.delegate_header,
-        accessor: "delegate",
-        Filter: SelectColumnFilter,
-      },
-      {
-        Header: primary.name_header,
-        accessor: "name",
-      },
-      {
-        Header: primary.email_header,
-        accessor: "email",
-      },
-    ],
-    [primary]
-  );
-  const data = useMemo(() => items, [items]);
-  const translations = useMemo(
-    () => ({
-      all: primary.all,
-      search: primary.search,
-      records: primary.records,
-    }),
-    [primary]
-  );
-  return (
-    <div className="mt-3 overflow-x-auto">
-      <Table columns={columns} data={data} translations={translations} />
-    </div>
   );
 };

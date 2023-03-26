@@ -26,6 +26,9 @@
   .course > p {
     @apply mb-2 leading-normal;
   }
+  .link {
+    @apply font-semibold text-green-dark underline decoration-1 underline-offset-2 hover:text-green-soft;
+  }
   .menu :where(li) > :where(*:not(ul)) {
     gap: 0.1rem !important;
   }

@@ -1,0 +1,149 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "FieldContent",
+        "value": "favorite",
+        "type": "Text"
+      },
+      "language_header": {
+        "__TYPE__": "FieldContent",
+        "value": "direction",
+        "type": "Text"
+      },
+      "title_header": {
+        "__TYPE__": "FieldContent",
+        "value": "handsome",
+        "type": "Text"
+      },
+      "authors_header": {
+        "__TYPE__": "FieldContent",
+        "value": "cheese",
+        "type": "Text"
+      },
+      "description_header": {
+        "__TYPE__": "FieldContent",
+        "value": "drove",
+        "type": "Text"
+      },
+      "year_header": {
+        "__TYPE__": "FieldContent",
+        "value": "desk",
+        "type": "Text"
+      },
+      "publisher_header": {
+        "__TYPE__": "FieldContent",
+        "value": "felt",
+        "type": "Text"
+      },
+      "country_header": {
+        "__TYPE__": "FieldContent",
+        "value": "parent",
+        "type": "Text"
+      },
+      "type_header": {
+        "__TYPE__": "FieldContent",
+        "value": "lower",
+        "type": "Text"
+      },
+      "all": {
+        "__TYPE__": "FieldContent",
+        "value": "realize",
+        "type": "Text"
+      },
+      "search": {
+        "__TYPE__": "FieldContent",
+        "value": "running",
+        "type": "Text"
+      },
+      "records": {
+        "__TYPE__": "FieldContent",
+        "value": "hospital",
+        "type": "Text"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "language",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "English",
+              "type": "Select"
+            }
+          ],
+          [
+            "title",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "exclaimed",
+              "type": "Text"
+            }
+          ],
+          [
+            "authors",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "under",
+              "type": "Text"
+            }
+          ],
+          [
+            "description",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "hang",
+              "type": "Text"
+            }
+          ],
+          [
+            "year",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "96",
+              "type": "Number"
+            }
+          ],
+          [
+            "publisher",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "equal",
+              "type": "Text"
+            }
+          ],
+          [
+            "country",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "halfway",
+              "type": "Text"
+            }
+          ],
+          [
+            "type",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "Undergraduate Thesis",
+              "type": "Select"
+            }
+          ],
+          [
+            "link",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://twitter.com"
+              }
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

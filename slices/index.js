@@ -12,6 +12,7 @@ import NavigationItem from './NavigationItem';
 import NetworkMembers from './NetworkMembers';
 import Objectives from './Objectives';
 import Origin from './Origin';
+import Repository from './Repository';
 import ResearchLines from './ResearchLines';
 import Social from './Social';
 import TextBlock from './TextBlock';
@@ -29,6 +30,7 @@ export {
 	NetworkMembers,
 	Objectives,
 	Origin,
+	Repository,
 	ResearchLines,
 	Social,
 	TextBlock,
@@ -47,6 +49,7 @@ export const components = {
 	network_members: NetworkMembers,
 	objectives: Objectives,
 	origin: Origin,
+	repository: Repository,
 	research_lines: ResearchLines,
 	social: Social,
 	text_block: TextBlock,

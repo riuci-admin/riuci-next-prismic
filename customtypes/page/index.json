@@ -64,6 +64,9 @@
             },
             "external_repositories": {
               "type": "SharedSlice"
+            },
+            "repository": {
+              "type": "SharedSlice"
             }
           }
         }
