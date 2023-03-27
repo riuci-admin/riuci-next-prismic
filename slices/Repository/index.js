@@ -1,4 +1,4 @@
-import { SelectColumnFilter, Table } from "components/Table";
+import { Table } from "components/Table";
 import React, { useMemo } from "react";
 
 /**
@@ -32,11 +32,6 @@ const Repository = ({ slice }) => {
         accessor: "description",
       },
       {
-        Header: slice.primary.year_header,
-        accessor: "year",
-        Filter: SelectColumnFilter,
-      },
-      {
         Header: slice.primary.published_header,
         accessor: "published",
       },
@@ -46,7 +41,6 @@ const Repository = ({ slice }) => {
   const data = useMemo(() => slice.items, [slice.items]);
   const translations = useMemo(
     () => ({
-      all: slice.primary.all,
       search: slice.primary.search,
       records: slice.primary.records,
     }),

@@ -23,16 +23,6 @@
         "value": "drove",
         "type": "Text"
       },
-      "year_header": {
-        "__TYPE__": "FieldContent",
-        "value": "desk",
-        "type": "Text"
-      },
-      "all": {
-        "__TYPE__": "FieldContent",
-        "value": "realize",
-        "type": "Text"
-      },
       "search": {
         "__TYPE__": "FieldContent",
         "value": "running",
@@ -75,14 +65,6 @@
               "__TYPE__": "FieldContent",
               "value": "hang",
               "type": "Text"
-            }
-          ],
-          [
-            "year",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "96",
-              "type": "Number"
             }
           ],
           [

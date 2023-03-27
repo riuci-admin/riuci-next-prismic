@@ -39,24 +39,10 @@
             "placeholder": ""
           }
         },
-        "year_header": {
-          "type": "Text",
-          "config": {
-            "label": "Year Header",
-            "placeholder": ""
-          }
-        },
         "published_header": {
           "type": "Text",
           "config": {
             "label": "Published Header",
-            "placeholder": ""
-          }
-        },
-        "all": {
-          "type": "Text",
-          "config": {
-            "label": "All",
             "placeholder": ""
           }
         },
@@ -102,13 +88,6 @@
           "type": "Text",
           "config": {
             "label": "Description",
-            "placeholder": ""
-          }
-        },
-        "year": {
-          "type": "Number",
-          "config": {
-            "label": "Year",
             "placeholder": ""
           }
         },

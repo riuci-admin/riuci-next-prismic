@@ -1420,16 +1420,6 @@ interface RepositorySliceDefaultPrimary {
      */
     description_header: prismicT.KeyTextField;
     /**
-     * Year Header field in *Repository → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: repository.primary.year_header
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    year_header: prismicT.KeyTextField;
-    /**
      * Published Header field in *Repository → Primary*
      *
      * - **Field Type**: Text
@@ -1439,16 +1429,6 @@ interface RepositorySliceDefaultPrimary {
      *
      */
     published_header: prismicT.KeyTextField;
-    /**
-     * All field in *Repository → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: repository.primary.all
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    all: prismicT.KeyTextField;
     /**
      * Search field in *Repository → Primary*
      *
@@ -1515,16 +1495,6 @@ export interface RepositorySliceDefaultItem {
      *
      */
     description: prismicT.KeyTextField;
-    /**
-     * Year field in *Repository → Items*
-     *
-     * - **Field Type**: Number
-     * - **Placeholder**: *None*
-     * - **API ID Path**: repository.items[].year
-     * - **Documentation**: https://prismic.io/docs/core-concepts/number
-     *
-     */
-    year: prismicT.NumberField;
     /**
      * Published field in *Repository → Items*
      *
