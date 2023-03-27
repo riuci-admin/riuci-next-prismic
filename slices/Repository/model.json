@@ -18,13 +18,6 @@
             "placeholder": ""
           }
         },
-        "language_header": {
-          "type": "Text",
-          "config": {
-            "label": "Language Header",
-            "placeholder": ""
-          }
-        },
         "title_header": {
           "type": "Text",
           "config": {
@@ -53,24 +46,10 @@
             "placeholder": ""
           }
         },
-        "publisher_header": {
+        "published_header": {
           "type": "Text",
           "config": {
-            "label": "Publisher Header",
-            "placeholder": ""
-          }
-        },
-        "country_header": {
-          "type": "Text",
-          "config": {
-            "label": "Country Header",
-            "placeholder": ""
-          }
-        },
-        "type_header": {
-          "type": "Text",
-          "config": {
-            "label": "Type Header",
+            "label": "Published Header",
             "placeholder": ""
           }
         },
@@ -97,19 +76,6 @@
         }
       },
       "items": {
-        "language": {
-          "type": "Select",
-          "config": {
-            "label": "Language",
-            "placeholder": "",
-            "options": [
-              "English",
-              "Spanish",
-              "Inglés",
-              "Español"
-            ]
-          }
-        },
         "title": {
           "type": "Text",
           "config": {
@@ -146,39 +112,11 @@
             "placeholder": ""
           }
         },
-        "publisher": {
+        "published": {
           "type": "Text",
           "config": {
-            "label": "Publisher",
+            "label": "Published",
             "placeholder": ""
-          }
-        },
-        "country": {
-          "type": "Text",
-          "config": {
-            "label": "Country",
-            "placeholder": ""
-          }
-        },
-        "type": {
-          "type": "Select",
-          "config": {
-            "label": "Type",
-            "placeholder": "",
-            "options": [
-              "Article",
-              "Technical Paper",
-              "Undergraduate Thesis",
-              "Master's Thesis",
-              "Doctoral Thesis",
-              "Other",
-              "Artículo",
-              "Documento Técnico",
-              "Tesis Pregrado",
-              "Tesis Maestría",
-              "Tesis Doctorado",
-              "Otro"
-            ]
           }
         }
       },

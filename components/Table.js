@@ -85,10 +85,9 @@ export const Table = ({ columns, data, translations }) => {
     tableInstance;
   return (
     <table {...getTableProps()} className="w-6xl table-zebra mx-auto table">
-      <thead>
+      <thead className="sticky top-0">
         {headerGroups.map((headerGroup, i) => (
           <tr key={i} {...headerGroup.getHeaderGroupProps()}>
-            <th></th>
             {headerGroup.headers.map((column, i) => {
               return (
                 <th key={i} {...column.getHeaderProps()}>
@@ -105,7 +104,6 @@ export const Table = ({ columns, data, translations }) => {
           prepareRow(row);
           return (
             <tr key={i} {...row.getRowProps()}>
-              <th className="align-text-top">{i + 1}</th>
               {row.cells.map((cell, i) => {
                 return (
                   <td

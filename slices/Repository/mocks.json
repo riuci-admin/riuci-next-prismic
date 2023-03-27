@@ -8,11 +8,6 @@
         "value": "favorite",
         "type": "Text"
       },
-      "language_header": {
-        "__TYPE__": "FieldContent",
-        "value": "direction",
-        "type": "Text"
-      },
       "title_header": {
         "__TYPE__": "FieldContent",
         "value": "handsome",
@@ -33,21 +28,6 @@
         "value": "desk",
         "type": "Text"
       },
-      "publisher_header": {
-        "__TYPE__": "FieldContent",
-        "value": "felt",
-        "type": "Text"
-      },
-      "country_header": {
-        "__TYPE__": "FieldContent",
-        "value": "parent",
-        "type": "Text"
-      },
-      "type_header": {
-        "__TYPE__": "FieldContent",
-        "value": "lower",
-        "type": "Text"
-      },
       "all": {
         "__TYPE__": "FieldContent",
         "value": "realize",
@@ -62,20 +42,17 @@
         "__TYPE__": "FieldContent",
         "value": "hospital",
         "type": "Text"
+      },
+      "published_header": {
+        "__TYPE__": "FieldContent",
+        "value": "condition",
+        "type": "Text"
       }
     },
     "items": [
       {
         "__TYPE__": "GroupItemContent",
         "value": [
-          [
-            "language",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "English",
-              "type": "Select"
-            }
-          ],
           [
             "title",
             {
@@ -109,30 +86,6 @@
             }
           ],
           [
-            "publisher",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "equal",
-              "type": "Text"
-            }
-          ],
-          [
-            "country",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "halfway",
-              "type": "Text"
-            }
-          ],
-          [
-            "type",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "Undergraduate Thesis",
-              "type": "Select"
-            }
-          ],
-          [
             "link",
             {
               "__TYPE__": "LinkContent",
@@ -140,6 +93,14 @@
                 "__TYPE__": "ExternalLink",
                 "url": "http://twitter.com"
               }
+            }
+          ],
+          [
+            "published",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "make",
+              "type": "Text"
             }
           ]
         ]

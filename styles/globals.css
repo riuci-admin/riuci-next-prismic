@@ -32,4 +32,7 @@
   .menu :where(li) > :where(*:not(ul)) {
     gap: 0.1rem !important;
   }
+  .table th:first-child {
+    position: relative !important;
+  }
 }

@@ -10,11 +10,6 @@ const Repository = ({ slice }) => {
   const columns = useMemo(
     () => [
       {
-        Header: slice.primary.language_header,
-        accessor: "language",
-        Filter: SelectColumnFilter,
-      },
-      {
         Header: slice.primary.title_header,
         accessor: "title",
         Cell: (props) => (
@@ -42,18 +37,8 @@ const Repository = ({ slice }) => {
         Filter: SelectColumnFilter,
       },
       {
-        Header: slice.primary.publisher_header,
-        accessor: "publisher",
-      },
-      {
-        Header: slice.primary.country_header,
-        accessor: "country",
-        Filter: SelectColumnFilter,
-      },
-      {
-        Header: slice.primary.type_header,
-        accessor: "type",
-        Filter: SelectColumnFilter,
+        Header: slice.primary.published_header,
+        accessor: "published",
       },
     ],
     [slice.primary]
@@ -71,7 +56,7 @@ const Repository = ({ slice }) => {
     <section className="bg-neutral-100">
       <div className="frame py pb-24">
         <h1 className="mb-10 text-center">{slice.primary.title}</h1>
-        <div className="mt-3 h-[60vh] overflow-x-auto overflow-y-scroll">
+        <div className="mt-3 h-[63vh] overflow-x-auto overflow-y-scroll">
           <Table columns={columns} data={data} translations={translations} />
         </div>
       </div>
