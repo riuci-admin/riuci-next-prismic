@@ -33,6 +33,7 @@ const Repository = ({ slice }) => {
     () => ({
       search: slice.primary.search,
       records: slice.primary.records,
+      row_title: slice.primary.row_title,
     }),
     [slice.primary]
   );

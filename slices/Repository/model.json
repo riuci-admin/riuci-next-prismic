@@ -59,6 +59,13 @@
             "label": "Records",
             "placeholder": ""
           }
+        },
+        "row_title": {
+          "type": "Text",
+          "config": {
+            "label": "Row Title",
+            "placeholder": ""
+          }
         }
       },
       "items": {

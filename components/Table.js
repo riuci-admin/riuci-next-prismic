@@ -71,18 +71,17 @@ export const Table = ({ columns, data, translations }) => {
     }),
     []
   );
-  const tableInstance = useTable(
-    {
-      columns,
-      data,
-      defaultColumn,
-      filterTypes,
-      translations,
-    },
-    useFilters
-  );
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-    tableInstance;
+    useTable(
+      {
+        columns,
+        data,
+        defaultColumn,
+        filterTypes,
+        translations,
+      },
+      useFilters
+    );
   return (
     <table {...getTableProps()} className="table-zebra mx-auto table w-full">
       <thead className="sticky top-0">
@@ -102,13 +101,16 @@ export const Table = ({ columns, data, translations }) => {
       <tbody {...getTableBodyProps()}>
         {rows.map((row, i) => {
           prepareRow(row);
+          const clickableRow = {};
+          if (row.original.link) {
+            clickableRow.onClick = () => {
+              window.open(row.original.link.url, "_blank");
+            };
+            clickableRow.className = "hover cursor-pointer";
+            clickableRow.title = translations.row_title;
+          }
           return (
-            <tr
-              key={i}
-              {...row.getRowProps()}
-              onClick={() => window.open(row.original.link.url, "_blank")}
-              className="hover cursor-pointer"
-            >
+            <tr key={i} {...row.getRowProps()} {...clickableRow}>
               {row.cells.map((cell, i) => {
                 return (
                   <td
