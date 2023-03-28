@@ -12,7 +12,7 @@ function DefaultColumnFilter({ column, translations }) {
         column.setFilter(e.target.value || undefined);
       }}
       placeholder={`${translations.search} ${count} ${translations.records}...`}
-      className="input input-sm mt-1 w-full"
+      className="input input-sm mt-1 min-w-[9rem]"
     />
   );
 }
@@ -31,7 +31,7 @@ export const SelectColumnFilter = ({ column, translations }) => {
       onChange={(e) => {
         column.setFilter(e.target.value || undefined);
       }}
-      className="select select-sm mt-1 w-full"
+      className="select select-sm mt-1 min-w-[3rem]"
     >
       <option value="">{translations.all}</option>
       {options.map((option, i) => (
@@ -84,7 +84,7 @@ export const Table = ({ columns, data, translations }) => {
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
     tableInstance;
   return (
-    <table {...getTableProps()} className="w-6xl table-zebra mx-auto table">
+    <table {...getTableProps()} className="table-zebra mx-auto table w-full">
       <thead className="sticky top-0">
         {headerGroups.map((headerGroup, i) => (
           <tr key={i} {...headerGroup.getHeaderGroupProps()}>
@@ -103,7 +103,12 @@ export const Table = ({ columns, data, translations }) => {
         {rows.map((row, i) => {
           prepareRow(row);
           return (
-            <tr key={i} {...row.getRowProps()}>
+            <tr
+              key={i}
+              {...row.getRowProps()}
+              onClick={() => window.open(row.original.link.url, "_blank")}
+              className="hover cursor-pointer"
+            >
               {row.cells.map((cell, i) => {
                 return (
                   <td

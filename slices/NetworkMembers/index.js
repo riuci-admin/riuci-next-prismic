@@ -47,7 +47,7 @@ const NetworkMembers = ({ slice }) => {
     <section className="bg-neutral-100">
       <div className="frame py pb-24">
         <h1 className="mb-10 text-center">{slice.primary.title}</h1>
-        <div className="mt-3 overflow-x-auto">
+        <div className="mt-3 overflow-x-auto rounded-lg">
           <Table columns={columns} data={data} translations={translations} />
         </div>
       </div>

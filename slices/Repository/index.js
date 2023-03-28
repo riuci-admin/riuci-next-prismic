@@ -12,16 +12,6 @@ const Repository = ({ slice }) => {
       {
         Header: slice.primary.title_header,
         accessor: "title",
-        Cell: (props) => (
-          <a
-            className="link"
-            target="_blank"
-            rel="noopener noreferrer"
-            href={props.row.original.link.url}
-          >
-            {props.row.original.title}
-          </a>
-        ),
       },
       {
         Header: slice.primary.authors_header,
@@ -50,7 +40,7 @@ const Repository = ({ slice }) => {
     <section className="bg-neutral-100">
       <div className="frame py pb-24">
         <h1 className="mb-10 text-center">{slice.primary.title}</h1>
-        <div className="mt-3 h-[63vh] overflow-x-auto overflow-y-scroll">
+        <div className="mt-3 max-h-[63vh] overflow-x-auto overflow-y-scroll rounded-lg">
           <Table columns={columns} data={data} translations={translations} />
         </div>
       </div>
