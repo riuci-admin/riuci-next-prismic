@@ -10,8 +10,8 @@ const FlagIcon = ({ lang }) => {
 
 export const Header = ({ alternateLanguages = [], navigation, settings }) => {
   return (
-    <header className="sticky top-0 z-30 bg-green-light py-3 shadow-lg md:py-4">
-      <div className="frame pr-1 pl-3">
+    <header className="sticky top-0 z-30 bg-green-light shadow-lg">
+      <div className="frame flex h-[6.5rem] justify-center pl-3 pr-1">
         <div className="navbar">
           <div className="flex-1">
             <PrismicLink href="/">
@@ -66,24 +66,6 @@ export const Header = ({ alternateLanguages = [], navigation, settings }) => {
                   </li>
                 );
               })}
-              <li className="flex items-center text-green-dark">
-                <Link href="/">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                    />
-                  </svg>
-                </Link>
-              </li>
               {alternateLanguages.map((lang) => (
                 <li className="flex items-center" key={lang.lang}>
                   <PrismicLink href={linkResolver(lang)} locale={lang.lang}>

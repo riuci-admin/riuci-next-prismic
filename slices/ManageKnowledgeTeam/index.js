@@ -7,8 +7,8 @@ import React from "react";
  * @param { ManageKnowledgeTeamProps }
  */
 const ManageKnowledgeTeam = ({ slice }) => (
-  <section className="py bg-neutral-100 pb-16">
-    <div className="frame">
+  <section className="bg-neutral-100">
+    <div className="frame py pb-16">
       <h2 className="mb-7 text-center md:mb-10">{slice.primary.title}</h2>
       <div className="flex flex-wrap justify-center gap-9 md:gap-14">
         <TeamMember

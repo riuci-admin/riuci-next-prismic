@@ -17,6 +17,9 @@
   h3 {
     @apply mb-2 text-center text-xl font-semibold text-green-dark;
   }
+  section {
+    @apply last:pb-16;
+  }
   .py {
     @apply py-9 md:py-11;
   }

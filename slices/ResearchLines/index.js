@@ -6,8 +6,8 @@ import React from "react";
  * @param { ResearchLinesProps }
  */
 const ResearchLines = ({ slice }) => (
-  <section className="py bg-neutral-100">
-    <div className="frame pb-11 pt-3">
+  <section className="bg-neutral-100">
+    <div className="frame py">
       <h2>{slice.primary.title}</h2>
       <div className="grid grid-cols-1 gap-11 pt-3 md:grid-cols-2 md:gap-11 lg:grid-cols-3">
         {slice.items.map((item, i) => (

@@ -26,7 +26,7 @@ const Objectives = ({ slice }) => (
       </div>
       <h2 className="mt-10 pt-3 text-left">{slice.primary.specific_title}</h2>
       <p>{slice.primary.specific_description}</p>
-      <div className="grid gap-11 py-7 md:grid-cols-2">
+      <div className="grid gap-11 pt-7 md:grid-cols-2">
         {slice?.items?.map((item, i) => (
           <div
             key={i}

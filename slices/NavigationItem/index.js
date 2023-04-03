@@ -1,4 +1,3 @@
-import { PrismicRichText } from "@prismicio/react";
 import React from "react";
 
 /**
@@ -7,9 +6,8 @@ import React from "react";
  * @param { NavigationItemProps }
  */
 const NavigationItem = ({ slice }) => (
-  <section className="py">
-    <PrismicRichText field={slice.primary.title} />
-    <PrismicRichText field={slice.primary.description} />
+  <section>
+    <div>{slice.primary.name} </div>
   </section>
 );
 

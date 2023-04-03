@@ -8,13 +8,13 @@ import React from "react";
  * @param { ManagementTeamProps }
  */
 const ManagementTeam = ({ slice }) => (
-  <section className="py bg-white">
-    <div className="frame">
+  <section className="bg-white">
+    <div className="frame py">
       <h1>{slice.primary.title}</h1>
       <div className="mx-auto max-w-3xl">
         <PrismicRichText field={slice.primary.description} />
       </div>
-      <div className="pt-12 pb-5">
+      <div className="pb-5 pt-12">
         <h2 className="mb-7 text-center md:mb-10">
           {slice.primary.team_title}
         </h2>

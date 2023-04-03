@@ -8,7 +8,7 @@ import React from "react";
  */
 const Membership = ({ slice }) => (
   <section>
-    <div className="frame py mb-9 max-w-2xl">
+    <div className="frame py max-w-2xl">
       <h1>{slice.primary.title}</h1>
       <PrismicRichText field={slice.primary.description} />
     </div>

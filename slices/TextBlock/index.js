@@ -7,11 +7,13 @@ import React from "react";
  * @param { TextBlockProps }
  */
 const TextBlock = ({ slice }) => (
-  <section className="py frame flex max-w-xl flex-col items-center text-center">
-    <div className="text-green-dark">
-      <PrismicRichText field={slice.primary.title} />
+  <section>
+    <div className="frame py flex max-w-xl flex-col items-center text-center">
+      <div className="text-green-dark">
+        <PrismicRichText field={slice.primary.title} />
+      </div>
+      <PrismicRichText field={slice.primary.description} />
     </div>
-    <PrismicRichText field={slice.primary.description} />
   </section>
 );
 

@@ -39,9 +39,9 @@ const Repository = ({ slice }) => {
   );
   return (
     <section className="bg-neutral-100">
-      <div className="frame py pb-24">
+      <div className="frame py">
         <h1 className="mb-10 text-center">{slice.primary.title}</h1>
-        <div className="mt-3 max-h-[63vh] overflow-x-auto overflow-y-scroll rounded-lg">
+        <div className="mt-3 max-h-[calc(100vh-16rem)] overflow-x-auto overflow-y-scroll rounded-lg">
           <Table columns={columns} data={data} translations={translations} />
         </div>
       </div>
