@@ -6,6 +6,9 @@ module.exports = {
       fontFamily: {
         inter: "var(--font-inter)",
       },
+      screens: {
+        xs: "421px",
+      },
       colors: {
         "green-light": "#F7FFF0",
         "green-soft": "#A8CA45",
