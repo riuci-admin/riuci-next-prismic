@@ -8,7 +8,7 @@ import React from "react";
  */
 const Hero = ({ slice }) => (
   <section
-    className="hero bg-cover bg-fixed xs:h-[calc(100vh-6.5rem)]"
+    className="hero bg-cover bg-fixed lg:h-[calc(100vh-6.5rem)]"
     role="img"
     aria-label={slice.primary.background.alt}
     style={{
