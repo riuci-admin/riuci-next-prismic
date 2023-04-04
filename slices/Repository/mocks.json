@@ -42,6 +42,11 @@
         "__TYPE__": "FieldContent",
         "value": "guard",
         "type": "Text"
+      },
+      "open_document": {
+        "__TYPE__": "FieldContent",
+        "value": "battle",
+        "type": "Text"
       }
     },
     "items": [
@@ -87,6 +92,14 @@
             {
               "__TYPE__": "FieldContent",
               "value": "make",
+              "type": "Text"
+            }
+          ],
+          [
+            "short_description",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "brought",
               "type": "Text"
             }
           ]

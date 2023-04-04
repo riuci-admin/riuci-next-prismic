@@ -66,6 +66,13 @@
             "label": "Row Title",
             "placeholder": ""
           }
+        },
+        "open_document": {
+          "type": "Text",
+          "config": {
+            "label": "Open Document",
+            "placeholder": ""
+          }
         }
       },
       "items": {
@@ -88,6 +95,13 @@
           "type": "Text",
           "config": {
             "label": "Authors",
+            "placeholder": ""
+          }
+        },
+        "short_description": {
+          "type": "Text",
+          "config": {
+            "label": "Short Description",
             "placeholder": ""
           }
         },

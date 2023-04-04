@@ -1459,6 +1459,16 @@ interface RepositorySliceDefaultPrimary {
      *
      */
     row_title: prismicT.KeyTextField;
+    /**
+     * Open Document field in *Repository → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: repository.primary.open_document
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    open_document: prismicT.KeyTextField;
 }
 /**
  * Item in Repository → Items
@@ -1495,6 +1505,16 @@ export interface RepositorySliceDefaultItem {
      *
      */
     authors: prismicT.KeyTextField;
+    /**
+     * Short Description field in *Repository → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: repository.items[].short_description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    short_description: prismicT.KeyTextField;
     /**
      * Description field in *Repository → Items*
      *
