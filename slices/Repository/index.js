@@ -18,8 +18,8 @@ const Repository = ({ slice }) => {
         accessor: "authors",
       },
       {
-        Header: slice.primary.description_header,
-        accessor: "short_description",
+        Header: slice.primary.key_words_header,
+        accessor: "key_words",
       },
       {
         Header: slice.primary.published_header,

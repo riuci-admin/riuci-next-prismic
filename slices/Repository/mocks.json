@@ -18,11 +18,6 @@
         "value": "cheese",
         "type": "Text"
       },
-      "description_header": {
-        "__TYPE__": "FieldContent",
-        "value": "drove",
-        "type": "Text"
-      },
       "search": {
         "__TYPE__": "FieldContent",
         "value": "running",
@@ -46,6 +41,11 @@
       "open_document": {
         "__TYPE__": "FieldContent",
         "value": "battle",
+        "type": "Text"
+      },
+      "key_words_header": {
+        "__TYPE__": "FieldContent",
+        "value": "center",
         "type": "Text"
       }
     },
@@ -96,10 +96,10 @@
             }
           ],
           [
-            "short_description",
+            "key_words",
             {
               "__TYPE__": "FieldContent",
-              "value": "brought",
+              "value": "lot",
               "type": "Text"
             }
           ]

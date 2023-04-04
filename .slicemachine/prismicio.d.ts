@@ -1410,15 +1410,15 @@ interface RepositorySliceDefaultPrimary {
      */
     authors_header: prismicT.KeyTextField;
     /**
-     * Description Header field in *Repository → Primary*
+     * Key Words Header field in *Repository → Primary*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: repository.primary.description_header
+     * - **API ID Path**: repository.primary.key_words_header
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    description_header: prismicT.KeyTextField;
+    key_words_header: prismicT.KeyTextField;
     /**
      * Published Header field in *Repository → Primary*
      *
@@ -1506,25 +1506,15 @@ export interface RepositorySliceDefaultItem {
      */
     authors: prismicT.KeyTextField;
     /**
-     * Short Description field in *Repository → Items*
+     * Key Words field in *Repository → Items*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: repository.items[].short_description
+     * - **API ID Path**: repository.items[].key_words
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    short_description: prismicT.KeyTextField;
-    /**
-     * Description field in *Repository → Items*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: repository.items[].description
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    description: prismicT.KeyTextField;
+    key_words: prismicT.KeyTextField;
     /**
      * Published field in *Repository → Items*
      *
@@ -1535,6 +1525,16 @@ export interface RepositorySliceDefaultItem {
      *
      */
     published: prismicT.KeyTextField;
+    /**
+     * Description field in *Repository → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: repository.items[].description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    description: prismicT.KeyTextField;
 }
 /**
  * Default variation for Repository Slice

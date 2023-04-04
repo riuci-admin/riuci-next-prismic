@@ -32,10 +32,10 @@
             "placeholder": ""
           }
         },
-        "description_header": {
+        "key_words_header": {
           "type": "Text",
           "config": {
-            "label": "Description Header",
+            "label": "Key Words Header",
             "placeholder": ""
           }
         },
@@ -98,17 +98,10 @@
             "placeholder": ""
           }
         },
-        "short_description": {
+        "key_words": {
           "type": "Text",
           "config": {
-            "label": "Short Description",
-            "placeholder": ""
-          }
-        },
-        "description": {
-          "type": "Text",
-          "config": {
-            "label": "Description",
+            "label": "Key Words",
             "placeholder": ""
           }
         },
@@ -116,6 +109,13 @@
           "type": "Text",
           "config": {
             "label": "Published",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
             "placeholder": ""
           }
         }
