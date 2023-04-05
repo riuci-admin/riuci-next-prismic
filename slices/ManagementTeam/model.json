@@ -24,7 +24,7 @@
             "label": "Description",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "paragraph,strong"
+            "multi": "paragraph,strong,hyperlink,list-item"
           }
         },
         "team_title": {
