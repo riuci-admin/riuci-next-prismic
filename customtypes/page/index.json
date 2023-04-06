@@ -67,6 +67,9 @@
             },
             "repository": {
               "type": "SharedSlice"
+            },
+            "first_assembly": {
+              "type": "SharedSlice"
             }
           }
         }

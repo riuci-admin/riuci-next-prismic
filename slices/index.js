@@ -3,6 +3,7 @@
 import Courses from './Courses';
 import ExchangeKnowledgeTeam from './ExchangeKnowledgeTeam';
 import ExternalRepositories from './ExternalRepositories';
+import FirstAssembly from './FirstAssembly';
 import GenerateKnowledgeTeam from './GenerateKnowledgeTeam';
 import Hero from './Hero';
 import ManageKnowledgeTeam from './ManageKnowledgeTeam';
@@ -21,6 +22,7 @@ export {
 	Courses,
 	ExchangeKnowledgeTeam,
 	ExternalRepositories,
+	FirstAssembly,
 	GenerateKnowledgeTeam,
 	Hero,
 	ManageKnowledgeTeam,
@@ -40,6 +42,7 @@ export const components = {
 	courses: Courses,
 	exchange_knowledge_team: ExchangeKnowledgeTeam,
 	external_repositories: ExternalRepositories,
+	first_assembly: FirstAssembly,
 	generate_knowledge_team: GenerateKnowledgeTeam,
 	hero: Hero,
 	manage_knowledge_team: ManageKnowledgeTeam,

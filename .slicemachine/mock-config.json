@@ -137,6 +137,12 @@
         "primary": {},
         "items": {}
       }
+    },
+    "FirstAssembly": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
     }
   }
 }
