@@ -1,6 +1,5 @@
 import { PrismicNextImage } from "@prismicio/next";
 import { PrismicLink } from "@prismicio/react";
-import Link from "next/link";
 import { linkResolver } from "prismicio";
 
 const FlagIcon = ({ lang }) => {

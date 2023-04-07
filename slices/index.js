@@ -6,6 +6,7 @@ import ExternalRepositories from './ExternalRepositories';
 import FirstAssembly from './FirstAssembly';
 import GenerateKnowledgeTeam from './GenerateKnowledgeTeam';
 import Hero from './Hero';
+import MainActivities from './MainActivities';
 import ManageKnowledgeTeam from './ManageKnowledgeTeam';
 import ManagementTeam from './ManagementTeam';
 import Membership from './Membership';
@@ -25,6 +26,7 @@ export {
 	FirstAssembly,
 	GenerateKnowledgeTeam,
 	Hero,
+	MainActivities,
 	ManageKnowledgeTeam,
 	ManagementTeam,
 	Membership,
@@ -45,6 +47,7 @@ export const components = {
 	first_assembly: FirstAssembly,
 	generate_knowledge_team: GenerateKnowledgeTeam,
 	hero: Hero,
+	main_activities: MainActivities,
 	manage_knowledge_team: ManageKnowledgeTeam,
 	management_team: ManagementTeam,
 	membership: Membership,

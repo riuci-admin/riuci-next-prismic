@@ -70,6 +70,9 @@
             },
             "first_assembly": {
               "type": "SharedSlice"
+            },
+            "main_activities": {
+              "type": "SharedSlice"
             }
           }
         }
