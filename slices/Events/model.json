@@ -1,15 +1,15 @@
 {
-  "id": "main_activities",
+  "id": "events",
   "type": "SharedSlice",
-  "name": "MainActivities",
-  "description": "MainActivities",
+  "name": "Events",
+  "description": "Events",
   "variations": [
     {
       "id": "default",
       "name": "Default",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "MainActivities",
+      "description": "Events",
       "primary": {
         "title": {
           "type": "Text",
@@ -20,6 +20,15 @@
         }
       },
       "items": {
+        "visible": {
+          "type": "Boolean",
+          "config": {
+            "label": "Visible",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": true
+          }
+        },
         "image": {
           "type": "Image",
           "config": {
@@ -30,11 +39,20 @@
             "thumbnails": []
           }
         },
-        "text": {
+        "topic": {
           "type": "Text",
           "config": {
-            "label": "Text",
+            "label": "Topic",
             "placeholder": ""
+          }
+        },
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,list-item,o-list-item,hyperlink"
           }
         }
       },

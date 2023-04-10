@@ -149,6 +149,12 @@
         "primary": {},
         "items": {}
       }
+    },
+    "Events": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
     }
   }
 }

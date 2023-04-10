@@ -2,11 +2,11 @@ import { PrismicRichText } from "@prismicio/react";
 import React from "react";
 
 /**
- * @typedef {import("@prismicio/client").Content.CoursesSlice} CoursesSlice
- * @typedef {import("@prismicio/react").SliceComponentProps<CoursesSlice>} CoursesProps
- * @param { CoursesProps }
+ * @typedef {import("@prismicio/client").Content.EventsSlice} EventsSlice
+ * @typedef {import("@prismicio/react").SliceComponentProps<EventsSlice>} EventsProps
+ * @param { EventsProps }
  */
-const Courses = ({ slice }) => (
+const Events = ({ slice }) => (
   <section className="bg-neutral-100">
     <div className="frame py flex flex-col">
       <h1 className="mb-10">{slice.primary.title}</h1>
@@ -36,4 +36,4 @@ const Courses = ({ slice }) => (
   </section>
 );
 
-export default Courses;
+export default Events;
