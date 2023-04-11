@@ -25,7 +25,7 @@ const Courses = ({ slice }) => (
               ></figure>
               <div className="card-body md:w-1/2">
                 <h3 className="text-left">{item.topic}</h3>
-                <div className="course">
+                <div>
                   <PrismicRichText field={item.text} />
                 </div>
               </div>

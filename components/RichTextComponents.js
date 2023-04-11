@@ -2,7 +2,7 @@ import { PrismicLink } from "@prismicio/react";
 
 export const richTextComponents = {
   paragraph: ({ children }) => (
-    <p className="mb-5 leading-normal last:mb-0">{children}</p>
+    <p className="mb-2 leading-normal last:mb-0">{children}</p>
   ),
   oList: ({ children }) => (
     <ol className="mb-7 pl-4 last:mb-0 md:pl-6">{children}</ol>
