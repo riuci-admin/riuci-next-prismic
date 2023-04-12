@@ -1,8 +1,9 @@
+import { PrismicNextImage } from "@prismicio/next";
 import { PrismicLink } from "@prismicio/react";
 
 export const richTextComponents = {
   paragraph: ({ children }) => (
-    <p className="mb-2 leading-normal last:mb-0">{children}</p>
+    <p className="mb-3 leading-normal last:mb-0">{children}</p>
   ),
   oList: ({ children }) => (
     <ol className="mb-7 pl-4 last:mb-0 md:pl-6">{children}</ol>
@@ -23,5 +24,10 @@ export const richTextComponents = {
     <PrismicLink field={node.data} className="link">
       {children}
     </PrismicLink>
+  ),
+  image: ({ node }) => (
+    <div className="md:pb-1">
+      <PrismicNextImage field={node} />
+    </div>
   ),
 };

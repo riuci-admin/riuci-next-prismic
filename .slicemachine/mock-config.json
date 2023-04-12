@@ -155,6 +155,12 @@
         "primary": {},
         "items": {}
       }
+    },
+    "News": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
     }
   }
 }

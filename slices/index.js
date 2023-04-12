@@ -13,6 +13,7 @@ import ManagementTeam from './ManagementTeam';
 import Membership from './Membership';
 import NavigationItem from './NavigationItem';
 import NetworkMembers from './NetworkMembers';
+import News from './News';
 import Objectives from './Objectives';
 import Origin from './Origin';
 import Repository from './Repository';
@@ -34,6 +35,7 @@ export {
 	Membership,
 	NavigationItem,
 	NetworkMembers,
+	News,
 	Objectives,
 	Origin,
 	Repository,
@@ -56,6 +58,7 @@ export const components = {
 	membership: Membership,
 	navigation_item: NavigationItem,
 	network_members: NetworkMembers,
+	news: News,
 	objectives: Objectives,
 	origin: Origin,
 	repository: Repository,

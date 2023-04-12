@@ -10,7 +10,7 @@ export const Footer = ({ footer }) => (
     role="img"
     aria-label={footer.data.background.alt}
   >
-    <div className="w-[17rem] gap-0 py-16 text-sm text-white">
+    <div className="w-[17rem] gap-0 py-20 text-sm text-white">
       <div className="pb-1">{footer.data.text}</div>
       <div>
         <a
