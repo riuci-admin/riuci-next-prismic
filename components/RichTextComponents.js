@@ -26,7 +26,7 @@ export const richTextComponents = {
     </PrismicLink>
   ),
   image: ({ node }) => (
-    <div className="md:pb-1">
+    <div className="pb-3">
       <PrismicNextImage field={node} />
     </div>
   ),
