@@ -1,4 +1,3 @@
-import { asDate } from "@prismicio/helpers";
 import { PrismicRichText } from "@prismicio/react";
 import { useRouter } from "next/router";
 import React from "react";
@@ -18,10 +17,11 @@ const News = ({ slice }) => {
         {slice.items.map((item, i) => (
           <div key={i}>
             <div className="font-semibold text-neutral-500">
-              {asDate(item.date).toLocaleDateString(currentLang, {
+              {new Date(item.date).toLocaleDateString(currentLang, {
                 year: "numeric",
                 month: "short",
                 day: "numeric",
+                timeZone: "UTC",
               })}
             </div>
             <h2 className="mb-3 text-left">{item.news_title}</h2>
