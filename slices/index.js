@@ -18,6 +18,7 @@ import Objectives from './Objectives';
 import Origin from './Origin';
 import Repository from './Repository';
 import ResearchLines from './ResearchLines';
+import SearchEngine from './SearchEngine';
 import Social from './Social';
 import TextBlock from './TextBlock';
 
@@ -40,6 +41,7 @@ export {
 	Origin,
 	Repository,
 	ResearchLines,
+	SearchEngine,
 	Social,
 	TextBlock,
 };
@@ -63,6 +65,7 @@ export const components = {
 	origin: Origin,
 	repository: Repository,
 	research_lines: ResearchLines,
+	search_engine: SearchEngine,
 	social: Social,
 	text_block: TextBlock,
 };

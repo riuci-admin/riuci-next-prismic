@@ -161,6 +161,11 @@
         "primary": {},
         "items": {}
       }
+    },
+    "SearchEngine": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }

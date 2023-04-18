@@ -79,6 +79,9 @@
             },
             "news": {
               "type": "SharedSlice"
+            },
+            "search_engine": {
+              "type": "SharedSlice"
             }
           }
         }
