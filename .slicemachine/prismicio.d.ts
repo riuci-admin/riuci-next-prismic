@@ -1193,13 +1193,13 @@ interface NetworkMembersSliceDefaultPrimary {
     /**
      * Description field in *NetworkMembers → Primary*
      *
-     * - **Field Type**: Rich Text
+     * - **Field Type**: Text
      * - **Placeholder**: *None*
      * - **API ID Path**: network_members.primary.description
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    description: prismicT.RichTextField;
+    description: prismicT.KeyTextField;
     /**
      * Country Header field in *NetworkMembers → Primary*
      *

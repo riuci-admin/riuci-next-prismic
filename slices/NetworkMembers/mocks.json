@@ -9,15 +9,9 @@
         "type": "Text"
       },
       "description": {
-        "__TYPE__": "StructuredTextContent",
-        "value": [
-          {
-            "type": "paragraph",
-            "content": {
-              "text": "Sint qui adipisicing culpa proident cillum Lorem velit. Esse amet do nostrud sint magna commodo nisi excepteur sunt. Reprehenderit enim do qui eu anim ullamco do adipisicing."
-            }
-          }
-        ]
+        "__TYPE__": "FieldContent",
+        "value": "independent",
+        "type": "Text"
       },
       "country_header": {
         "__TYPE__": "FieldContent",
