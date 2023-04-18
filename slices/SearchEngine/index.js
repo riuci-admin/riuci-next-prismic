@@ -11,7 +11,7 @@ const SearchEngine = ({ slice }) => (
     <div className="frame py max-w-2xl">
       <h1>{slice.primary.title}</h1>
       <p className="text-center">{slice.primary.text}</p>
-      <div className="mt-10 flex justify-center">
+      <div className="mt-9 flex justify-center">
         <a
           className="card max-w-[39rem] border-[1px] bg-white p-9 font-medium shadow-xl hover:border-[1px] hover:border-green-100 hover:bg-green-light hover:text-green-dark hover:shadow-green-200"
           href={slice.primary.link.url}
