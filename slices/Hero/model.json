@@ -31,7 +31,9 @@
           "type": "Image",
           "config": {
             "label": "Background",
-            "constraint": {},
+            "constraint": {
+              "width": 1920
+            },
             "thumbnails": []
           }
         }
