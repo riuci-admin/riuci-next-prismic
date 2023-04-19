@@ -3,9 +3,9 @@ import { PrismicLink } from "@prismicio/react";
 export const DrawerSide = ({ navigation }) => (
   <div className="drawer-side">
     <label htmlFor="menu-drawer" className="drawer-overlay"></label>
-    <ul className="menu menu-compact w-64 bg-white p-2">
+    <ul className="menu menu-compact w-64 bg-white p-2 pt-4">
       {navigation.data.slices.map((slice) => (
-        <div key={slice.id} className="border-b-[1px] py-4">
+        <>
           {slice.items.length > 0 ? (
             <li className="menu-title" key={slice.id} tabIndex={0}>
               <span>{slice.primary.name}</span>
@@ -30,7 +30,8 @@ export const DrawerSide = ({ navigation }) => (
                 </li>
               );
             })}
-        </div>
+          <div className="divider"></div>
+        </>
       ))}
     </ul>
   </div>

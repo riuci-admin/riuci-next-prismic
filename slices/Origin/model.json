@@ -22,7 +22,9 @@
           "type": "Image",
           "config": {
             "label": "Image",
-            "constraint": {},
+            "constraint": {
+              "width": 1024
+            },
             "thumbnails": []
           }
         },
@@ -39,7 +41,9 @@
           "type": "Image",
           "config": {
             "label": "Manifesto Image",
-            "constraint": {},
+            "constraint": {
+              "width": 1024
+            },
             "thumbnails": []
           }
         },
