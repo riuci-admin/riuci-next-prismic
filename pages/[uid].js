@@ -5,7 +5,8 @@ import Head from "next/head";
 import { createClient } from "prismicio";
 import { components } from "slices";
 
-const Page = ({ page, navigation, settings, footer }) => {
+const Page = ({ locale, page, navigation, settings, footer }) => {
+  const bamboo = locale === "es-es" ? "bambú" : "bamboo";
   return (
     <Layout
       alternateLanguages={page.alternate_languages}
@@ -14,7 +15,18 @@ const Page = ({ page, navigation, settings, footer }) => {
       footer={footer}
     >
       <Head>
-        <title>{prismicH.asText(page.data.title)}</title>
+        <title>{`${prismicH.asText(page.data.title)} | RIUCI ${bamboo}`}</title>
+        <meta name="description" content={page.data.description} />
+        <meta
+          property="og:title"
+          content={`${prismicH.asText(page.data.title)} | RIUCI ${bamboo}`}
+        />
+        <meta property="og:description" content={page.data.description} />
+        <meta
+          property="og:url"
+          content={`${process.env.NEXT_PUBLIC_HOST}/${locale}`}
+        />
+        <meta property="og:type" content="website" />
       </Head>
       <SliceZone slices={page.data.slices} components={components} />
     </Layout>
@@ -33,6 +45,7 @@ export async function getStaticProps({ params, locale, previewData }) {
 
   return {
     props: {
+      locale,
       page,
       navigation,
       settings,

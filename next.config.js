@@ -1,5 +1,4 @@
 const prismic = require("@prismicio/client");
-
 const sm = require("./sm.json");
 
 /** @type {import('next').NextConfig} */
@@ -13,7 +12,7 @@ const nextConfig = async () => {
     reactStrictMode: true,
     i18n: {
       locales,
-      defaultLocale: locales[1],
+      defaultLocale: "es-es",
     },
   };
 };
