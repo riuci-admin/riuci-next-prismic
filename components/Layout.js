@@ -17,6 +17,7 @@ export const Layout = ({
 }) => {
   return (
     <div className={`${inter.variable} drawer font-inter`}>
+      <label htmlFor="menu-drawer">Menu Drawer</label>
       <input id="menu-drawer" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col justify-between">
         <Header

@@ -7,11 +7,15 @@ export const DrawerSide = ({ navigation }) => (
       {navigation.data.slices.map((slice) => (
         <>
           {slice.items.length > 0 ? (
-            <li className="menu-title" key={slice.id} tabIndex={0}>
+            <li
+              className="menu-title mt-3 border-t-[1px] border-solid border-neutral-400 pt-3 first:mt-0 first:border-t-[0px] first:pt-0"
+              key={slice.id}
+              tabIndex={0}
+            >
               <span>{slice.primary.name}</span>
             </li>
           ) : (
-            <li className="font-medium text-green-dark">
+            <li className="mt-3 border-y-[1px] border-solid border-[#DADADA] py-3 font-medium text-green-dark">
               <PrismicLink field={slice.primary.link}>
                 {slice.primary.name}
               </PrismicLink>
@@ -30,7 +34,6 @@ export const DrawerSide = ({ navigation }) => (
                 </li>
               );
             })}
-          <div className="divider"></div>
         </>
       ))}
     </ul>
