@@ -10,6 +10,9 @@ const nextConfig = async () => {
 
   return {
     reactStrictMode: true,
+    images: {
+      domains: ["images.prismic.io"],
+    },
     i18n: {
       locales,
       defaultLocale: "es-es",
