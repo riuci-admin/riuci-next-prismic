@@ -1,4 +1,4 @@
-import matchSorter from "match-sorter";
+import { matchSorter } from "match-sorter";
 import { useMemo, useState } from "react";
 import { useFilters, useTable } from "react-table";
 

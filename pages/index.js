@@ -31,14 +31,12 @@ const Index = ({ locale, page, navigation, settings, footer }) => {
 
 export default Index;
 
-export async function getStaticProps({ locale, previewData }) {
-  const client = createClient({ previewData });
-
+export async function getStaticProps({ locale }) {
+  const client = createClient();
   const page = await client.getByUID("page", "home", { lang: locale });
   const navigation = await client.getSingle("navigation", { lang: locale });
   const settings = await client.getSingle("settings", { lang: locale });
   const footer = await client.getSingle("footer", { lang: locale });
-
   return {
     props: {
       locale,

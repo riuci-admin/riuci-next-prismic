@@ -36,10 +36,6 @@ export const linkResolver = (doc) => {
  *
  * @param config {prismicNext.CreateClientConfig} - A configuration object to
  */
-export const createClient = ({ previewData, req, ...config } = {}) => {
-  const client = prismic.createClient(sm.apiEndpoint, config);
-
-  prismicNext.enableAutoPreviews({ client, previewData, req });
-
-  return client;
+export const createClient = ({ req, ...config } = {}) => {
+  return prismic.createClient(sm.apiEndpoint, config);
 };
