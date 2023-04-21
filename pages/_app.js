@@ -1,5 +1,4 @@
 import "styles/globals.css";
-import "styles/icons.css";
 
 import { PrismicProvider } from "@prismicio/react";
 import { richTextComponents } from "components/RichTextComponents";

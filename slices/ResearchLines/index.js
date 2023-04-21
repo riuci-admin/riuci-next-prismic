@@ -1,4 +1,5 @@
 import BambooSVG from "components/BambooSVG";
+import Image from "next/image";
 import React from "react";
 /**
  * @typedef {import("@prismicio/client").Content.ResearchLinesSlice} ResearchLinesSlice
@@ -11,16 +12,14 @@ const ResearchLines = ({ slice }) => (
       <h2>{slice.primary.title}</h2>
       <div className="flex flex-wrap justify-center gap-11 pt-3 md:gap-14">
         {slice.items.map((item, i) => (
-          <div key={i} className="card h-52 w-80 bg-white shadow-xl">
-            <div className="card-body flex items-center justify-center text-center md:justify-start">
-              <div className="pb-3 text-5xl text-green-dark opacity-80">
-                {item.icon === "bamboo" ? (
-                  <BambooSVG />
-                ) : (
-                  <i className={`fa-solid fa-${item.icon}`}></i>
-                )}
+          <div key={i} className="card h-auto w-80 bg-white shadow-xl">
+            <figure>
+              <div className="relative mt-7 h-14 w-14 opacity-80">
+                <Image src={`svg/${item.icon}.svg`} alt={item.icon} fill />
               </div>
-              <div className="pb-1 font-medium">{item.topic}</div>
+            </figure>
+            <div className="card-body flex items-center justify-center px-7 pb-8 pt-5 text-center md:justify-start">
+              <div className="font-medium">{item.topic}</div>
             </div>
           </div>
         ))}
