@@ -16,7 +16,11 @@ export const Header = ({ alternateLanguages = [], navigation, settings }) => {
             <PrismicLink href="/">
               <div className="flex w-32 items-center">
                 <Image
-                  src={settings.data.logo.url}
+                  src={
+                    alternateLanguages[0].lang === "es-es"
+                      ? "/svg/riuci-logo-es.svg"
+                      : "/svg/riuci-logo.svg"
+                  }
                   alt={settings.data.logo.alt}
                   width={128}
                   height={55}
