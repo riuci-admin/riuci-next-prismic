@@ -72,7 +72,6 @@ Here are some of the files in your project that you can edit:
 - `pages/\_app.js` - This is your app component, which includes configuration for `@prismicio/react` and `@prismicio/next`.
 - `pages/index.js` - This is the app homepage. It queries and renders a page document with the UID (unique identifier) "home" from the Prismic API.
 - `pages/[uid].js` - This is the page component, which queries and renders a page document from your Prismic repository based on the UID.
-- `pages/api/sign-up.js` - This is the API endpoint for your form. To use the form, send a POST request to a back end from this endpoint.
 - `slices/\*/index.js` - Each Slice in your project has an index.js file that renders the Slice component. Edit this file to customize your Slices.
 
 These are important files that you should leave as-is:

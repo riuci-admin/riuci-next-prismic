@@ -29,7 +29,9 @@
           "type": "Image",
           "config": {
             "label": "General Image",
-            "constraint": {},
+            "constraint": {
+              "width": 1024
+            },
             "thumbnails": []
           }
         },
@@ -67,7 +69,9 @@
           "type": "Image",
           "config": {
             "label": "Objective Image",
-            "constraint": {},
+            "constraint": {
+              "width": 1024
+            },
             "thumbnails": []
           }
         }

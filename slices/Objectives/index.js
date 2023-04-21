@@ -1,4 +1,4 @@
-import { PrismicNextImage } from "@prismicio/next";
+import Image from "next/image";
 import React from "react";
 
 /**
@@ -9,17 +9,19 @@ import React from "react";
 const Objectives = ({ slice }) => (
   <section className="bg-white">
     <div className="frame py max-w-4xl">
-      <div
-        className="card image-full h-96 items-center shadow-xl md:bg-bottom"
-        style={{
-          backgroundImage: `url('${slice.primary.general_image.url}&w=896')`,
-        }}
-      >
-        <div className="card-body items-center text-center">
+      <div className="relative">
+        <Image
+          className="card h-96 object-cover shadow-xl"
+          src={slice.primary.general_image.url}
+          alt={slice.primary.general_image.alt}
+          width={848}
+          height={384}
+        />
+        <div className="card-body absolute left-1/2 top-1/2 min-w-[20rem] -translate-x-1/2 -translate-y-1/2 items-center text-center">
           <h1 className="text-4xl text-green-dark">
             {slice.primary.general_title}
           </h1>
-          <p className="max-w-md text-xl text-black">
+          <p className="max-w-md text-lg text-black md:text-xl">
             {slice.primary.general_description}
           </p>
         </div>
@@ -33,7 +35,13 @@ const Objectives = ({ slice }) => (
             className="card bg-white shadow-xl md:last:col-span-2 md:last:mx-auto md:last:w-1/2"
           >
             <figure>
-              <PrismicNextImage field={item.objective_image} />
+              <Image
+                src={item.objective_image.url}
+                alt={item.objective_image.alt}
+                width={750}
+                height={400}
+                sizes="100vw, (min-width: 769px) 50vw"
+              />
             </figure>
             <div className="card-body">
               <h3 className="text-left">{item.objective_title}</h3>

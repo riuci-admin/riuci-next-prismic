@@ -1,5 +1,5 @@
-import { PrismicNextImage } from "@prismicio/next";
 import { PrismicLink } from "@prismicio/react";
+import Image from "next/image";
 import { linkResolver } from "prismicio";
 
 const FlagIcon = ({ lang }) => {
@@ -15,7 +15,12 @@ export const Header = ({ alternateLanguages = [], navigation, settings }) => {
           <div className="flex-1">
             <PrismicLink href="/">
               <div className="flex w-32 items-center">
-                <PrismicNextImage field={settings.data.logo} />
+                <Image
+                  src={settings.data.logo.url}
+                  alt={settings.data.logo.alt}
+                  width={128}
+                  height={55}
+                />
               </div>
             </PrismicLink>
           </div>
