@@ -47,6 +47,11 @@
         "__TYPE__": "FieldContent",
         "value": "center",
         "type": "Text"
+      },
+      "text": {
+        "__TYPE__": "FieldContent",
+        "value": "road",
+        "type": "Text"
       }
     },
     "items": [

@@ -1712,6 +1712,16 @@ interface RepositorySliceDefaultPrimary {
      */
     title: prismicT.KeyTextField;
     /**
+     * Text field in *Repository → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: repository.primary.text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    text: prismicT.KeyTextField;
+    /**
      * Title Header field in *Repository → Primary*
      *
      * - **Field Type**: Text

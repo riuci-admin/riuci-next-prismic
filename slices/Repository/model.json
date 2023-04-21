@@ -18,6 +18,13 @@
             "placeholder": ""
           }
         },
+        "text": {
+          "type": "Text",
+          "config": {
+            "label": "Text",
+            "placeholder": ""
+          }
+        },
         "title_header": {
           "type": "Text",
           "config": {
