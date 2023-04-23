@@ -11,11 +11,7 @@ const nextConfig = async () => {
   return {
     reactStrictMode: true,
     images: {
-      domains: [
-        "riuci.cdn.prismic.io",
-        "images.prismic.io",
-        "cdnjs.cloudflare.com",
-      ],
+      domains: ["images.prismic.io"],
     },
     i18n: {
       locales,

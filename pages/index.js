@@ -5,7 +5,7 @@ import Head from "next/head";
 import { createClient } from "prismicio";
 import { components } from "slices";
 
-const Index = ({ locale, page, navigation, settings, footer }) => {
+export default function Index({ locale, page, navigation, settings, footer }) {
   return (
     <Layout
       alternateLanguages={page.alternate_languages}
@@ -27,9 +27,7 @@ const Index = ({ locale, page, navigation, settings, footer }) => {
       <SliceZone slices={page.data.slices} components={components} />
     </Layout>
   );
-};
-
-export default Index;
+}
 
 export async function getStaticProps({ locale }) {
   const client = createClient();
