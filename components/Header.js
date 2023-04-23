@@ -1,11 +1,8 @@
 import { PrismicLink } from "@prismicio/react";
+import EnFlag from "components/SVG/EnFlag";
+import EsFlag from "components/SVG/EsFlag";
 import Image from "next/image";
 import { linkResolver } from "prismicio";
-
-const FlagIcon = ({ lang }) => {
-  const code = lang.substring(3).toLowerCase();
-  return <span className={`fi fi-${code}`} />;
-};
 
 export const Header = ({ alternateLanguages = [], navigation, settings }) => {
   return (
@@ -18,8 +15,8 @@ export const Header = ({ alternateLanguages = [], navigation, settings }) => {
                 <Image
                   src={
                     alternateLanguages[0].lang === "es-es"
-                      ? "/svg/riuci-logo-es.svg"
-                      : "/svg/riuci-logo.svg"
+                      ? "/svg/riuci-logo.svg"
+                      : "/svg/riuci-logo-es.svg"
                   }
                   alt={settings.data.logo.alt}
                   width={128}
@@ -51,9 +48,7 @@ export const Header = ({ alternateLanguages = [], navigation, settings }) => {
                         </svg>
                       </label>
                     ) : (
-                      <PrismicLink field={slice.primary.link}>
-                        {slice.primary.name}
-                      </PrismicLink>
+                      <PrismicLink field={slice.primary.link}>{slice.primary.name}</PrismicLink>
                     )}
                     {slice.items.length > 0 && (
                       <ul className="border-[1px] border-neutral-200 bg-white p-2">
@@ -63,9 +58,7 @@ export const Header = ({ alternateLanguages = [], navigation, settings }) => {
                               className="text-sm font-medium text-green-dark"
                               key={item.child_link.id}
                             >
-                              <PrismicLink field={item.child_link}>
-                                {item.child_name}
-                              </PrismicLink>
+                              <PrismicLink field={item.child_link}>{item.child_name}</PrismicLink>
                             </li>
                           );
                         })}
@@ -78,7 +71,7 @@ export const Header = ({ alternateLanguages = [], navigation, settings }) => {
                 <li className="flex items-center" key={lang.lang}>
                   <PrismicLink href={linkResolver(lang)} locale={lang.lang}>
                     <span className="sr-only">{lang.lang}</span>
-                    <FlagIcon lang={lang.lang} />
+                    {lang.lang === "es-es" ? <EsFlag /> : <EnFlag />}
                   </PrismicLink>
                 </li>
               ))}
