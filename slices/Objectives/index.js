@@ -9,18 +9,15 @@ import React from "react";
 const Objectives = ({ slice }) => (
   <section className="bg-white">
     <div className="frame py max-w-4xl">
-      <div className="relative">
+      <div className="card relative flex h-96 w-full items-center justify-center overflow-hidden shadow-xl">
         <Image
-          className="card h-96 object-cover shadow-xl"
+          className="object-cover"
           src={slice.primary.general_image.url}
           alt={slice.primary.general_image.alt}
-          width={848}
-          height={384}
+          fill
         />
-        <div className="card-body absolute left-1/2 top-1/2 min-w-[20rem] -translate-x-1/2 -translate-y-1/2 items-center text-center">
-          <h1 className="text-4xl text-green-dark">
-            {slice.primary.general_title}
-          </h1>
+        <div className="z-0 flex max-w-[25rem] flex-col items-center justify-center p-8 text-center">
+          <h1 className="text-4xl text-green-dark">{slice.primary.general_title}</h1>
           <p className="max-w-md text-lg text-black md:text-xl">
             {slice.primary.general_description}
           </p>

@@ -4,14 +4,14 @@ import { components } from "slices";
 
 export const Footer = ({ footer }) => (
   <footer>
-    <div className="relative h-[20rem]">
+    <div className="relative flex h-[20rem] w-full items-center justify-center overflow-hidden">
       <Image
-        className="w-full bg-neutral-800 object-cover"
         src={`${footer.data.background.url}&bri=100`}
         alt={footer.data.background.alt}
+        className="bg-neutral-800 object-cover"
         fill
       />
-      <div className="absolute left-1/2 top-1/2 w-[17rem] -translate-x-1/2 -translate-y-1/2 text-center text-sm text-white">
+      <div className="z-0 flex w-[17rem] flex-col items-center justify-center text-center text-sm text-white">
         <div className="pb-1">{footer.data.text}</div>
         <div>
           <a
