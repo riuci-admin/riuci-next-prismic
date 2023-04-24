@@ -9,16 +9,16 @@ type Simplify<T> = {
 /** Content for Footer documents */
 interface FooterDocumentData {
     /**
-     * Text field in *Footer*
+     * Contact Us field in *Footer*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: footer.text
+     * - **API ID Path**: footer.contact_us
      * - **Tab**: Main
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    text: prismicT.KeyTextField;
+    contact_us: prismicT.KeyTextField;
     /**
      * Email field in *Footer*
      *
@@ -31,16 +31,60 @@ interface FooterDocumentData {
      */
     email: prismicT.KeyTextField;
     /**
-     * Bamboo field in *Footer*
+     * Sponsored By field in *Footer*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: footer.bamboo
+     * - **API ID Path**: footer.sponsored_by
      * - **Tab**: Main
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    bamboo: prismicT.KeyTextField;
+    sponsored_by: prismicT.KeyTextField;
+    /**
+     * AECID field in *Footer*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.aecid
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    aecid: prismicT.ImageField<never>;
+    /**
+     * AECID Link field in *Footer*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.aecid_link
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    aecid_link: prismicT.LinkField;
+    /**
+     * INBAR field in *Footer*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.inbar
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    inbar: prismicT.ImageField<never>;
+    /**
+     * INBAR Link field in *Footer*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.inbar_link
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    inbar_link: prismicT.LinkField;
     /**
      * RIUCI Description field in *Footer*
      *
@@ -63,6 +107,17 @@ interface FooterDocumentData {
      *
      */
     background: prismicT.ImageField<never>;
+    /**
+     * Bamboo field in *Footer*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.bamboo
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    bamboo: prismicT.KeyTextField;
     /**
      * Slice Zone field in *Footer*
      *

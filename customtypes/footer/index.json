@@ -5,10 +5,10 @@
   "status": true,
   "json": {
     "Main": {
-      "text": {
+      "contact_us": {
         "type": "Text",
         "config": {
-          "label": "Text",
+          "label": "Contact Us",
           "placeholder": ""
         }
       },
@@ -19,11 +19,49 @@
           "placeholder": ""
         }
       },
-      "bamboo": {
+      "sponsored_by": {
         "type": "Text",
         "config": {
-          "label": "Bamboo",
+          "label": "Sponsored By",
           "placeholder": ""
+        }
+      },
+      "aecid": {
+        "type": "Image",
+        "config": {
+          "label": "AECID",
+          "constraint": {
+            "width": 250
+          },
+          "thumbnails": []
+        }
+      },
+      "aecid_link": {
+        "type": "Link",
+        "config": {
+          "label": "AECID Link",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null
+        }
+      },
+      "inbar": {
+        "type": "Image",
+        "config": {
+          "label": "INBAR",
+          "constraint": {
+            "width": 250
+          },
+          "thumbnails": []
+        }
+      },
+      "inbar_link": {
+        "type": "Link",
+        "config": {
+          "label": "INBAR Link",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null
         }
       },
       "riuci_description": {
@@ -39,6 +77,13 @@
           "label": "Background",
           "constraint": {},
           "thumbnails": []
+        }
+      },
+      "bamboo": {
+        "type": "Text",
+        "config": {
+          "label": "Bamboo",
+          "placeholder": ""
         }
       },
       "slices": {

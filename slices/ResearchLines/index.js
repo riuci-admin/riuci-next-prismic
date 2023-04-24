@@ -14,7 +14,7 @@ const ResearchLines = ({ slice }) => (
           <div key={i} className="card h-auto w-80 bg-white shadow-xl">
             <figure>
               <div className="relative mt-7 h-14 w-14 opacity-80">
-                <Image src={`svg/${item.icon}.svg`} alt={item.icon} fill />
+                <Image src={`/svg/${item.icon}.svg`} alt={item.icon} fill />
               </div>
             </figure>
             <div className="card-body flex items-center justify-center px-7 pb-8 pt-5 text-center md:justify-start">
