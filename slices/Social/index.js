@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 /**
  * @typedef {import("@prismicio/client").Content.SocialSlice} SocialSlice
@@ -16,7 +17,13 @@ const Social = ({ slice }) => (
           rel="noopener noreferrer"
           className="text-2xl hover:text-green-soft"
         >
-          <i className={`fa-brands fa-${item.icon}`}></i>
+          <Image
+            src={`svg/${item.icon}.svg`}
+            alt={item.icon}
+            width={24}
+            height={24}
+            className="mt-1 h-6"
+          />
         </a>
       </div>
     ))}
