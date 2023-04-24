@@ -1,6 +1,6 @@
 export default function EnFlag() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" style={{ height: "1rem" }}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" height={"1rem"}>
       <path fill="#bd3d44" d="M0 0h640v480H0" />
       <path
         stroke="#fff"

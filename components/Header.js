@@ -1,10 +1,11 @@
 import { PrismicLink } from "@prismicio/react";
 import EnFlag from "components/SVG/EnFlag";
 import EsFlag from "components/SVG/EsFlag";
-import Image from "next/image";
+import RiuciLogo from "components/SVG/RiuciLogo";
+import RiuciLogoEs from "components/SVG/RiuciLogoEs";
 import { linkResolver } from "prismicio";
 
-export const Header = ({ alternateLanguages = [], navigation, settings }) => {
+export const Header = ({ alternateLanguages = [], navigation }) => {
   return (
     <header className="sticky top-0 z-30 bg-green-light shadow-lg">
       <div className="frame flex h-[6.5rem] justify-center pl-3 pr-1">
@@ -12,16 +13,7 @@ export const Header = ({ alternateLanguages = [], navigation, settings }) => {
           <div className="flex-1">
             <PrismicLink href="/">
               <div className="flex w-32 items-center">
-                <Image
-                  src={
-                    alternateLanguages[0].lang === "es-es"
-                      ? "/svg/riuci-logo.svg"
-                      : "/svg/riuci-logo-es.svg"
-                  }
-                  alt={settings.data.logo.alt}
-                  width={128}
-                  height={55}
-                />
+                {alternateLanguages[0].lang === "es-es" ? <RiuciLogo /> : <RiuciLogoEs />}
               </div>
             </PrismicLink>
           </div>
