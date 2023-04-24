@@ -11,11 +11,14 @@ const News = ({ slice }) => {
   const router = useRouter();
   const currentLang = router.locale;
   return (
-    <section>
-      <div className="frame py max-w-3xl">
-        <h1>{slice.primary.title}</h1>
-        {slice.items.map((item, i) => (
-          <div key={i}>
+    <div className="pt-9 md:pt-11">
+      <h1 className="mx-auto -mb-5">{slice.primary.title}</h1>
+      {slice.items.map((item, i) => (
+        <section
+          key={i}
+          className="py-12 last:pb-24 odd:bg-neutral-100 even:bg-white last:lg:pb-28"
+        >
+          <div className="frame max-w-3xl">
             <div className="font-semibold text-neutral-500">
               {new Date(item.date).toLocaleDateString(currentLang, {
                 year: "numeric",
@@ -29,9 +32,9 @@ const News = ({ slice }) => {
               <PrismicRichText field={item.rich_text} />
             </div>
           </div>
-        ))}
-      </div>
-    </section>
+        </section>
+      ))}
+    </div>
   );
 };
 
