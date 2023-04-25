@@ -21,7 +21,7 @@ const FirstAssembly = ({ slice }) => (
               <h2 className="w-full text-center">{item.subtitle}</h2>
               <div className="grid grid-cols-2 items-center gap-5 md:min-h-[280px] md:gap-9">
                 <div className="col-span-2 flex justify-center md:col-span-1">
-                  <PrismicNextImage field={item.image} />
+                  <PrismicNextImage field={item.image} priority />
                 </div>
                 <div className="col-span-2 md:col-span-1">
                   <PrismicRichText field={item.description} />
