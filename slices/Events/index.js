@@ -1,4 +1,5 @@
 import { PrismicRichText } from "@prismicio/react";
+import Image from "next/image";
 import React from "react";
 
 /**
@@ -17,14 +18,18 @@ const Events = ({ slice }) => (
               key={i}
               className="card mb-14 min-h-[348px] overflow-auto bg-white shadow-xl md:card-side last:mb-0"
             >
-              <figure
-                className="h-72 bg-cover md:h-auto md:w-1/2"
-                style={{
-                  backgroundImage: `url('${item.image.url}')`,
-                }}
-              ></figure>
+              <div className="relative h-72 md:h-auto md:w-1/2">
+                <Image
+                  className="object-cover"
+                  src={item.image.url.split("?")[0]}
+                  alt={item.image.alt}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                  priority
+                  fill
+                />
+              </div>
               <div className="card-body md:w-1/2">
-                <h3 className="text-left">{item.topic}</h3>
+                <h2 className="mb-2 text-left text-xl">{item.topic}</h2>
                 <div>
                   <PrismicRichText field={item.text} />
                 </div>
