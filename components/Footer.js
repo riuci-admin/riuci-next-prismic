@@ -53,6 +53,7 @@ export const Footer = ({ footer }) => (
               alt={footer.data.aecid.alt}
               width={200}
               height={44}
+              sizes="(max-width: 768px) 50vw, (max-width: 1280px) 25vw, 15vw"
             />
           </a>
           <a
