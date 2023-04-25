@@ -39,7 +39,7 @@ const Repository = ({ slice }) => {
     [slice.primary]
   );
   return (
-    <section className="bg-neutral-100">
+    <section className="min-h-[calc(100vh-33.5rem)] bg-neutral-100">
       <div className="frame py">
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="text-center">{slice.primary.title}</h1>
