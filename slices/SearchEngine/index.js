@@ -20,7 +20,7 @@ const SearchEngine = ({ slice }) => (
           rel="noopener noreferrer"
         >
           <figure className="rounded-lg">
-            <PrismicNextImage field={slice.primary.image} />
+            <PrismicNextImage field={slice.primary.image} priority />
           </figure>
         </a>
       </div>
