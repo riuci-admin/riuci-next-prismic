@@ -8,6 +8,7 @@ export const Footer = ({ footer }) => (
         alt={footer.data.background.alt}
         className="bg-neutral-800 object-cover"
         fill
+        priority
       />
       <div className="z-0 flex w-[17rem] flex-col items-center justify-center text-center text-sm text-white">
         <div className="pb-1">{footer.data.contact_us}</div>
@@ -30,11 +31,12 @@ export const Footer = ({ footer }) => (
                 className="text-2xl hover:text-green-soft"
               >
                 <Image
+                  className="h-6"
                   src={`/svg/${item.icon}.svg`}
                   alt={item.icon}
                   width={24}
                   height={24}
-                  className="h-6"
+                  priority
                 />
               </a>
             </div>
@@ -54,6 +56,7 @@ export const Footer = ({ footer }) => (
               width={200}
               height={44}
               sizes="(max-width: 768px) 50vw, (max-width: 1280px) 25vw, 15vw"
+              priority
             />
           </a>
           <a
@@ -67,6 +70,7 @@ export const Footer = ({ footer }) => (
               alt={footer.data.inbar.alt}
               width={100}
               height={66}
+              priority
             />
           </a>
         </div>
