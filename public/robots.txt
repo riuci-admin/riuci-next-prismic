@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://riuci.net
+
+# Sitemaps
+Sitemap: https://riuci.net/sitemap.xml
