@@ -14,6 +14,7 @@ const Hero = ({ slice }) => (
         src={`${slice.primary.background.url}&w=1280&bri=-25&blur=35`}
         alt={slice.primary.background.alt}
         className="object-cover"
+        sizes="100vw"
         priority
         fill
       />
