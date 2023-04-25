@@ -23,12 +23,13 @@ const Courses = ({ slice }) => (
                   className="object-cover"
                   src={item.image.url.split("?")[0]}
                   alt={item.image.alt}
-                  fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                  priority
+                  fill
                 />
               </div>
               <div className="card-body md:w-1/2">
-                <h3 className="text-left">{item.topic}</h3>
+                <h2 className="mb-2 text-left text-xl">{item.topic}</h2>
                 <div>
                   <PrismicRichText field={item.text} />
                 </div>
