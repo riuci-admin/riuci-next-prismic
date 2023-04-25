@@ -56,9 +56,7 @@ export const Table = ({ columns, data, translations }) => {
         return rows.filter((row) => {
           const rowValue = row.values[id];
           return rowValue !== undefined
-            ? String(rowValue)
-                .toLowerCase()
-                .startsWith(String(filterValue).toLowerCase())
+            ? String(rowValue).toLowerCase().startsWith(String(filterValue).toLowerCase())
             : true;
         });
       },
@@ -71,24 +69,20 @@ export const Table = ({ columns, data, translations }) => {
     }),
     []
   );
-  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-    useTable(
-      {
-        columns,
-        data,
-        defaultColumn,
-        filterTypes,
-        translations,
-      },
-      useFilters
-    );
+  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable(
+    {
+      columns,
+      data,
+      defaultColumn,
+      filterTypes,
+      translations,
+    },
+    useFilters
+  );
   const [selectedRow, setSelectedRow] = useState([]);
   return (
     <>
-      <table
-        {...getTableProps()}
-        className="table-zebra table-compact mx-auto table w-full"
-      >
+      <table {...getTableProps()} className="table-zebra table-compact mx-auto table w-full">
         <thead className="sticky top-0">
           {headerGroups.map((headerGroup, i) => (
             <tr key={i} {...headerGroup.getHeaderGroupProps()}>
@@ -96,9 +90,7 @@ export const Table = ({ columns, data, translations }) => {
                 return (
                   <th key={i} {...column.getHeaderProps()}>
                     {column.render("Header")}
-                    <div>
-                      {column.canFilter ? column.render("Filter") : null}
-                    </div>
+                    <div>{column.canFilter ? column.render("Filter") : null}</div>
                   </th>
                 );
               })}
@@ -135,6 +127,7 @@ export const Table = ({ columns, data, translations }) => {
           })}
         </tbody>
       </table>
+      <label htmlFor="document-modal" />
       <input type="checkbox" id="document-modal" className="modal-toggle" />
       <label htmlFor="document-modal" className="modal cursor-pointer">
         <label className="modal-box relative" htmlFor="">
