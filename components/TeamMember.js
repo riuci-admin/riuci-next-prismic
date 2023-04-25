@@ -10,16 +10,13 @@ export const TeamMember = ({ photo, member, title }) => (
             fit: "facearea",
             facepad: 4,
           }}
+          sizes="(max-width: 768px) 50vw, (max-width: 1280px) 25vw, 15vw"
         />
       </div>
     </div>
     <div className="card-body pt-5 text-center leading-tight md:h-36">
       <div className="font-medium">{member}</div>
-      {title && (
-        <div className="mt-2 text-sm font-semibold text-green-dark">
-          {title}
-        </div>
-      )}
+      {title && <div className="mt-2 text-sm font-semibold text-green-dark">{title}</div>}
     </div>
   </div>
 );
