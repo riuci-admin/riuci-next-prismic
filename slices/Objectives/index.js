@@ -14,6 +14,7 @@ const Objectives = ({ slice }) => (
           className="object-cover"
           src={slice.primary.general_image.url}
           alt={slice.primary.general_image.alt}
+          priority
           fill
         />
         <div className="z-0 flex max-w-[25rem] flex-col items-center justify-center p-8 text-center">
@@ -37,7 +38,7 @@ const Objectives = ({ slice }) => (
                 alt={item.objective_image.alt}
                 width={750}
                 height={400}
-                sizes="100vw, (min-width: 769px) 50vw"
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
               />
             </figure>
             <div className="card-body">
