@@ -21,7 +21,7 @@ const ExternalRepositories = ({ slice }) => (
           >
             <div>{item.name}</div>
             <figure className="rounded-sm pt-5">
-              <PrismicNextImage field={item.logo} />
+              <PrismicNextImage field={item.logo} sizes="(max-width: 768px) 100vw, 33vw" priority />
             </figure>
           </a>
         ))}
