@@ -13,7 +13,11 @@ const Origin = ({ slice }) => (
       <div className="grid grid-cols-1 items-center gap-x-7 lg:grid-cols-2">
         <h1 className="lg:col-span-2">{slice.primary.title}</h1>
         <div className="mb-6 overflow-hidden rounded-2xl lg:mb-0">
-          <PrismicNextImage field={slice.primary.image} />
+          <PrismicNextImage
+            field={slice.primary.image}
+            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+            priority
+          />
         </div>
         <div>
           <PrismicRichText field={slice.primary.text} />
@@ -25,7 +29,10 @@ const Origin = ({ slice }) => (
           <PrismicRichText field={slice.primary.manifesto_text} />
         </div>
         <div className="mb-6 overflow-hidden rounded-2xl lg:mb-0">
-          <PrismicNextImage field={slice.primary.manifesto_image} />
+          <PrismicNextImage
+            field={slice.primary.manifesto_image}
+            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+          />
         </div>
       </div>
       <div className="mt-4">
@@ -33,12 +40,8 @@ const Origin = ({ slice }) => (
           <tbody>
             {slice.items.map((item, i) => (
               <tr key={i}>
-                <td className="max-w-[7rem] whitespace-normal md:max-w-full">
-                  {item.member_name}
-                </td>
-                <td className="max-w-md whitespace-normal">
-                  {item.member_place}
-                </td>
+                <td className="max-w-[7rem] whitespace-normal md:max-w-full">{item.member_name}</td>
+                <td className="max-w-md whitespace-normal">{item.member_place}</td>
               </tr>
             ))}
           </tbody>
