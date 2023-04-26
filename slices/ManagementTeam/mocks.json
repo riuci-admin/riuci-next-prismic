@@ -1,103 +1,103 @@
 [
-  {
-    "__TYPE__": "SharedSliceContent",
-    "variation": "default",
-    "primary": {
-      "title": {
-        "__TYPE__": "FieldContent",
-        "value": "time",
-        "type": "Text"
-      },
-      "description": {
-        "__TYPE__": "StructuredTextContent",
-        "value": [
-          {
-            "type": "paragraph",
-            "content": {
-              "text": "Laborum esse sit dolor commodo qui et incididunt."
-            }
-          }
-        ]
-      },
-      "team_title": {
-        "__TYPE__": "FieldContent",
-        "value": "successful",
-        "type": "Text"
-      },
-      "coordinator_photo": {
-        "origin": {
-          "id": "main",
-          "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
-          "width": 5243,
-          "height": 3495
-        },
-        "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
-        "width": 5243,
-        "height": 3495,
-        "edit": {
-          "zoom": 1,
-          "crop": {
-            "x": 0,
-            "y": 0
-          },
-          "background": "transparent"
-        },
-        "credits": null,
-        "alt": null,
-        "__TYPE__": "ImageContent",
-        "thumbnails": {}
-      },
-      "coordinator": {
-        "__TYPE__": "FieldContent",
-        "value": "medicine",
-        "type": "Text"
-      },
-      "coordinator_title": {
-        "__TYPE__": "FieldContent",
-        "value": "here",
-        "type": "Text"
-      }
-    },
-    "items": [
-      {
-        "__TYPE__": "GroupItemContent",
-        "value": [
-          [
-            "member_photo",
-            {
-              "origin": {
-                "id": "main",
-                "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6",
-                "width": 4272,
-                "height": 2848
-              },
-              "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6",
-              "width": 4272,
-              "height": 2848,
-              "edit": {
-                "zoom": 1,
-                "crop": {
-                  "x": 0,
-                  "y": 0
-                },
-                "background": "transparent"
-              },
-              "credits": null,
-              "alt": null,
-              "__TYPE__": "ImageContent",
-              "thumbnails": {}
-            }
-          ],
-          [
-            "member",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "electricity",
-              "type": "Text"
-            }
-          ]
-        ]
-      }
-    ]
-  }
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "time",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Laborum esse sit dolor commodo qui et incididunt."
+						}
+					}
+				]
+			},
+			"team_title": {
+				"__TYPE__": "FieldContent",
+				"value": "successful",
+				"type": "Text"
+			},
+			"coordinator_photo": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89",
+					"width": 3456,
+					"height": 3456
+				},
+				"url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89?rect=0%2C0%2C3456%2C3456&w=768&h=768",
+				"width": 768,
+				"height": 768,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"coordinator": {
+				"__TYPE__": "FieldContent",
+				"value": "medicine",
+				"type": "Text"
+			},
+			"coordinator_title": {
+				"__TYPE__": "FieldContent",
+				"value": "here",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"member_photo",
+						{
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468",
+								"width": 4000,
+								"height": 6000
+							},
+							"url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?rect=0%2C0%2C4000%2C6000&w=768&h=1152",
+							"width": 768,
+							"height": 1152,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"credits": null,
+							"alt": null,
+							"__TYPE__": "ImageContent",
+							"thumbnails": {}
+						}
+					],
+					[
+						"member",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "electricity",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
 ]
