@@ -10,7 +10,10 @@
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
       "description": "Courses",
-      "primary": { "title": { "type": "Text", "config": { "label": "Title", "placeholder": "" } } },
+      "primary": {
+        "title": { "type": "Text", "config": { "label": "Title", "placeholder": "" } },
+        "description": { "type": "Text", "config": { "label": "Description", "placeholder": "" } }
+      },
       "items": {
         "visible": {
           "type": "Boolean",
