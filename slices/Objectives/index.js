@@ -14,6 +14,7 @@ const Objectives = ({ slice }) => (
           className="object-cover"
           src={slice.primary.general_image.url}
           alt={slice.primary.general_image.alt}
+          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
           priority
           fill
         />

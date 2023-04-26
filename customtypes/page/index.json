@@ -7,10 +7,7 @@
     "Main": {
       "uid": {
         "type": "UID",
-        "config": {
-          "label": "UID",
-          "placeholder": "URL slug for the page"
-        }
+        "config": { "label": "UID", "placeholder": "URL slug for the page" }
       },
       "title": {
         "type": "StructuredText",
@@ -21,75 +18,35 @@
           "single": "heading1"
         }
       },
-      "description": {
-        "type": "Text",
-        "config": {
-          "label": "Description",
-          "placeholder": ""
-        }
+      "description": { "type": "Text", "config": { "label": "Description", "placeholder": "" } },
+      "image": {
+        "type": "Image",
+        "config": { "label": "Image", "constraint": { "width": 1200 }, "thumbnails": [] }
       },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "hero": {
-              "type": "SharedSlice"
-            },
-            "research_lines": {
-              "type": "SharedSlice"
-            },
-            "text_block": {
-              "type": "SharedSlice"
-            },
-            "origin": {
-              "type": "SharedSlice"
-            },
-            "membership": {
-              "type": "SharedSlice"
-            },
-            "objectives": {
-              "type": "SharedSlice"
-            },
-            "management_team": {
-              "type": "SharedSlice"
-            },
-            "network_members": {
-              "type": "SharedSlice"
-            },
-            "exchange_knowledge_team": {
-              "type": "SharedSlice"
-            },
-            "generate_knowledge_team": {
-              "type": "SharedSlice"
-            },
-            "manage_knowledge_team": {
-              "type": "SharedSlice"
-            },
-            "courses": {
-              "type": "SharedSlice"
-            },
-            "external_repositories": {
-              "type": "SharedSlice"
-            },
-            "repository": {
-              "type": "SharedSlice"
-            },
-            "first_assembly": {
-              "type": "SharedSlice"
-            },
-            "main_activities": {
-              "type": "SharedSlice"
-            },
-            "events": {
-              "type": "SharedSlice"
-            },
-            "news": {
-              "type": "SharedSlice"
-            },
-            "search_engine": {
-              "type": "SharedSlice"
-            }
+            "hero": { "type": "SharedSlice" },
+            "research_lines": { "type": "SharedSlice" },
+            "text_block": { "type": "SharedSlice" },
+            "origin": { "type": "SharedSlice" },
+            "membership": { "type": "SharedSlice" },
+            "objectives": { "type": "SharedSlice" },
+            "management_team": { "type": "SharedSlice" },
+            "network_members": { "type": "SharedSlice" },
+            "exchange_knowledge_team": { "type": "SharedSlice" },
+            "generate_knowledge_team": { "type": "SharedSlice" },
+            "manage_knowledge_team": { "type": "SharedSlice" },
+            "courses": { "type": "SharedSlice" },
+            "external_repositories": { "type": "SharedSlice" },
+            "repository": { "type": "SharedSlice" },
+            "first_assembly": { "type": "SharedSlice" },
+            "main_activities": { "type": "SharedSlice" },
+            "events": { "type": "SharedSlice" },
+            "news": { "type": "SharedSlice" },
+            "search_engine": { "type": "SharedSlice" }
           }
         }
       }

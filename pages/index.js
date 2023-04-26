@@ -16,12 +16,10 @@ export default function Index({ locale, page, navigation, settings, footer }) {
       <Head>
         <title>{prismicH.asText(page.data.title)}</title>
         <meta name="description" content={page.data.description} />
+        <meta property="og:url" content={`${process.env.NEXT_PUBLIC_HOST}/${locale}`} />
         <meta property="og:title" content={prismicH.asText(page.data.title)} />
         <meta property="og:description" content={page.data.description} />
-        <meta
-          property="og:url"
-          content={`${process.env.NEXT_PUBLIC_HOST}/${locale}`}
-        />
+        <meta property="og:image" content={page.data.image.url} />
         <meta property="og:type" content="website" />
       </Head>
       <SliceZone slices={page.data.slices} components={components} />

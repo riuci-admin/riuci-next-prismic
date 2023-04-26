@@ -21,11 +21,9 @@ export default function Page({ locale, page, navigation, settings, footer }) {
           property="og:title"
           content={`${prismicH.asText(page.data.title)} | RIUCI ${bamboo}`}
         />
+        <meta property="og:url" content={`${process.env.NEXT_PUBLIC_HOST}/${locale}`} />
         <meta property="og:description" content={page.data.description} />
-        <meta
-          property="og:url"
-          content={`${process.env.NEXT_PUBLIC_HOST}/${locale}`}
-        />
+        <meta property="og:image" content={page.data.image.url} />
         <meta property="og:type" content="website" />
       </Head>
       <SliceZone slices={page.data.slices} components={components} />
