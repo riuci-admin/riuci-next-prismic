@@ -11,6 +11,7 @@ const Courses = ({ slice }) => (
   <section className="bg-neutral-100">
     <div className="frame py flex flex-col">
       <h1 className="mb-10">{slice.primary.title}</h1>
+      <p className="mx-auto max-w-3xl pb-9 text-center">{slice.primary.description}</p>
       {slice.items.map(
         (item, i) =>
           item.visible && (
