@@ -10,15 +10,7 @@
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
       "description": "Courses",
-      "primary": {
-        "title": {
-          "type": "Text",
-          "config": {
-            "label": "Title",
-            "placeholder": ""
-          }
-        }
-      },
+      "primary": { "title": { "type": "Text", "config": { "label": "Title", "placeholder": "" } } },
       "items": {
         "visible": {
           "type": "Boolean",
@@ -31,19 +23,9 @@
         },
         "image": {
           "type": "Image",
-          "config": {
-            "label": "Image",
-            "constraint": {},
-            "thumbnails": []
-          }
+          "config": { "label": "Image", "constraint": { "width": 1024 }, "thumbnails": [] }
         },
-        "topic": {
-          "type": "Text",
-          "config": {
-            "label": "Topic",
-            "placeholder": ""
-          }
-        },
+        "topic": { "type": "Text", "config": { "label": "Topic", "placeholder": "" } },
         "text": {
           "type": "StructuredText",
           "config": {
