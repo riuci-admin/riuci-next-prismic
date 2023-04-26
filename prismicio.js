@@ -22,7 +22,6 @@ export const linkResolver = (doc) => {
   if (doc.type === "page") {
     return doc.uid === "home" || doc.uid === "inicio" ? "/" : `/${doc.uid}`;
   }
-
   return "/";
 };
 

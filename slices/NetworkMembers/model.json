@@ -11,113 +11,42 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "NetworkMembers",
       "primary": {
-        "title": {
-          "type": "Text",
-          "config": {
-            "label": "Title",
-            "placeholder": ""
-          }
-        },
-        "description": {
-          "type": "Text",
-          "config": {
-            "label": "Description",
-            "placeholder": ""
-          }
-        },
+        "title": { "type": "Text", "config": { "label": "Title", "placeholder": "" } },
+        "description": { "type": "Text", "config": { "label": "Description", "placeholder": "" } },
         "country_header": {
           "type": "Text",
-          "config": {
-            "label": "Country Header",
-            "placeholder": ""
-          }
+          "config": { "label": "Country Header", "placeholder": "" }
         },
         "institution_header": {
           "type": "Text",
-          "config": {
-            "label": "Institution Header",
-            "placeholder": ""
-          }
+          "config": { "label": "Institution Header", "placeholder": "" }
         },
         "delegate_header": {
           "type": "Text",
-          "config": {
-            "label": "Delegate Header",
-            "placeholder": ""
-          }
+          "config": { "label": "Delegate Header", "placeholder": "" }
         },
-        "name_header": {
-          "type": "Text",
-          "config": {
-            "label": "Name Header",
-            "placeholder": ""
-          }
-        },
+        "name_header": { "type": "Text", "config": { "label": "Name Header", "placeholder": "" } },
         "email_header": {
           "type": "Text",
-          "config": {
-            "label": "Email Header",
-            "placeholder": ""
-          }
+          "config": { "label": "Email Header", "placeholder": "" }
         },
-        "all": {
-          "type": "Text",
-          "config": {
-            "label": "All",
-            "placeholder": ""
-          }
-        },
-        "search": {
-          "type": "Text",
-          "config": {
-            "label": "Search",
-            "placeholder": ""
-          }
-        },
-        "records": {
-          "type": "Text",
-          "config": {
-            "label": "Records",
-            "placeholder": ""
-          }
-        }
+        "all": { "type": "Text", "config": { "label": "All", "placeholder": "" } },
+        "search": { "type": "Text", "config": { "label": "Search", "placeholder": "" } },
+        "records": { "type": "Text", "config": { "label": "Records", "placeholder": "" } }
       },
       "items": {
-        "country": {
-          "type": "Text",
-          "config": {
-            "label": "Country",
-            "placeholder": ""
-          }
-        },
-        "institution": {
-          "type": "Text",
-          "config": {
-            "label": "Institution",
-            "placeholder": ""
-          }
-        },
+        "country": { "type": "Text", "config": { "label": "Country", "placeholder": "" } },
+        "institution": { "type": "Text", "config": { "label": "Institution", "placeholder": "" } },
         "delegate": {
-          "type": "Text",
+          "type": "Select",
           "config": {
             "label": "Delegate",
-            "placeholder": ""
+            "placeholder": "",
+            "options": ["Principal", "Alternate", "Alterno"]
           }
         },
-        "name": {
-          "type": "Text",
-          "config": {
-            "label": "Name",
-            "placeholder": ""
-          }
-        },
-        "email": {
-          "type": "Text",
-          "config": {
-            "label": "Email",
-            "placeholder": ""
-          }
-        }
+        "name": { "type": "Text", "config": { "label": "Name", "placeholder": "" } },
+        "email": { "type": "Text", "config": { "label": "Email", "placeholder": "" } }
       },
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }

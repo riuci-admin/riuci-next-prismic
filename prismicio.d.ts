@@ -1497,13 +1497,13 @@ export interface NetworkMembersSliceDefaultItem {
   /**
    * Delegate field in *NetworkMembers → Items*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **API ID Path**: network_members.items[].delegate
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/select
    *
    */
-  delegate: prismicT.KeyTextField;
+  delegate: prismicT.SelectField<"Principal" | "Alternate" | "Alterno">;
   /**
    * Name field in *NetworkMembers → Items*
    *
