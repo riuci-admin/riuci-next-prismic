@@ -20,11 +20,7 @@ export const repositoryName = prismic.getRepositoryName(slicemachine.apiEndpoint
  */
 export const linkResolver = (doc) => {
   if (doc.type === "page") {
-    if (doc.uid === "home") {
-      return "/";
-    } else {
-      return `/${doc.uid}`;
-    }
+    return doc.uid === "home" || doc.uid === "inicio" ? "/" : `/${doc.uid}`;
   }
 
   return "/";
