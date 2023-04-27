@@ -20,9 +20,9 @@ const ExternalRepositories = ({ slice }) => (
             rel="noopener noreferrer"
           >
             <div>{item.name}</div>
-            <figure className="rounded-sm pt-5">
+            <div className="mt-3 flex h-40 items-center justify-center rounded-sm">
               <PrismicNextImage field={item.logo} sizes="(max-width: 768px) 100vw, 33vw" priority />
-            </figure>
+            </div>
           </a>
         ))}
       </div>
