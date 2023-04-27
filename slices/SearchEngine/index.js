@@ -1,4 +1,5 @@
 import { PrismicNextImage } from "@prismicio/next";
+import va from "@vercel/analytics";
 import React from "react";
 
 /**
@@ -20,7 +21,11 @@ const SearchEngine = ({ slice }) => (
           rel="noopener noreferrer"
         >
           <figure className="rounded-lg">
-            <PrismicNextImage field={slice.primary.image} priority />
+            <PrismicNextImage
+              field={slice.primary.image}
+              priority
+              onClick={() => va.track("Search Engine")}
+            />
           </figure>
         </a>
       </div>
