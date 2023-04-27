@@ -426,6 +426,16 @@ interface EventsSliceDefaultPrimary {
    *
    */
   title: prismicT.KeyTextField;
+  /**
+   * Description field in *Events → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: events.primary.description
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  description: prismicT.KeyTextField;
 }
 /**
  * Item in Events → Items

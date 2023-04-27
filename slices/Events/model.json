@@ -11,13 +11,8 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Events",
       "primary": {
-        "title": {
-          "type": "Text",
-          "config": {
-            "label": "Title",
-            "placeholder": ""
-          }
-        }
+        "title": { "type": "Text", "config": { "label": "Title", "placeholder": "" } },
+        "description": { "type": "Text", "config": { "label": "Description", "placeholder": "" } }
       },
       "items": {
         "visible": {
@@ -31,21 +26,9 @@
         },
         "image": {
           "type": "Image",
-          "config": {
-            "label": "Image",
-            "constraint": {
-              "width": 1024
-            },
-            "thumbnails": []
-          }
+          "config": { "label": "Image", "constraint": { "width": 1024 }, "thumbnails": [] }
         },
-        "topic": {
-          "type": "Text",
-          "config": {
-            "label": "Topic",
-            "placeholder": ""
-          }
-        },
+        "topic": { "type": "Text", "config": { "label": "Topic", "placeholder": "" } },
         "text": {
           "type": "StructuredText",
           "config": {
