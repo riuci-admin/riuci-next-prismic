@@ -196,6 +196,17 @@ export type NavigationDocument<Lang extends string = string> = prismicT.PrismicD
 /** Content for Page documents */
 interface PageDocumentData {
   /**
+   * Meta Title field in *Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.meta_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  meta_title: prismicT.KeyTextField;
+  /**
    * Title field in *Page*
    *
    * - **Field Type**: Title
@@ -207,27 +218,27 @@ interface PageDocumentData {
    */
   title: prismicT.TitleField;
   /**
-   * Description field in *Page*
+   * Meta Description field in *Page*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: page.description
+   * - **API ID Path**: page.meta_description
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
    *
    */
-  description: prismicT.KeyTextField;
+  meta_description: prismicT.KeyTextField;
   /**
-   * Image field in *Page*
+   * Meta Image field in *Page*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: page.image
+   * - **API ID Path**: page.meta_image
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/core-concepts/image
    *
    */
-  image: prismicT.ImageField<never>;
+  meta_image: prismicT.ImageField<never>;
   /**
    * Slice Zone field in *Page*
    *

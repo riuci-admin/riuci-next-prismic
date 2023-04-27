@@ -1,4 +1,3 @@
-import * as prismicH from "@prismicio/helpers";
 import { SliceZone } from "@prismicio/react";
 import { Layout } from "components/Layout";
 import Head from "next/head";
@@ -15,15 +14,12 @@ export default function Page({ locale, page, navigation, settings, footer }) {
       footer={footer}
     >
       <Head>
-        <title>{`${prismicH.asText(page.data.title)} | RIUCI ${bamboo}`}</title>
-        <meta name="description" content={page.data.description} />
-        <meta
-          property="og:title"
-          content={`${prismicH.asText(page.data.title)} | RIUCI ${bamboo}`}
-        />
+        <title>{`${page.data.meta_title} | RIUCI ${bamboo}`}</title>
+        <meta name="description" content={page.data.meta_description} />
+        <meta property="og:title" content={`${page.data.meta_title} | RIUCI ${bamboo}`} />
         <meta property="og:url" content={`${process.env.NEXT_PUBLIC_HOST}/${locale}`} />
-        <meta property="og:description" content={page.data.description} />
-        <meta property="og:image" content={page.data.image.url} />
+        <meta property="og:description" content={page.data.meta_description} />
+        <meta property="og:image" content={page.data.meta_image.url} />
         <meta property="og:type" content="website" />
       </Head>
       <SliceZone slices={page.data.slices} components={components} />

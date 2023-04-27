@@ -9,6 +9,7 @@
         "type": "UID",
         "config": { "label": "UID", "placeholder": "URL slug for the page" }
       },
+      "meta_title": { "type": "Text", "config": { "label": "Meta Title", "placeholder": "" } },
       "title": {
         "type": "StructuredText",
         "config": {
@@ -18,10 +19,13 @@
           "single": "heading1"
         }
       },
-      "description": { "type": "Text", "config": { "label": "Description", "placeholder": "" } },
-      "image": {
+      "meta_description": {
+        "type": "Text",
+        "config": { "label": "Meta Description", "placeholder": "" }
+      },
+      "meta_image": {
         "type": "Image",
-        "config": { "label": "Image", "constraint": { "width": 1200 }, "thumbnails": [] }
+        "config": { "label": "Meta Image", "constraint": { "width": 1200 }, "thumbnails": [] }
       },
       "slices": {
         "type": "Slices",
