@@ -9,7 +9,8 @@ import React from "react";
 const ExternalRepositories = ({ slice }) => (
   <section className="bg-neutral-100">
     <div className="frame py">
-      <h1 className="mb-10">{slice.primary.title}</h1>
+      <h1>{slice.primary.title}</h1>
+      <p className="mx-auto max-w-3xl pb-9 text-center">{slice.primary.description}</p>
       <div className="flex flex-wrap items-center justify-center gap-10 text-center">
         {slice.items.map((item, i) => (
           <a

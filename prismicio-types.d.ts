@@ -628,6 +628,16 @@ interface ExternalRepositoriesSliceDefaultPrimary {
    *
    */
   title: prismicT.KeyTextField;
+  /**
+   * Description field in *ExternalRepositories → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: external_repositories.primary.description
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  description: prismicT.KeyTextField;
 }
 /**
  * Item in ExternalRepositories → Items
