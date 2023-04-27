@@ -207,17 +207,6 @@ interface PageDocumentData {
    */
   meta_title: prismicT.KeyTextField;
   /**
-   * Title field in *Page*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: Title for the page
-   * - **API ID Path**: page.title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-   *
-   */
-  title: prismicT.TitleField;
-  /**
    * Meta Description field in *Page*
    *
    * - **Field Type**: Text
