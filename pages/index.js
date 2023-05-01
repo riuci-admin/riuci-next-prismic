@@ -4,14 +4,9 @@ import Head from "next/head";
 import { createClient } from "prismicio";
 import { components } from "slices";
 
-export default function Index({ locale, page, navigation, settings, footer }) {
+export default function Index({ locale, page, navigation, footer }) {
   return (
-    <Layout
-      alternateLanguages={page.alternate_languages}
-      navigation={navigation}
-      settings={settings}
-      footer={footer}
-    >
+    <Layout alternateLanguages={page.alternate_languages} navigation={navigation} footer={footer}>
       <Head>
         <title>{page.data.meta_title}</title>
         <meta name="description" content={page.data.meta_description} />
@@ -30,14 +25,12 @@ export async function getStaticProps({ locale }) {
   const client = createClient();
   const page = await client.getByUID("page", "home", { lang: locale });
   const navigation = await client.getSingle("navigation", { lang: locale });
-  const settings = await client.getSingle("settings", { lang: locale });
   const footer = await client.getSingle("footer", { lang: locale });
   return {
     props: {
       locale,
       page,
       navigation,
-      settings,
       footer,
     },
   };

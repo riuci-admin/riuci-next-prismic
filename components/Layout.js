@@ -8,7 +8,7 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-export const Layout = ({ alternateLanguages, navigation, settings, footer, children }) => {
+export const Layout = ({ alternateLanguages, navigation, footer, children }) => {
   return (
     <div className={`${inter.variable} drawer font-inter`}>
       <label htmlFor="menu-drawer">Menu Drawer</label>
@@ -17,7 +17,6 @@ export const Layout = ({ alternateLanguages, navigation, settings, footer, child
         <Header
           alternateLanguages={alternateLanguages}
           navigation={navigation}
-          settings={settings}
         />
         <main>{children}</main>
         <Footer footer={footer} />

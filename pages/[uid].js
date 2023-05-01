@@ -4,15 +4,10 @@ import Head from "next/head";
 import { createClient } from "prismicio";
 import { components } from "slices";
 
-export default function Page({ locale, page, navigation, settings, footer }) {
+export default function Page({ locale, page, navigation, footer }) {
   const bamboo = locale === "es-es" ? "bambú" : "bamboo";
   return (
-    <Layout
-      alternateLanguages={page.alternate_languages}
-      navigation={navigation}
-      settings={settings}
-      footer={footer}
-    >
+    <Layout alternateLanguages={page.alternate_languages} navigation={navigation} footer={footer}>
       <Head>
         <title>{`${page.data.meta_title} | RIUCI ${bamboo}`}</title>
         <meta name="description" content={page.data.meta_description} />
@@ -31,14 +26,12 @@ export async function getStaticProps({ params, locale }) {
   const client = createClient();
   const page = await client.getByUID("page", params.uid, { lang: locale });
   const navigation = await client.getSingle("navigation", { lang: locale });
-  const settings = await client.getSingle("settings", { lang: locale });
   const footer = await client.getSingle("footer", { lang: locale });
   return {
     props: {
       locale,
       page,
       navigation,
-      settings,
       footer,
     },
   };
