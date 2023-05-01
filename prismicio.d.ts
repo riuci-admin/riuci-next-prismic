@@ -278,39 +278,10 @@ export type PageDocument<Lang extends string = string> = prismicT.PrismicDocumen
   "page",
   Lang
 >;
-/** Content for Settings documents */
-interface SettingsDocumentData {
-  /**
-   * Logo field in *Settings*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: settings.logo
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/image
-   *
-   */
-  logo: prismicT.ImageField<never>;
-}
-/**
- * Settings document from Prismic
- *
- * - **API ID**: `settings`
- * - **Repeatable**: `false`
- * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type SettingsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<
-  Simplify<SettingsDocumentData>,
-  "settings",
-  Lang
->;
 export type AllDocumentTypes =
   | FooterDocument
   | NavigationDocument
   | PageDocument
-  | SettingsDocument;
 /**
  * Primary content in Courses → Primary
  *
@@ -2370,8 +2341,6 @@ declare module "@prismicio/client" {
       PageDocumentData,
       PageDocumentDataSlicesSlice,
       PageDocument,
-      SettingsDocumentData,
-      SettingsDocument,
       AllDocumentTypes,
       CoursesSliceDefaultPrimary,
       CoursesSliceDefaultItem,
