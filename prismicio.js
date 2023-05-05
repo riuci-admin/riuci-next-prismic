@@ -32,5 +32,5 @@ export const linkResolver = (doc) => {
  * @param config {prismicNext.CreateClientConfig} - A configuration object to
  */
 export const createClient = ({ req, ...config } = {}) => {
-  return prismic.createClient(slicemachine.apiEndpoint, config);
+  return prismic.createClient(slicemachine.repositoryName, config);
 };
